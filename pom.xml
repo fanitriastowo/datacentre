@@ -7,7 +7,7 @@
 
 	<properties>
 		<org.springframework.version>4.0.2.RELEASE</org.springframework.version>
-		<apache.tiles.version>3.0.4</apache.tiles.version>
+		<apache.tiles.version>3.0.5</apache.tiles.version>
 	</properties>
 
 	<dependencies>

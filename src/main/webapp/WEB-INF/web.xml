@@ -14,7 +14,6 @@
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>*.html</url-pattern>
-		<url-pattern>*.jsp</url-pattern>
 		<url-pattern>*.json</url-pattern>
 		<url-pattern>*.php</url-pattern>
 	</servlet-mapping>

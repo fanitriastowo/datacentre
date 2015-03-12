@@ -26,12 +26,12 @@
 				<button type="button" class="navbar-toggle" data-toggle="collapse">
 					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html"><strong>Datacentre Gedung</strong></a>
+				<a class="navbar-brand" href='<spring:url value="/" />'><strong>Datacentre Gedung</strong></a>
 			</div>
 			<!-- /.navbar-header -->
 
 			<ul class="nav navbar-top-links navbar-right">
-				<li class="active"><a href="#">Account</a></li>
+				<li><a href="#">Account</a></li>
 				<li><a href="#">Logout</a></li>
 			</ul>
 
@@ -47,7 +47,7 @@
 								</span>
 							</div> <!-- /input-group -->
 						</li>
-						<li><a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
+						<li><a href='<spring:url value="/" />'><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
 						<li><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Operation<span class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
 								<li><a href="#">Import</a></li>

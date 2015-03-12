@@ -8,9 +8,23 @@
 	<properties>
 		<org.springframework.version>4.0.2.RELEASE</org.springframework.version>
 		<apache.tiles.version>3.0.5</apache.tiles.version>
+		<hibernate-entitymanager.version>4.3.4.Final</hibernate-entitymanager.version>
+		<spring-data-jpa.version>1.5.1.RELEASE</spring-data-jpa.version>
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate-entitymanager.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring-data-jpa.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.slf4j</groupId>

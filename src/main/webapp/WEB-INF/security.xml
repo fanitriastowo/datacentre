@@ -5,10 +5,16 @@
            http://www.springframework.org/schema/security
            http://www.springframework.org/schema/security/spring-security.xsd">
 
-	<http>
-		<intercept-url pattern="/**" access="ROLE_ADMIN" />
-		<form-login />
-		<logout />
+	<global-method-security pre-post-annotations="enabled" />
+
+	<http use-expressions="true">
+		<form-login login-page="/login.html" authentication-failure-url="/login.html" default-target-url="/" />
+		<logout logout-url="/logout" logout-success-url="/login.html" />
+
+		<intercept-url pattern="/static/**" access="permitAll" />
+		<intercept-url pattern="/account.html" access="isAuthenticated()" />
+		<intercept-url pattern="/master/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/" access="isAuthenticated()" />
 	</http>
 
 	<authentication-manager>

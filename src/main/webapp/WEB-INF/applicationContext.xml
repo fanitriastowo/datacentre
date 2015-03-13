@@ -34,4 +34,6 @@
 	</bean>
 
 	<jpa:repositories base-package="id.ac.ump.ppp.datacentre.repositories" />
+
+	<import resource="security.xml" />
 </beans>

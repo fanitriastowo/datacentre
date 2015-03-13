@@ -7,27 +7,43 @@
 	<definition name="base" template="/WEB-INF/template/base.jsp">
 		<put-attribute name="footer" value="/WEB-INF/template/footer.jsp" />
 	</definition>
+	
+	<definition name="login" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Please Sign In" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="sidebar" value="" />
+		<put-attribute name="body" value="/WEB-INF/pages/login.jsp" />
+		<put-attribute name="current" value="" />
+	</definition>
 
 	<definition name="account" extends="base">
 		<put-attribute name="title" value="Aplikasi Datacentre - Account" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
 		<put-attribute name="body" value="/WEB-INF/pages/account.jsp" />
 		<put-attribute name="current" value="account" />
 	</definition>
 
 	<definition name="home" extends="base">
 		<put-attribute name="title" value="Aplikasi Datacentre" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
 		<put-attribute name="body" value="/WEB-INF/pages/home.jsp" />
 		<put-attribute name="current" value="home" />
 	</definition>
 
 	<definition name="users" extends="base">
 		<put-attribute name="title" value="Aplikasi Datacentre - List of User" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
 		<put-attribute name="body" value="/WEB-INF/pages/users.jsp" />
 		<put-attribute name="current" value="master" />
 	</definition>
 
 	<definition name="gedung" extends="base">
 		<put-attribute name="title" value="Aplikasi Datacentre - Daftar Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
 		<put-attribute name="body" value="/WEB-INF/pages/gedung.jsp" />
 		<put-attribute name="current" value="master" />
 	</definition>

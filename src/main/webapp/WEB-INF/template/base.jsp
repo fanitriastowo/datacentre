@@ -22,46 +22,8 @@
 
 		<!-- Navigation -->
 		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href='<spring:url value="/" />'><strong>Datacentre Gedung</strong></a>
-			</div>
-			<!-- /.navbar-header -->
-
-			<ul class="nav navbar-top-links navbar-right">
-				<li class="active"><a href='<spring:url value="/account.html" />'><i class="fa fa-user fa-fw"></i> Account</a></li>
-				<li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
-			</ul>
-
-			<div class="navbar-default sidebar" role="navigation">
-				<div class="sidebar-nav navbar-collapse">
-					<ul class="nav" id="side-menu">
-						<li class="sidebar-search">
-							<div class="input-group custom-search-form">
-								<input type="text" class="form-control" placeholder="Search..."> <span class="input-group-btn">
-									<button class="btn btn-default" type="button">
-										<i class="fa fa-search"></i>
-									</button>
-								</span>
-							</div> <!-- /input-group -->
-						</li>
-						<li><a href='<spring:url value="/" />'><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
-						<li><a href="#"><i class="fa fa-cog fa-fw"></i> Operation<span class="fa arrow"></span></a>
-							<ul class="nav nav-second-level">
-								<li><a href="#"><i class="fa fa-arrow-circle-up fa-fw"></i> Import</a></li>
-								<li><a href="#"><i class="fa fa-arrow-circle-down fa-fw"></i> Export</a></li>
-							</ul> <!-- /.nav-second-level --></li>
-						<li><a href="#"><i class="fa fa-th-list fa-fw"></i> Master<span class="fa arrow"></span></a>
-							<ul class="nav nav-second-level">
-								<li><a href='<spring:url value="/master/gedung.html"/>'><i class="fa fa-building fa-fw"></i> Gedung</a></li>
-								<li><a href='<spring:url value="/users.html"/>'><i class="fa fa-user fa-fw"></i> User</a></li>
-							</ul> <!-- /.nav-second-level --></li>
-					</ul>
-				</div>
-				<!-- /.sidebar-collapse -->
-			</div>
+			<tiles:insertAttribute name="header" />
+			<tiles:insertAttribute name="sidebar" />
 		</nav>
 
 		<div id="page-wrapper">

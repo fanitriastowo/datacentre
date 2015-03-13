@@ -31,7 +31,7 @@
 			<!-- /.navbar-header -->
 
 			<ul class="nav navbar-top-links navbar-right">
-				<li><a href="#"><i class="fa fa-user fa-fw"></i> Account</a></li>
+				<li class="active"><a href='<spring:url value="/account.html" />'><i class="fa fa-user fa-fw"></i> Account</a></li>
 				<li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
 			</ul>
 
@@ -56,6 +56,7 @@
 						<li><a href="#"><i class="fa fa-th-list fa-fw"></i> Master<span class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
 								<li><a href='<spring:url value="/master/gedung.html"/>'><i class="fa fa-building fa-fw"></i> Gedung</a></li>
+								<li><a href='<spring:url value="/users.html"/>'><i class="fa fa-user fa-fw"></i> User</a></li>
 							</ul> <!-- /.nav-second-level --></li>
 					</ul>
 				</div>
@@ -71,7 +72,7 @@
 			</div>
 		</div>
 
-		<footer class="footer">
+		<footer>
 			<tiles:insertAttribute name="footer" />
 		</footer>
 	</div>

@@ -19,6 +19,8 @@ public class User {
 
 	private String password;
 
+	private String email;
+
 	@ManyToMany
 	@JoinTable
 	private List<Role> roles;
@@ -53,6 +55,14 @@ public class User {
 
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }

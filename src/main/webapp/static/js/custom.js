@@ -1,6 +1,6 @@
 $(function() {
 
-	$('#side-menu').metisMenu();
+	$('#side-menu').metisMenu({});
 
 });
 
@@ -33,5 +33,7 @@ $(function() {
 	}).addClass('active').parent().parent().addClass('in').parent();
 	if (element.is('li')) {
 		element.addClass('active');
+	} else {
+		element.removeClass('active');
 	}
 });

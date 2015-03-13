@@ -23,7 +23,7 @@
 		<!-- Navigation -->
 		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href='<spring:url value="/" />'><strong>Datacentre Gedung</strong></a>
@@ -31,8 +31,8 @@
 			<!-- /.navbar-header -->
 
 			<ul class="nav navbar-top-links navbar-right">
-				<li><a href="#">Account</a></li>
-				<li><a href="#">Logout</a></li>
+				<li><a href="#"><i class="fa fa-user fa-fw"></i> Account</a></li>
+				<li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
 			</ul>
 
 			<div class="navbar-default sidebar" role="navigation">
@@ -48,14 +48,14 @@
 							</div> <!-- /input-group -->
 						</li>
 						<li><a href='<spring:url value="/" />'><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
-						<li><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Operation<span class="fa arrow"></span></a>
+						<li><a href="#"><i class="fa fa-cog fa-fw"></i> Operation<span class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
-								<li><a href="#">Import</a></li>
-								<li><a href="#">Export</a></li>
+								<li><a href="#"><i class="fa fa-arrow-circle-up fa-fw"></i> Import</a></li>
+								<li><a href="#"><i class="fa fa-arrow-circle-down fa-fw"></i> Export</a></li>
 							</ul> <!-- /.nav-second-level --></li>
-						<li><a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Master<span class="fa arrow"></span></a>
+						<li><a href="#"><i class="fa fa-th-list fa-fw"></i> Master<span class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
-								<li><a href="#">Gedung</a></li>
+								<li><a href='<spring:url value="/master/gedung.html"/>'><i class="fa fa-building fa-fw"></i> Gedung</a></li>
 							</ul> <!-- /.nav-second-level --></li>
 					</ul>
 				</div>
@@ -76,7 +76,9 @@
 		</footer>
 	</div>
 	<!-- /#wrapper -->
-	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery-2.1.1.min.js"></script>
+
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.map"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/metisMenu.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/custom.js"></script>

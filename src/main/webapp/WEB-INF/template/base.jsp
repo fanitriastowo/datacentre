@@ -23,8 +23,8 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.map"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/moment.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/bootstrap-datepicker.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/moment_id.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/metisMenu.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/custom.js"></script>
 

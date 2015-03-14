@@ -171,18 +171,19 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#tahunBerdiri').datetimepicker({
-			language : 'id',
-			pickTime : false
-		});
-		$('#tahunSurvey').datetimepicker({
-			language : 'id',
-			pickTime : false
-		});
 		$('.triggerRemove').click(function(e) {
 			e.preventDefault();
 			$('#modalRemove .btnRemove').attr("href", $(this).attr("href"));
 			$('#modalRemove').modal();
 		});
 	})
+
+	$(function() {
+		$('#tahunBerdiri').datetimepicker({
+			locale : 'id'
+		});
+		$('#tahunSurvey').datetimepicker({
+			locale : 'id'
+		});
+	});
 </script>

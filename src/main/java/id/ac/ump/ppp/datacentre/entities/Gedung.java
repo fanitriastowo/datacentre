@@ -34,7 +34,7 @@ public class Gedung {
 	private Date tahunSurvey;
 
 	private Double luasGedung;
-	
+
 	@Lob
 	@Column(length = Integer.MAX_VALUE)
 	@Type(type = "org.hibernate.type.StringClobType")

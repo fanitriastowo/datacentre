@@ -17,4 +17,12 @@ public class GedungService {
 	public List<Gedung> findAll() {
 		return gedungRepository.findAll();
 	}
+
+	public void save(Gedung gedung) {
+		gedungRepository.save(gedung);
+	}
+
+	public void delete(Integer id) {
+		gedungRepository.delete(id);
+	}
 }

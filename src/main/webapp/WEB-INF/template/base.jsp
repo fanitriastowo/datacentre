@@ -12,38 +12,45 @@
 
 <link rel="icon" href="${pageContext.request.contextPath }/static/images/favicon.png">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/bootstrap-datepicker.min.css" type="text/css" media="screen">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/metisMenu.min.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/morris.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/custom.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/font-awesome.min.css">
+
+
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.map"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/moment.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/moment_id.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/metisMenu.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/custom.js"></script>
+
 </head>
 <body>
 	<div id="wrapper">
 
 		<!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <tiles:insertAttribute name="header" />
-            <tiles:insertAttribute name="sidebar" />
-        </nav>
+		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+			<tiles:insertAttribute name="header" />
+			<tiles:insertAttribute name="sidebar" />
+		</nav>
 
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <tiles:insertAttribute name="body" />
-                </div>
-            </div>
-        </div>
-		
-        <footer>
+		<div id="page-wrapper">
+			<div class="row">
+				<div class="col-lg-12">
+					<tiles:insertAttribute name="body" />
+				</div>
+			</div>
+		</div>
+
+		<footer>
 			<tiles:insertAttribute name="footer" />
 		</footer>
 	</div>
 	<!-- /#wrapper -->
 
-	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.map"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/metisMenu.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/custom.js"></script>
 </body>
 </html>

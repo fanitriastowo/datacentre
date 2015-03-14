@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<entities>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
 	<entity>
 		<entity-name>id.ac.ump.ppp.datacentre.entities.Role</entity-name>
 		<entity-width>120</entity-width>
@@ -26,8 +25,8 @@
 		<entity-name>id.ac.ump.ppp.datacentre.entities.Gedung</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>268</entity-height>
-		<entity-X-Coordinate>157</entity-X-Coordinate>
-		<entity-Y-Coordinate>290</entity-Y-Coordinate>
+		<entity-X-Coordinate>149</entity-X-Coordinate>
+		<entity-Y-Coordinate>240</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>

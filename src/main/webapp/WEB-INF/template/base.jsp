@@ -21,20 +21,20 @@
 	<div id="wrapper">
 
 		<!-- Navigation -->
-		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-			<tiles:insertAttribute name="header" />
-			<tiles:insertAttribute name="sidebar" />
-		</nav>
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <tiles:insertAttribute name="header" />
+            <tiles:insertAttribute name="sidebar" />
+        </nav>
 
-		<div id="page-wrapper">
-			<div class="row">
-				<div class="col-lg-12">
-					<tiles:insertAttribute name="body" />
-				</div>
-			</div>
-		</div>
-
-		<footer>
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <tiles:insertAttribute name="body" />
+                </div>
+            </div>
+        </div>
+		
+        <footer>
 			<tiles:insertAttribute name="footer" />
 		</footer>
 	</div>

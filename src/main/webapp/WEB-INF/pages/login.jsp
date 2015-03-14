@@ -10,12 +10,12 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/morris.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/custom.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/font-awesome.min.css">
-<title>Datacentre Gedung - Please Login</title>
+<title><tiles:getAsString name="title" /></title>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4 col-md-offset-4">
+			<div class="col-md-4 col-md-offset-4 col-sm-12">
 				<div class="login-panel panel panel-default">
 					<div class="panel-heading">
 						<h3 class="panel-title">Silahkan Login</h3>
@@ -37,6 +37,9 @@
 			</div>
 		</div>
 	</div>
+    <footer>
+        <tiles:insertAttribute name="footer" />
+    </footer>
 
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.map"></script>

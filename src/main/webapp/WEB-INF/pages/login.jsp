@@ -15,8 +15,8 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4 col-md-offset-4 col-sm-12">
-				<div class="login-panel panel panel-default">
+			<div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
+				<div id="login-panel" class="panel panel-default">
 					<div class="panel-heading">
 						<h3 class="panel-title">Silahkan Login</h3>
 					</div>

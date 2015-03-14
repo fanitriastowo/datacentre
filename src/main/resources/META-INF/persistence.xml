@@ -3,5 +3,6 @@
 	<persistence-unit name="datacentre">
 		<class>id.ac.ump.ppp.datacentre.entities.User</class>
 		<class>id.ac.ump.ppp.datacentre.entities.Role</class>
+		<class>id.ac.ump.ppp.datacentre.entities.Gedung</class>
 	</persistence-unit>
 </persistence>

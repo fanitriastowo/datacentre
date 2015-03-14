@@ -24,10 +24,10 @@
 						<form role="form" action="/j_spring_security_check" method="POST">
 							<fieldset>
 								<div class="form-group">
-									<input class="form-control" placeholder="Username" name="j_username" type="text" autofocus>
+									<input class="form-control" placeholder="Username" name="j_username" type="text" autofocus required>
 								</div>
 								<div class="form-group">
-									<input class="form-control" placeholder="Password" name="j_password" type="password">
+									<input class="form-control" placeholder="Password" name="j_password" type="password" required>
 								</div>
 								<button class="btn btn-lg btn-success btn-block" type="submit">Sign In</button>
 							</fieldset>
@@ -37,9 +37,9 @@
 			</div>
 		</div>
 	</div>
-    <footer>
-        <tiles:insertAttribute name="footer" />
-    </footer>
+	<footer>
+		<tiles:insertAttribute name="footer" />
+	</footer>
 
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.map"></script>

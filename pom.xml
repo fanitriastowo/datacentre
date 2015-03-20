@@ -12,9 +12,16 @@
 		<spring-data-jpa.version>1.5.1.RELEASE</spring-data-jpa.version>
 		<org.hsqldb.version>2.3.2</org.hsqldb.version>
 		<spring.security.version>3.2.3.RELEASE</spring.security.version>
+		<jackson.version>1.9.13</jackson.version>
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -114,8 +121,7 @@
 			<artifactId>spring-aop</artifactId>
 		</dependency>
 
-		<!-- Application Context (depends on spring-core, spring-expression, spring-aop, spring-beans) This is the central artifact for Spring's Dependency Injection 
-			Container and is generally always defined -->
+		<!-- Application Context (depends on spring-core, spring-expression, spring-aop, spring-beans) This is the central artifact for Spring's Dependency Injection Container and is generally always defined -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -127,8 +133,7 @@
 			<artifactId>spring-context-support</artifactId>
 		</dependency>
 
-		<!-- Transaction Management Abstraction (depends on spring-core, spring-beans, spring-aop, spring-context) Define this if you use Spring Transactions 
-			or DAO Exception Hierarchy (org.springframework.transaction.*/org.springframework.dao.*) -->
+		<!-- Transaction Management Abstraction (depends on spring-core, spring-beans, spring-aop, spring-context) Define this if you use Spring Transactions or DAO Exception Hierarchy (org.springframework.transaction.*/org.springframework.dao.*) -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
@@ -140,43 +145,38 @@
 			<artifactId>spring-jdbc</artifactId>
 		</dependency>
 
-		<!-- Object-to-Relation-Mapping (ORM) integration with Hibernate, JPA, and iBatis. (depends on spring-core, spring-beans, spring-context, spring-tx) 
-			Define this if you need ORM (org.springframework.orm.*) -->
+		<!-- Object-to-Relation-Mapping (ORM) integration with Hibernate, JPA, and iBatis. (depends on spring-core, spring-beans, spring-context, spring-tx) Define this if you need ORM (org.springframework.orm.*) -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 		</dependency>
 
-		<!-- Object-to-XML Mapping (OXM) abstraction and integration with JAXB, JiBX, Castor, XStream, and XML Beans. (depends on spring-core, spring-beans, 
-			spring-context) Define this if you need OXM (org.springframework.oxm.*) -->
+		<!-- Object-to-XML Mapping (OXM) abstraction and integration with JAXB, JiBX, Castor, XStream, and XML Beans. (depends on spring-core, spring-beans, spring-context) Define this if you need OXM (org.springframework.oxm.*) -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-oxm</artifactId>
 		</dependency>
 
-		<!-- Web application development utilities applicable to both Servlet and Portlet Environments (depends on spring-core, spring-beans, spring-context) 
-			Define this if you use Spring MVC, or wish to use Struts, JSF, or another web framework with Spring (org.springframework.web.*) -->
+		<!-- Web application development utilities applicable to both Servlet and Portlet Environments (depends on spring-core, spring-beans, spring-context) Define this if you use Spring MVC, or wish to use 
+			Struts, JSF, or another web framework with Spring (org.springframework.web.*) -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 		</dependency>
 
-		<!-- Spring MVC for Servlet Environments (depends on spring-core, spring-beans, spring-context, spring-web) Define this if you use Spring MVC with a 
-			Servlet Container such as Apache Tomcat (org.springframework.web.servlet.*) -->
+		<!-- Spring MVC for Servlet Environments (depends on spring-core, spring-beans, spring-context, spring-web) Define this if you use Spring MVC with a Servlet Container such as Apache Tomcat (org.springframework.web.servlet.*) -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
 
-		<!-- Spring MVC for Portlet Environments (depends on spring-core, spring-beans, spring-context, spring-web) Define this if you use Spring MVC with a 
-			Portlet Container (org.springframework.web.portlet.*) -->
+		<!-- Spring MVC for Portlet Environments (depends on spring-core, spring-beans, spring-context, spring-web) Define this if you use Spring MVC with a Portlet Container (org.springframework.web.portlet.*) -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc-portlet</artifactId>
 		</dependency>
 
-		<!-- Support for testing Spring applications with tools such as JUnit and TestNG This artifact is generally always defined with a 'test' scope for the 
-			integration testing framework and unit testing stubs -->
+		<!-- Support for testing Spring applications with tools such as JUnit and TestNG This artifact is generally always defined with a 'test' scope for the integration testing framework and unit testing stubs -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>

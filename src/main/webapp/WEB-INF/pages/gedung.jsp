@@ -7,7 +7,7 @@
 <br />
 <br />
 
-<!-- Modal -->
+<!-- Add Modal -->
 <form:form commandName="gedung" action="${pageContext.request.contextPath }/master/gedung/save.html" method="post" cssClass="form-horizontal addModalForm">
 	<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
@@ -125,7 +125,7 @@
 				<th>Tahun Survey</th>
 				<th>Luas Gedung</th>
 				<th>Jenis Gedung</th>
-				<th>Lokasi Gedung</th>
+				<th>Kondisi Usuk</th>
 				<th>Operation</th>
 			</tr>
 		</thead>
@@ -140,8 +140,11 @@
 					<td><c:out value="${gedung.tahunSurvey }" /></td>
 					<td><c:out value="${gedung.luasGedung }" /></td>
 					<td><c:out value="${gedung.jenisGedung }" /></td>
-					<td><c:out value="${gedung.lokasiGedung }" /></td>
-					<td><a href='<spring:url value="/master/gedung/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a></td>
+					<td><c:out value="${gedung.atap.usukKondisi }" /></td>
+					<td>
+						<a href='<spring:url value="/master/gedung/update/${gedung.id }.html" />' class="btn btn-success" data-toggle="modal" data-target="#updateModal">Update</a>
+						<a href='<spring:url value="/master/gedung/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a>
+					</td>
 				</tr>
 			</c:forEach>
 		</tbody>

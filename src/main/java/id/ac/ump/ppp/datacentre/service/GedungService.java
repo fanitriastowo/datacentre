@@ -25,4 +25,8 @@ public class GedungService {
 	public void delete(Integer id) {
 		gedungRepository.delete(id);
 	}
+
+	public Gedung findOne(Integer id) {
+		return gedungRepository.findOne(id);
+	}
 }

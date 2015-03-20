@@ -10,6 +10,7 @@ import id.ac.ump.ppp.datacentre.entities.Role;
 import id.ac.ump.ppp.datacentre.entities.User;
 import id.ac.ump.ppp.datacentre.entities.Gedung.JenisGedung;
 import id.ac.ump.ppp.datacentre.entities.kondisi.KondisiEnum;
+import id.ac.ump.ppp.datacentre.repositories.AtapRepository;
 import id.ac.ump.ppp.datacentre.repositories.GedungRepository;
 import id.ac.ump.ppp.datacentre.repositories.RoleRepository;
 import id.ac.ump.ppp.datacentre.repositories.UserRepository;
@@ -32,6 +33,9 @@ public class InitDbService {
 
 	@Autowired
 	private GedungRepository gedungRepository;
+
+	@Autowired
+	private AtapRepository atapRepository;
 
 	@PostConstruct
 	public void initDb() {
@@ -85,6 +89,8 @@ public class InitDbService {
 		atap1.setBumbunganPanjang(10.0);
 		atap1.setBumbunganBahan("Campuran");
 		atap1.setBumbunganKondisi(KondisiEnum.RUSAK_RINGAN);
+
+		atapRepository.save(atap1);
 
 		Calendar tahunBerdiri = Calendar.getInstance();
 		tahunBerdiri.set(2014, 0, 1);
@@ -142,6 +148,7 @@ public class InitDbService {
 		atap2.setBumbunganPanjang(10.0);
 		atap2.setBumbunganBahan("Campuran");
 		atap2.setBumbunganKondisi(KondisiEnum.RUSAK_RINGAN);
+		atapRepository.save(atap2);
 
 		tahunBerdiri.set(2004, 0, 1);
 		tahunSurvey.set(2004, 0, 1);

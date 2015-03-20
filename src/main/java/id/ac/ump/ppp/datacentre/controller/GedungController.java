@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/master")
@@ -35,18 +36,18 @@ public class GedungController {
 		binder.registerCustomEditor(Date.class, "tahunSurvey", new CustomDateEditor(dateFormat, false));
 	}
 
-	@RequestMapping("/gedung")
+	@RequestMapping(value = "/gedung", method = RequestMethod.GET)
 	public String gedung(Model model) {
 		model.addAttribute("gedungList", gedungService.findAll());
 		return "gedung";
 	}
 
-	@RequestMapping("/gedung/save")
+	@RequestMapping(value = "/gedung/save", method = RequestMethod.POST)
 	public String save(@ModelAttribute(value = "gedung") Gedung gedung) {
 		gedungService.save(gedung);
 		return "redirect:/master/gedung.html";
 	}
-	
+
 	@RequestMapping("/gedung/delete/{id}")
 	public String delete(@PathVariable(value = "id") Integer id) {
 		gedungService.delete(id);

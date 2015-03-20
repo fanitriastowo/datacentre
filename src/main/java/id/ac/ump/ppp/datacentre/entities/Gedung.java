@@ -6,7 +6,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -39,6 +41,10 @@ public class Gedung {
 	@Column(length = Integer.MAX_VALUE)
 	@Type(type = "org.hibernate.type.StringClobType")
 	private String lokasiGedung;
+
+	@OneToOne
+	@JoinColumn(name = "atap_id")
+	private Atap atap;
 
 	private JenisGedung jenisGedung;
 
@@ -124,6 +130,14 @@ public class Gedung {
 
 	public void setLokasiGedung(String lokasiGedung) {
 		this.lokasiGedung = lokasiGedung;
+	}
+
+	public Atap getAtap() {
+		return atap;
+	}
+
+	public void setAtap(Atap atap) {
+		this.atap = atap;
 	}
 
 }

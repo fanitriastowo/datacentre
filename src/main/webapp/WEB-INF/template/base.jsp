@@ -18,15 +18,8 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/custom.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/font-awesome.min.css">
 
-
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.min.map"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/moment.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/bootstrap-datepicker.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/moment_id.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/metisMenu.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/custom.js"></script>
 
 </head>
 <body>
@@ -52,5 +45,11 @@
 	</div>
 	<!-- /#wrapper -->
 
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/moment.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/moment_id.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/metisMenu.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/custom.js"></script>
 </body>
 </html>

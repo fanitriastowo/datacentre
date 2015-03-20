@@ -4,5 +4,6 @@
 		<class>id.ac.ump.ppp.datacentre.entities.User</class>
 		<class>id.ac.ump.ppp.datacentre.entities.Role</class>
 		<class>id.ac.ump.ppp.datacentre.entities.Gedung</class>
+		<class>id.ac.ump.ppp.datacentre.entities.Atap</class>
 	</persistence-unit>
 </persistence>

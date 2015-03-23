@@ -9,5 +9,5 @@
 <!-- /.navbar-header -->
 <ul class="nav navbar-top-links navbar-right">
 	<li class="active"><a href='<spring:url value="/account.html" />'><i class="fa fa-user fa-fw"></i> Account</a></li>
-	<li><a href='<spring:url value="/logout" />'><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+	<li><a href='<spring:url value="/logout.html" />'><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
 </ul>

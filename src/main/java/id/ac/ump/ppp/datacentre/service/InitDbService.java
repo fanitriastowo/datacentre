@@ -19,6 +19,7 @@ import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -48,8 +49,10 @@ public class InitDbService {
 
 		User userAdmin = new User();
 		userAdmin.setUsername("admin");
-		userAdmin.setPassword("admin");
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		userAdmin.setPassword(encoder.encode("admin"));
 		userAdmin.setEmail("fani.triastowo@gmail.com");
+		userAdmin.setEnabled(true);
 		userAdmin.setRoles(roles);
 		userRepository.save(userAdmin);
 

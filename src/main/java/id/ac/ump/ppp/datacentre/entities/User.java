@@ -23,6 +23,8 @@ public class User {
 
 	private String email;
 
+	private boolean enabled;
+
 	@ManyToMany
 	@JoinTable
 	private List<Role> roles;
@@ -67,11 +69,20 @@ public class User {
 		this.email = email;
 	}
 
-	public void update(Integer id, String username, String password, String email, List<Role> roles) {
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public void update(Integer id, String username, String password, String email, boolean enabled, List<Role> roles) {
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.email = email;
+		this.enabled = enabled;
 		this.roles = roles;
 	}
 

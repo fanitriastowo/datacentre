@@ -1,5 +1,6 @@
 package id.ac.ump.ppp.datacentre.service;
 
+import id.ac.ump.ppp.datacentre.entities.Role;
 import id.ac.ump.ppp.datacentre.entities.User;
 import id.ac.ump.ppp.datacentre.repositories.UserRepository;
 
@@ -31,6 +32,10 @@ public class UserService {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		updated.update(user.getId(), user.getUsername(), encoder.encode(user.getPassword()), user.getEmail(), updated.isEnabled(), updated.getRoles());
 		userRepository.save(updated);
+	}
+
+	public List<User> findAllByRoles(Role role) {
+		return userRepository.findAllByRoles(role);
 	}
 
 }

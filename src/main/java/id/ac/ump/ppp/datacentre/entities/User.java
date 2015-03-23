@@ -7,8 +7,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "USER")
 public class User {
 
 	@Id
@@ -63,6 +65,14 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public void update(Integer id, String username, String password, String email, List<Role> roles) {
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.roles = roles;
 	}
 
 }

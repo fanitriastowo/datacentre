@@ -5,8 +5,10 @@ import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "ATAP")
 public class Atap {
 
 	@Id

@@ -53,4 +53,10 @@ public class GedungController {
 		gedungService.delete(id);
 		return "redirect:/master/gedung.html";
 	}
+
+	@RequestMapping(value = "/gedung/detail/{id}", method = RequestMethod.GET)
+	public String gedungDetail(@PathVariable(value = "id") Integer id, Model model) {
+		model.addAttribute("gedungDetail", gedungService.findOne(id));
+		return "gedungDetail";
+	}
 }

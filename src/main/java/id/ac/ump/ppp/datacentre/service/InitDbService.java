@@ -9,7 +9,7 @@ import id.ac.ump.ppp.datacentre.entities.Gedung;
 import id.ac.ump.ppp.datacentre.entities.Role;
 import id.ac.ump.ppp.datacentre.entities.User;
 import id.ac.ump.ppp.datacentre.entities.Gedung.JenisGedung;
-import id.ac.ump.ppp.datacentre.entities.kondisi.KondisiEnum;
+import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
 import id.ac.ump.ppp.datacentre.repositories.AtapRepository;
 import id.ac.ump.ppp.datacentre.repositories.GedungRepository;
 import id.ac.ump.ppp.datacentre.repositories.RoleRepository;
@@ -58,37 +58,37 @@ public class InitDbService {
 		// ============= Usuk ===============
 		atap1.setUsukPanjang(300.3);
 		atap1.setUsukBahan("Baja");
-		atap1.setUsukKondisi(KondisiEnum.BAIK);
+		atap1.setUsukKondisi(Kondisi.BAIK);
 
 		// ============= Gording ===============
 		atap1.setGordingPanjang(200.3);
 		atap1.setGordingBahan("Kain");
-		atap1.setGordingKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap1.setGordingKondisi(Kondisi.RUSAK_RINGAN);
 
 		// ============= Reng ===============
 		atap1.setRengPanjang(10.0);
 		atap1.setRengBahan("Campuran");
-		atap1.setRengKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap1.setRengKondisi(Kondisi.RUSAK_RINGAN);
 
 		// ============= Kuda - Kuda ===============
 		atap1.setKudaKudaPanjang(10.0);
 		atap1.setKudaKudaBahan("Campuran");
-		atap1.setKudaKudaKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap1.setKudaKudaKondisi(Kondisi.RUSAK_RINGAN);
 
 		// ============= Ikatan Angin ===============
 		atap1.setIkatanAnginPanjang(10.0);
 		atap1.setIkatanAnginBahan("Campuran");
-		atap1.setIkatanAnginKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap1.setIkatanAnginKondisi(Kondisi.RUSAK_RINGAN);
 
 		// ============= Genteng ===============
 		atap1.setGentengPanjang(10.0);
 		atap1.setGentengBahan("Campuran");
-		atap1.setGentengKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap1.setGentengKondisi(Kondisi.RUSAK_RINGAN);
 
 		// ============= Bumbungan ===============
 		atap1.setBumbunganPanjang(10.0);
 		atap1.setBumbunganBahan("Campuran");
-		atap1.setBumbunganKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap1.setBumbunganKondisi(Kondisi.RUSAK_RINGAN);
 
 		atapRepository.save(atap1);
 
@@ -117,37 +117,37 @@ public class InitDbService {
 		// ============= Usuk ===============
 		atap2.setUsukPanjang(300.3);
 		atap2.setUsukBahan("Baja");
-		atap2.setUsukKondisi(KondisiEnum.BAIK);
+		atap2.setUsukKondisi(Kondisi.BAIK);
 
 		// ============= Gording ===============
 		atap2.setGordingPanjang(200.3);
 		atap2.setGordingBahan("Kain");
-		atap2.setGordingKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap2.setGordingKondisi(Kondisi.RUSAK_RINGAN);
 
 		// ============= Reng ===============
 		atap2.setRengPanjang(10.0);
 		atap2.setRengBahan("Campuran");
-		atap2.setRengKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap2.setRengKondisi(Kondisi.RUSAK_RINGAN);
 
 		// ============= Kuda - Kuda ===============
 		atap2.setKudaKudaPanjang(10.0);
 		atap2.setKudaKudaBahan("Campuran");
-		atap2.setKudaKudaKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap2.setKudaKudaKondisi(Kondisi.RUSAK_RINGAN);
 
 		// ============= Ikatan Angin ===============
 		atap2.setIkatanAnginPanjang(10.0);
 		atap2.setIkatanAnginBahan("Campuran");
-		atap2.setIkatanAnginKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap2.setIkatanAnginKondisi(Kondisi.RUSAK_RINGAN);
 
 		// ============= Genteng ===============
 		atap2.setGentengPanjang(10.0);
 		atap2.setGentengBahan("Campuran");
-		atap2.setGentengKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap2.setGentengKondisi(Kondisi.RUSAK_RINGAN);
 
 		// ============= Bumbungan ===============
 		atap2.setBumbunganPanjang(10.0);
 		atap2.setBumbunganBahan("Campuran");
-		atap2.setBumbunganKondisi(KondisiEnum.RUSAK_RINGAN);
+		atap2.setBumbunganKondisi(Kondisi.RUSAK_RINGAN);
 		atapRepository.save(atap2);
 
 		tahunBerdiri.set(2004, 0, 1);

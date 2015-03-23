@@ -117,15 +117,13 @@
 	<table class="table table-striped table-bordered table-hover">
 		<thead>
 			<tr>
+				<th>ID</th>
 				<th>Kode Gedung</th>
 				<th>Nama Gedung</th>
-				<th>Nama Lain</th>
 				<th>Kegunaan</th>
 				<th>Tahun Berdiri</th>
 				<th>Tahun Survey</th>
-				<th>Luas Gedung</th>
 				<th>Jenis Gedung</th>
-				<th>Kondisi Usuk</th>
 				<th>Operation</th>
 			</tr>
 		</thead>
@@ -138,10 +136,9 @@
 					<td><c:out value="${gedung.kegunaan }" /></td>
 					<td><c:out value="${gedung.tahunBerdiri }" /></td>
 					<td><c:out value="${gedung.tahunSurvey }" /></td>
-					<td><c:out value="${gedung.luasGedung }" /></td>
 					<td><c:out value="${gedung.jenisGedung }" /></td>
-					<td><c:out value="${gedung.atap.usukKondisi }" /></td>
 					<td>
+						<a href='<spring:url value="/master/gedung/detail/${gedung.id }.html" />' class="btn btn-info">Detail</a>
 						<a href='<spring:url value="/master/gedung/update/${gedung.id }.html" />' class="btn btn-success" data-toggle="modal" data-target="#updateModal">Update</a>
 						<a href='<spring:url value="/master/gedung/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a>
 					</td>

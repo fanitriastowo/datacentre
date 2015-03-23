@@ -1,6 +1,6 @@
 package id.ac.ump.ppp.datacentre.entities;
 
-import id.ac.ump.ppp.datacentre.entities.kondisi.KondisiEnum;
+import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,43 +17,43 @@ public class Atap {
 
 	private String usukBahan;
 
-	private KondisiEnum usukKondisi;
+	private Kondisi usukKondisi;
 
 	private Double gordingPanjang;
 
 	private String gordingBahan;
 
-	private KondisiEnum gordingKondisi;
+	private Kondisi gordingKondisi;
 
 	private Double rengPanjang;
 
 	private String rengBahan;
 
-	private KondisiEnum rengKondisi;
+	private Kondisi rengKondisi;
 
 	private Double kudaKudaPanjang;
 
 	private String kudaKudaBahan;
 
-	private KondisiEnum kudaKudaKondisi;
+	private Kondisi kudaKudaKondisi;
 
 	private Double ikatanAnginPanjang;
 
 	private String ikatanAnginBahan;
 
-	private KondisiEnum ikatanAnginKondisi;
+	private Kondisi ikatanAnginKondisi;
 
 	private Double gentengPanjang;
 
 	private String gentengBahan;
 
-	private KondisiEnum gentengKondisi;
+	private Kondisi gentengKondisi;
 
 	private Double bumbunganPanjang;
 
 	private String bumbunganBahan;
 
-	private KondisiEnum bumbunganKondisi;
+	private Kondisi bumbunganKondisi;
 
 	public Integer getId() {
 		return id;
@@ -79,11 +79,11 @@ public class Atap {
 		this.usukBahan = usukBahan;
 	}
 
-	public KondisiEnum getUsukKondisi() {
+	public Kondisi getUsukKondisi() {
 		return usukKondisi;
 	}
 
-	public void setUsukKondisi(KondisiEnum usukKondisi) {
+	public void setUsukKondisi(Kondisi usukKondisi) {
 		this.usukKondisi = usukKondisi;
 	}
 
@@ -103,11 +103,11 @@ public class Atap {
 		this.gordingBahan = gordingBahan;
 	}
 
-	public KondisiEnum getGordingKondisi() {
+	public Kondisi getGordingKondisi() {
 		return gordingKondisi;
 	}
 
-	public void setGordingKondisi(KondisiEnum gordingKondisi) {
+	public void setGordingKondisi(Kondisi gordingKondisi) {
 		this.gordingKondisi = gordingKondisi;
 	}
 
@@ -127,11 +127,11 @@ public class Atap {
 		this.rengBahan = rengBahan;
 	}
 
-	public KondisiEnum getRengKondisi() {
+	public Kondisi getRengKondisi() {
 		return rengKondisi;
 	}
 
-	public void setRengKondisi(KondisiEnum rengKondisi) {
+	public void setRengKondisi(Kondisi rengKondisi) {
 		this.rengKondisi = rengKondisi;
 	}
 
@@ -151,11 +151,11 @@ public class Atap {
 		this.kudaKudaBahan = kudaKudaBahan;
 	}
 
-	public KondisiEnum getKudaKudaKondisi() {
+	public Kondisi getKudaKudaKondisi() {
 		return kudaKudaKondisi;
 	}
 
-	public void setKudaKudaKondisi(KondisiEnum kudaKudaKondisi) {
+	public void setKudaKudaKondisi(Kondisi kudaKudaKondisi) {
 		this.kudaKudaKondisi = kudaKudaKondisi;
 	}
 
@@ -175,11 +175,11 @@ public class Atap {
 		this.ikatanAnginBahan = ikatanAnginBahan;
 	}
 
-	public KondisiEnum getIkatanAnginKondisi() {
+	public Kondisi getIkatanAnginKondisi() {
 		return ikatanAnginKondisi;
 	}
 
-	public void setIkatanAnginKondisi(KondisiEnum ikatanAnginKondisi) {
+	public void setIkatanAnginKondisi(Kondisi ikatanAnginKondisi) {
 		this.ikatanAnginKondisi = ikatanAnginKondisi;
 	}
 
@@ -199,11 +199,11 @@ public class Atap {
 		this.gentengBahan = gentengBahan;
 	}
 
-	public KondisiEnum getGentengKondisi() {
+	public Kondisi getGentengKondisi() {
 		return gentengKondisi;
 	}
 
-	public void setGentengKondisi(KondisiEnum gentengKondisi) {
+	public void setGentengKondisi(Kondisi gentengKondisi) {
 		this.gentengKondisi = gentengKondisi;
 	}
 
@@ -223,11 +223,11 @@ public class Atap {
 		this.bumbunganBahan = bumbunganBahan;
 	}
 
-	public KondisiEnum getBumbunganKondisi() {
+	public Kondisi getBumbunganKondisi() {
 		return bumbunganKondisi;
 	}
 
-	public void setBumbunganKondisi(KondisiEnum bumbunganKondisi) {
+	public void setBumbunganKondisi(Kondisi bumbunganKondisi) {
 		this.bumbunganKondisi = bumbunganKondisi;
 	}
 

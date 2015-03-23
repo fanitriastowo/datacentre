@@ -44,5 +44,13 @@
 		<put-attribute name="body" value="/WEB-INF/pages/gedung.jsp" />
 		<put-attribute name="current" value="master" />
 	</definition>
+	
+	<definition name="gedungDetail" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Detail Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/gedungDetail.jsp" />
+		<put-attribute name="current" value="master" />
+	</definition>
 
 </tiles-definitions>

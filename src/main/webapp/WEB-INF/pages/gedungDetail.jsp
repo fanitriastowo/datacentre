@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../template/taglib.jsp"%>
 
-<div class="panel panel-default">
+<div class="panel panel-success">
 	<div class="panel-heading">
 		<h2 class="panel-title text-center">
 			<strong>Identitas <c:out value="${gedungDetail.namaLain}" /></strong>
@@ -57,7 +57,7 @@
 	</div>
 </div>
 
-<div class="panel panel-default">
+<div class="panel panel-success">
 	<div class="panel-heading">
 		<h2 class="panel-title text-center">
 			<strong>Status Atap</strong>
@@ -75,7 +75,7 @@
 					<tbody>
 						<tr>
 							<td><strong>Panjang:</strong></td>
-							<td><c:out value="${gedungDetail.atap.usukPanjang }" /> m</td>
+							<td><c:out value="${gedungDetail.atap.usukPanjang }" /> m<sup>2</sup></td>
 						</tr>
 						<tr>
 							<td><strong>Bahan:</strong></td>
@@ -98,7 +98,7 @@
 					<tbody>
 						<tr>
 							<td><strong>Panjang:</strong></td>
-							<td><c:out value="${gedungDetail.atap.gordingPanjang }" /> m</td>
+							<td><c:out value="${gedungDetail.atap.gordingPanjang }" /> m<sup>2</sup></td>
 						</tr>
 						<tr>
 							<td><strong>Bahan:</strong></td>
@@ -121,7 +121,7 @@
 					<tbody>
 						<tr>
 							<td><strong>Panjang:</strong></td>
-							<td><c:out value="${gedungDetail.atap.rengPanjang }" /> m</td>
+							<td><c:out value="${gedungDetail.atap.rengPanjang }" /> m<sup>2</sup></td>
 						</tr>
 						<tr>
 							<td><strong>Bahan:</strong></td>
@@ -146,7 +146,7 @@
 					<tbody>
 						<tr>
 							<td><strong>Panjang:</strong></td>
-							<td><c:out value="${gedungDetail.atap.kudaKudaPanjang }" /> m</td>
+							<td><c:out value="${gedungDetail.atap.kudaKudaPanjang }" /> m<sup>2</sup></td>
 						</tr>
 						<tr>
 							<td><strong>Bahan:</strong></td>
@@ -169,7 +169,7 @@
 					<tbody>
 						<tr>
 							<td><strong>Panjang:</strong></td>
-							<td><c:out value="${gedungDetail.atap.ikatanAnginPanjang }" /> m</td>
+							<td><c:out value="${gedungDetail.atap.ikatanAnginPanjang }" /> m<sup>2</sup></td>
 						</tr>
 						<tr>
 							<td><strong>Bahan:</strong></td>
@@ -192,7 +192,7 @@
 					<tbody>
 						<tr>
 							<td><strong>Panjang:</strong></td>
-							<td><c:out value="${gedungDetail.atap.gentengPanjang }" /> m</td>
+							<td><c:out value="${gedungDetail.atap.gentengPanjang }" /> m<sup>2</sup></td>
 						</tr>
 						<tr>
 							<td><strong>Bahan:</strong></td>
@@ -215,7 +215,7 @@
 					<tbody>
 						<tr>
 							<td><strong>Panjang:</strong></td>
-							<td><c:out value="${gedungDetail.atap.bumbunganPanjang}" /> m</td>
+							<td><c:out value="${gedungDetail.atap.bumbunganPanjang}" /> m<sup>2</sup></td>
 						</tr>
 						<tr>
 							<td><strong>Bahan:</strong></td>

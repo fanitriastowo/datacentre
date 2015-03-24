@@ -253,15 +253,15 @@
 					<tbody>
 						<tr>
 							<td><strong>Panjang:</strong></td>
-							<td><c:out value="${gedungDetail.atap.usukPanjang }" /> m<sup>2</sup></td>
+							<td><c:out value="${gedungDetail.plafon.lisplangPanjang }" /> m<sup>2</sup></td>
 						</tr>
 						<tr>
 							<td><strong>Bahan:</strong></td>
-							<td><c:out value="${gedungDetail.atap.usukBahan }" /></td>
+							<td><c:out value="${gedungDetail.plafon.lisplangBahan }" /></td>
 						</tr>
 						<tr>
 							<td><strong>Kondisi:</strong></td>
-							<td><c:out value="${gedungDetail.atap.usukKondisi }" /></td>
+							<td><c:out value="${gedungDetail.plafon.lisplangKondisi }" /></td>
 						</tr>
 					</tbody>
 				</table>
@@ -276,15 +276,15 @@
 					<tbody>
 						<tr>
 							<td><strong>Panjang:</strong></td>
-							<td><c:out value="${gedungDetail.atap.gordingPanjang }" /> m<sup>2</sup></td>
+							<td><c:out value="${gedungDetail.plafon.rangkaPlafonPanjang }" /> m<sup>2</sup></td>
 						</tr>
 						<tr>
 							<td><strong>Bahan:</strong></td>
-							<td><c:out value="${gedungDetail.atap.gordingBahan }" /></td>
+							<td><c:out value="${gedungDetail.plafon.rangkaPlafonBahan }" /></td>
 						</tr>
 						<tr>
 							<td><strong>Kondisi:</strong></td>
-							<td><c:out value="${gedungDetail.atap.gordingKondisi }" /></td>
+							<td><c:out value="${gedungDetail.plafon.rangkaPlafonKondisi }" /></td>
 						</tr>
 					</tbody>
 				</table>
@@ -299,15 +299,15 @@
 					<tbody>
 						<tr>
 							<td><strong>Panjang:</strong></td>
-							<td><c:out value="${gedungDetail.atap.rengPanjang }" /> m<sup>2</sup></td>
+							<td><c:out value="${gedungDetail.plafon.plafonPanjang }" /> m<sup>2</sup></td>
 						</tr>
 						<tr>
 							<td><strong>Bahan:</strong></td>
-							<td><c:out value="${gedungDetail.atap.rengBahan }" /></td>
+							<td><c:out value="${gedungDetail.plafon.plafonBahan }" /></td>
 						</tr>
 						<tr>
 							<td><strong>Kondisi:</strong></td>
-							<td><c:out value="${gedungDetail.atap.rengKondisi }" /></td>
+							<td><c:out value="${gedungDetail.plafon.plafonKondisi }" /></td>
 						</tr>
 					</tbody>
 				</table>

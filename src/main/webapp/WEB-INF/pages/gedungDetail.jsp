@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../template/taglib.jsp"%>
 
+<!-- Identitas -->
 <div class="panel panel-success">
 	<div class="panel-heading">
 		<h2 class="panel-title text-center">
@@ -57,6 +58,7 @@
 	</div>
 </div>
 
+<!-- Atap -->
 <div class="panel panel-success">
 	<div class="panel-heading">
 		<h2 class="panel-title text-center">
@@ -224,6 +226,88 @@
 						<tr>
 							<td><strong>Kondisi:</strong></td>
 							<td><c:out value="${gedungDetail.atap.bumbunganKondisi }" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Plafon -->
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2 class="panel-title text-center">
+			<strong>Status Plafon</strong>
+		</h2>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-4">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="text-center"><strong>Lisplang</strong></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong>Panjang:</strong></td>
+							<td><c:out value="${gedungDetail.atap.usukPanjang }" /> m<sup>2</sup></td>
+						</tr>
+						<tr>
+							<td><strong>Bahan:</strong></td>
+							<td><c:out value="${gedungDetail.atap.usukBahan }" /></td>
+						</tr>
+						<tr>
+							<td><strong>Kondisi:</strong></td>
+							<td><c:out value="${gedungDetail.atap.usukKondisi }" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-4">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="text-center"><strong>Rangka Plafon</strong></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong>Panjang:</strong></td>
+							<td><c:out value="${gedungDetail.atap.gordingPanjang }" /> m<sup>2</sup></td>
+						</tr>
+						<tr>
+							<td><strong>Bahan:</strong></td>
+							<td><c:out value="${gedungDetail.atap.gordingBahan }" /></td>
+						</tr>
+						<tr>
+							<td><strong>Kondisi:</strong></td>
+							<td><c:out value="${gedungDetail.atap.gordingKondisi }" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-4">
+				<table class="table">
+					<thead>
+						<tr>
+							<th class="text-center"><strong>Plafon</strong></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong>Panjang:</strong></td>
+							<td><c:out value="${gedungDetail.atap.rengPanjang }" /> m<sup>2</sup></td>
+						</tr>
+						<tr>
+							<td><strong>Bahan:</strong></td>
+							<td><c:out value="${gedungDetail.atap.rengBahan }" /></td>
+						</tr>
+						<tr>
+							<td><strong>Kondisi:</strong></td>
+							<td><c:out value="${gedungDetail.atap.rengKondisi }" /></td>
 						</tr>
 					</tbody>
 				</table>

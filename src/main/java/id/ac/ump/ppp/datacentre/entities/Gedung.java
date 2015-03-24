@@ -48,6 +48,10 @@ public class Gedung {
 	@JoinColumn(name = "atap_id")
 	private Atap atap;
 
+	@OneToOne
+	@JoinColumn(name = "plafon_id")
+	private Plafon plafon;
+
 	private JenisGedung jenisGedung;
 
 	public enum JenisGedung {
@@ -140,6 +144,14 @@ public class Gedung {
 
 	public void setAtap(Atap atap) {
 		this.atap = atap;
+	}
+
+	public Plafon getPlafon() {
+		return plafon;
+	}
+
+	public void setPlafon(Plafon plafon) {
+		this.plafon = plafon;
 	}
 
 }

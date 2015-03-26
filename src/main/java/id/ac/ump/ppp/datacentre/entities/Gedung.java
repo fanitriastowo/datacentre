@@ -53,7 +53,7 @@ public class Gedung {
 	private Plafon plafon;
 
 	@OneToOne
-	@JoinColumn(name = "plafon_id")
+	@JoinColumn(name = "struktur_id")
 	private Struktur struktur;
 
 	private JenisGedung jenisGedung;

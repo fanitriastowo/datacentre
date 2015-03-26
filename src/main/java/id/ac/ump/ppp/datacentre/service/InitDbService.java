@@ -9,6 +9,7 @@ import id.ac.ump.ppp.datacentre.entities.Gedung;
 import id.ac.ump.ppp.datacentre.entities.Plafon;
 import id.ac.ump.ppp.datacentre.entities.Role;
 import id.ac.ump.ppp.datacentre.entities.User;
+import id.ac.ump.ppp.datacentre.entities.Struktur;
 import id.ac.ump.ppp.datacentre.entities.Gedung.JenisGedung;
 import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
 import id.ac.ump.ppp.datacentre.repositories.AtapRepository;
@@ -16,6 +17,7 @@ import id.ac.ump.ppp.datacentre.repositories.GedungRepository;
 import id.ac.ump.ppp.datacentre.repositories.PlafonRepository;
 import id.ac.ump.ppp.datacentre.repositories.RoleRepository;
 import id.ac.ump.ppp.datacentre.repositories.UserRepository;
+import id.ac.ump.ppp.datacentre.repositories.StrukturRepository;
 
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
@@ -42,6 +44,9 @@ public class InitDbService {
 
 	@Autowired
 	private PlafonRepository plafonRepository;
+
+	@Autowired
+	private StrukturRepository strukturRepository;
 
 	@PostConstruct
 	public void initDb() {
@@ -112,6 +117,27 @@ public class InitDbService {
 		plafonRepository.save(plafon1);
 		/* ============= Plafon ============ */
 
+		/* ============= Struktur ============ */
+		Struktur struktur1 = new Struktur();
+		struktur1.setKolomJumlah(30);
+		struktur1.setKolomBahan("Baja");
+		struktur1.setKolomKondisi(Kondisi.RUSAK_RINGAN);
+
+		struktur1.setRingBalokJumlah(30);
+		struktur1.setRingBalokBahan("Baja");
+		struktur1.setRingBalokKondisi(Kondisi.RUSAK_RINGAN);
+
+		struktur1.setBalokJumlah(30);
+		struktur1.setBalokBahan("Baja");
+		struktur1.setBalokKondisi(Kondisi.RUSAK_BERAT);
+
+		struktur1.setPelatLantaiPanjang(30.5);
+		struktur1.setPelatLantaiBahan("Besi");
+		struktur1.setPelatLantaiKondisi(Kondisi.BAIK);
+
+		strukturRepository.save(struktur1);
+		/* ============= Struktur ============ */
+
 		Calendar tahunBerdiri = Calendar.getInstance();
 		tahunBerdiri.set(2014, 0, 1);
 
@@ -130,6 +156,7 @@ public class InitDbService {
 		gedung.setLokasiGedung("Kampus 1 UMP Dukuhwaluh Purwokerto");
 		gedung.setAtap(atap1);
 		gedung.setPlafon(plafon1);
+		gedung.setStruktur(struktur1);
 		gedungRepository.save(gedung);
 		// ====================================================================================
 
@@ -182,6 +209,28 @@ public class InitDbService {
 		plafonRepository.save(plafon2);
 		/* ============= Plafon ============ */
 
+
+		/* ============= Struktur ============ */
+		Struktur struktur2 = new Struktur();
+		struktur2.setKolomJumlah(30);
+		struktur2.setKolomBahan("Baja");
+		struktur2.setKolomKondisi(Kondisi.RUSAK_RINGAN);
+
+		struktur2.setRingBalokJumlah(30);
+		struktur2.setRingBalokBahan("Baja");
+		struktur2.setRingBalokKondisi(Kondisi.RUSAK_RINGAN);
+
+		struktur2.setBalokJumlah(30);
+		struktur2.setBalokBahan("Baja");
+		struktur2.setBalokKondisi(Kondisi.RUSAK_BERAT);
+
+		struktur2.setPelatLantaiPanjang(30.5);
+		struktur2.setPelatLantaiBahan("Besi");
+		struktur2.setPelatLantaiKondisi(Kondisi.BAIK);
+
+		strukturRepository.save(struktur2);
+		/* ============= Struktur ============ */
+
 		tahunBerdiri.set(2004, 0, 1);
 		tahunSurvey.set(2004, 0, 1);
 
@@ -197,6 +246,7 @@ public class InitDbService {
 		gedung2.setLokasiGedung("Kampus 1 UMP Dukuhwaluh Purwokerto");
 		gedung2.setAtap(atap2);
 		gedung2.setPlafon(plafon2);
+		gedung2.setStruktur(struktur2);
 		gedungRepository.save(gedung2);
 		// ====================================================================================
 	}

@@ -52,6 +52,10 @@ public class Gedung {
 	@JoinColumn(name = "plafon_id")
 	private Plafon plafon;
 
+	@OneToOne
+	@JoinColumn(name = "plafon_id")
+	private Struktur struktur;
+
 	private JenisGedung jenisGedung;
 
 	public enum JenisGedung {
@@ -152,6 +156,14 @@ public class Gedung {
 
 	public void setPlafon(Plafon plafon) {
 		this.plafon = plafon;
+	}
+
+	public Struktur getStruktur() {
+		return struktur;
+	}
+
+	public void setStruktur(Struktur struktur) {
+		this.struktur = struktur;
 	}
 
 }

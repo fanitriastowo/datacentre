@@ -10,6 +10,7 @@ import id.ac.ump.ppp.datacentre.entities.Plafon;
 import id.ac.ump.ppp.datacentre.entities.Role;
 import id.ac.ump.ppp.datacentre.entities.User;
 import id.ac.ump.ppp.datacentre.entities.Struktur;
+import id.ac.ump.ppp.datacentre.entities.Pondasi;
 import id.ac.ump.ppp.datacentre.entities.Gedung.JenisGedung;
 import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
 import id.ac.ump.ppp.datacentre.repositories.AtapRepository;
@@ -18,6 +19,7 @@ import id.ac.ump.ppp.datacentre.repositories.PlafonRepository;
 import id.ac.ump.ppp.datacentre.repositories.RoleRepository;
 import id.ac.ump.ppp.datacentre.repositories.UserRepository;
 import id.ac.ump.ppp.datacentre.repositories.StrukturRepository;
+import id.ac.ump.ppp.datacentre.repositories.PondasiRepository;
 
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
@@ -47,6 +49,9 @@ public class InitDbService {
 
 	@Autowired
 	private StrukturRepository strukturRepository;
+
+	@Autowired
+	private PondasiRepository pondasiRepository;
 
 	@PostConstruct
 	public void initDb() {
@@ -138,6 +143,14 @@ public class InitDbService {
 		strukturRepository.save(struktur1);
 		/* ============= Struktur ============ */
 
+		/* ============= Pondasi ============ */
+		Pondasi pondasi1 = new Pondasi();
+		pondasi1.setSloofPanjang(30.2);
+		pondasi1.setSloofBahan("Baja");
+		pondasi1.setSloofKondisi(Kondisi.BAIK);
+		pondasiRepository.save(pondasi1);
+		/* ============= Pondasi ============ */
+
 		Calendar tahunBerdiri = Calendar.getInstance();
 		tahunBerdiri.set(2014, 0, 1);
 
@@ -157,6 +170,7 @@ public class InitDbService {
 		gedung.setAtap(atap1);
 		gedung.setPlafon(plafon1);
 		gedung.setStruktur(struktur1);
+		gedung.setPondasi(pondasi1);
 		gedungRepository.save(gedung);
 		// ====================================================================================
 
@@ -231,6 +245,14 @@ public class InitDbService {
 		strukturRepository.save(struktur2);
 		/* ============= Struktur ============ */
 
+		/* ============= Pondasi ============ */
+		Pondasi pondasi2 = new Pondasi();
+		pondasi2.setSloofPanjang(30.2);
+		pondasi2.setSloofBahan("Baja");
+		pondasi2.setSloofKondisi(Kondisi.BAIK);
+		pondasiRepository.save(pondasi2);
+		/* ============= Pondasi ============ */
+
 		tahunBerdiri.set(2004, 0, 1);
 		tahunSurvey.set(2004, 0, 1);
 
@@ -247,6 +269,7 @@ public class InitDbService {
 		gedung2.setAtap(atap2);
 		gedung2.setPlafon(plafon2);
 		gedung2.setStruktur(struktur2);
+		gedung2.setPondasi(pondasi2);
 		gedungRepository.save(gedung2);
 		// ====================================================================================
 	}

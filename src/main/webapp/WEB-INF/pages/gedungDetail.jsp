@@ -67,6 +67,7 @@
 	<li><a href="#ruangan" role="tab" data-toggle="tab">Ruangan</a></li>
 	<li><a href="#lantai" role="tab" data-toggle="tab">Lantai</a></li>
 	<li><a href="#kelistrikan" role="tab" data-toggle="tab">Kelistrikan</a></li>
+	<li><a href="#air" role="tab" data-toggle="tab">Air</a></li>
 </ul>
 
 <div class="tab-content">
@@ -940,6 +941,199 @@
 								<tr>
 									<td><strong>Rusak:</strong></td>
 									<td><c:out value="${gedungDetail.kelistrikan.switchJumlahRusak }" /> Buah</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Air -->
+	<div class="tab-pane" id="air">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h2 class="panel-title text-center">
+					<strong>Status Air</strong>
+				</h2>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Instalasi Pipa Air Bersih</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.air.instalasiPipaAirBersihPanjang }" /> m</td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.air.instalasiPipaAirBersihBahan }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.air.instalasiPipaAirBersihKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Tanki Air</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Volume:</strong></td>
+									<td><c:out value="${gedungDetail.air.tankiAirVolume }" /> m<sup>3</sup></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.air.tankiAirKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Pompa</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Jumlah:</strong></td>
+									<td><c:out value="${gedungDetail.air.pompaJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.air.pompaKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Kran</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.air.kranJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Merek:</strong></td>
+									<td><c:out value="${gedungDetail.air.kranMerek }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.air.kranKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Groundtank</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Jumlah:</strong></td>
+									<td><c:out value="${gedungDetail.air.groundtankJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Merek:</strong></td>
+									<td><c:out value="${gedungDetail.air.groundtankMerek }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.air.groundtankKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Instalasi Air Kotor</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.air.instalasiAirKotorPanjang }" /> m<sup>2</sup></td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.air.instalasiAirKotorBahan }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.air.instalasiAirKotorKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Drainase</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Jumlah:</strong></td>
+									<td><c:out value="${gedungDetail.air.drainaseJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.air.drainaseBahan }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.air.drainaseKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Water Closed</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Jumlah:</strong></td>
+									<td><c:out value="${gedungDetail.air.waterClosedJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Merek:</strong></td>
+									<td><c:out value="${gedungDetail.air.waterClosedMerek }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.air.waterClosedKondisi }" /></td>
 								</tr>
 							</tbody>
 						</table>

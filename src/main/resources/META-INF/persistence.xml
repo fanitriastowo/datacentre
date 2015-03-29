@@ -11,5 +11,6 @@
 		<class>id.ac.ump.ppp.datacentre.entities.Ruangan</class>
 		<class>id.ac.ump.ppp.datacentre.entities.Lantai</class>
 		<class>id.ac.ump.ppp.datacentre.entities.Kelistrikan</class>
+		<class>id.ac.ump.ppp.datacentre.entities.Air</class>
 	</persistence-unit>
 </persistence>

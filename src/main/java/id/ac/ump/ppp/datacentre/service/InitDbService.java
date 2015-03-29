@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import id.ac.ump.ppp.datacentre.entities.Air;
 import id.ac.ump.ppp.datacentre.entities.Atap;
 import id.ac.ump.ppp.datacentre.entities.Gedung;
 import id.ac.ump.ppp.datacentre.entities.Kelistrikan;
@@ -16,6 +17,7 @@ import id.ac.ump.ppp.datacentre.entities.Struktur;
 import id.ac.ump.ppp.datacentre.entities.Pondasi;
 import id.ac.ump.ppp.datacentre.entities.Gedung.JenisGedung;
 import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
+import id.ac.ump.ppp.datacentre.repositories.AirRepository;
 import id.ac.ump.ppp.datacentre.repositories.AtapRepository;
 import id.ac.ump.ppp.datacentre.repositories.GedungRepository;
 import id.ac.ump.ppp.datacentre.repositories.KelistrikanRepository;
@@ -67,6 +69,9 @@ public class InitDbService {
 
 	@Autowired
 	private KelistrikanRepository kelistrikanRepository;
+
+	@Autowired
+	private AirRepository airRepository;
 
 	@PostConstruct
 	public void initDb() {
@@ -234,6 +239,33 @@ public class InitDbService {
 		kelistrikanRepository.save(kelistrikan1);
 		/* ============= Kelistrikan ============ */
 
+		/* ============= Air ============ */
+		Air air1 = new Air();
+		air1.setInstalasiPipaAirBersihPanjang(30d);
+		air1.setInstalasiPipaAirBersihBahan("PVC");
+		air1.setInstalasiPipaAirBersihKondisi(Kondisi.BAIK);
+		air1.setTankiAirVolume(30d);
+		air1.setTankiAirKondisi(Kondisi.BAIK);
+		air1.setPompaJumlah(5);
+		air1.setPompaKondisi(Kondisi.BAIK);
+		air1.setKranJumlah(30);
+		air1.setKranMerek("MajuJaya");
+		air1.setKranKondisi(Kondisi.RUSAK_SEDANG);
+		air1.setGroundtankJumlah(30);
+		air1.setGroundtankMerek("Pinguin");
+		air1.setGroundtankKondisi(Kondisi.BAIK);
+		air1.setInstalasiAirKotorPanjang(30d);
+		air1.setInstalasiAirKotorBahan("PVC");
+		air1.setInstalasiAirKotorKondisi(Kondisi.BAIK);
+		air1.setDrainaseJumlah(10);
+		air1.setDrainaseBahan("Besi");
+		air1.setDrainaseKondisi(Kondisi.BAIK);
+		air1.setWaterClosedJumlah(20);
+		air1.setWaterClosedMerek("MajuMakmur");
+		air1.setWaterClosedKondisi(Kondisi.BAIK);
+		airRepository.save(air1);
+		/* ============= Air ============ */
+
 		Calendar tahunBerdiri = Calendar.getInstance();
 		tahunBerdiri.set(2014, 0, 1);
 
@@ -257,6 +289,7 @@ public class InitDbService {
 		gedung.setRuangan(ruangan1);
 		gedung.setLantai(lantai1);
 		gedung.setKelistrikan(kelistrikan1);
+		gedung.setAir(air1);
 		gedungRepository.save(gedung);
 		// ====================================================================================
 
@@ -406,6 +439,33 @@ public class InitDbService {
 		kelistrikanRepository.save(kelistrikan2);
 		/* ============= Kelistrikan ============ */
 
+		/* ============= Air ============ */
+		Air air2 = new Air();
+		air2.setInstalasiPipaAirBersihPanjang(30d);
+		air2.setInstalasiPipaAirBersihBahan("PVC");
+		air2.setInstalasiPipaAirBersihKondisi(Kondisi.BAIK);
+		air2.setTankiAirVolume(30d);
+		air2.setTankiAirKondisi(Kondisi.BAIK);
+		air2.setPompaJumlah(5);
+		air2.setPompaKondisi(Kondisi.BAIK);
+		air2.setKranJumlah(30);
+		air2.setKranMerek("MajuJaya");
+		air2.setKranKondisi(Kondisi.RUSAK_SEDANG);
+		air2.setGroundtankJumlah(30);
+		air2.setGroundtankMerek("Pinguin");
+		air2.setGroundtankKondisi(Kondisi.BAIK);
+		air2.setInstalasiAirKotorPanjang(30d);
+		air2.setInstalasiAirKotorBahan("PVC");
+		air2.setInstalasiAirKotorKondisi(Kondisi.BAIK);
+		air2.setDrainaseJumlah(10);
+		air2.setDrainaseBahan("Besi");
+		air2.setDrainaseKondisi(Kondisi.BAIK);
+		air2.setWaterClosedJumlah(20);
+		air2.setWaterClosedMerek("MajuMakmur");
+		air2.setWaterClosedKondisi(Kondisi.BAIK);
+		airRepository.save(air2);
+		/* ============= Air ============ */
+
 		tahunBerdiri.set(2004, 0, 1);
 		tahunSurvey.set(2004, 0, 1);
 
@@ -426,6 +486,7 @@ public class InitDbService {
 		gedung2.setRuangan(ruangan2);
 		gedung2.setLantai(lantai2);
 		gedung2.setKelistrikan(kelistrikan2);
+		gedung2.setAir(air2);
 		gedungRepository.save(gedung2);
 		// ====================================================================================
 	}

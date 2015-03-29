@@ -67,10 +67,14 @@ public class Gedung {
 	@OneToOne
 	@JoinColumn(name = "lantai_id")
 	private Lantai lantai;
-	
+
 	@OneToOne
 	@JoinColumn(name = "kelistrikan_id")
 	private Kelistrikan kelistrikan;
+
+	@OneToOne
+	@JoinColumn(name = "air_id")
+	private Air air;
 
 	private JenisGedung jenisGedung;
 
@@ -212,6 +216,14 @@ public class Gedung {
 
 	public void setKelistrikan(Kelistrikan kelistrikan) {
 		this.kelistrikan = kelistrikan;
+	}
+
+	public Air getAir() {
+		return air;
+	}
+
+	public void setAir(Air air) {
+		this.air = air;
 	}
 
 }

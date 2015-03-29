@@ -66,6 +66,7 @@
 	<li><a href="#pondasi" role="tab" data-toggle="tab">Pondasi</a></li>
 	<li><a href="#ruangan" role="tab" data-toggle="tab">Ruangan</a></li>
 	<li><a href="#lantai" role="tab" data-toggle="tab">Lantai</a></li>
+	<li><a href="#kelistrikan" role="tab" data-toggle="tab">Kelistrikan</a></li>
 </ul>
 
 <div class="tab-content">
@@ -743,6 +744,7 @@
 			</div>
 		</div>
 	</div>
+
 	<!-- Lantai -->
 	<div class="tab-pane" id="lantai">
 		<div class="panel panel-success">
@@ -772,6 +774,172 @@
 								<tr>
 									<td><strong>Kondisi:</strong></td>
 									<td><c:out value="${gedungDetail.lantai.keramikKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Kelistrikan -->
+	<div class="tab-pane" id="kelistrikan">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h2 class="panel-title text-center">
+					<strong>Status Kelistrikan</strong>
+				</h2>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Instalasi Kabel</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.instalasiKabelPanjang }" /> m</td>
+								</tr>
+								<tr>
+									<td><strong>Jenis:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.instalasiKabelJenis }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.instalasiKabelKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Lampu</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Jumlah:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.lampuJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Baik:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.lampuJumlahBaik }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Rusak:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.lampuJumlahRusak }" /> Buah</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Stop Kontak</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Jumlah:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.stopKontakJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Baik:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.stopKontakJumlahBaik }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Rusak:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.stopKontakJumlahRusak }" /> Buah</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Saklar</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Jumlah:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.saklarJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Baik:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.saklarJumlahBaik }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Rusak:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.saklarJumlahRusak }" /> Buah</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Instalasi Listrik</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.instalasiListrikKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-4">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Instalasi LAN</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.instalasiKabelLANPanjang }" /> m</td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.instalasiKabelLANKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-4">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Switch</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Jumlah:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.switchJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Baik:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.switchJumlahBaik }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Rusak:</strong></td>
+									<td><c:out value="${gedungDetail.kelistrikan.switchJumlahRusak }" /> Buah</td>
 								</tr>
 							</tbody>
 						</table>

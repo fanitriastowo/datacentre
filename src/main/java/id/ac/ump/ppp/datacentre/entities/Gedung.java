@@ -67,6 +67,10 @@ public class Gedung {
 	@OneToOne
 	@JoinColumn(name = "lantai_id")
 	private Lantai lantai;
+	
+	@OneToOne
+	@JoinColumn(name = "kelistrikan_id")
+	private Kelistrikan kelistrikan;
 
 	private JenisGedung jenisGedung;
 
@@ -200,6 +204,14 @@ public class Gedung {
 
 	public void setLantai(Lantai lantai) {
 		this.lantai = lantai;
+	}
+
+	public Kelistrikan getKelistrikan() {
+		return kelistrikan;
+	}
+
+	public void setKelistrikan(Kelistrikan kelistrikan) {
+		this.kelistrikan = kelistrikan;
 	}
 
 }

@@ -10,5 +10,6 @@
 		<class>id.ac.ump.ppp.datacentre.entities.Pondasi</class>
 		<class>id.ac.ump.ppp.datacentre.entities.Ruangan</class>
 		<class>id.ac.ump.ppp.datacentre.entities.Lantai</class>
+		<class>id.ac.ump.ppp.datacentre.entities.Kelistrikan</class>
 	</persistence-unit>
 </persistence>

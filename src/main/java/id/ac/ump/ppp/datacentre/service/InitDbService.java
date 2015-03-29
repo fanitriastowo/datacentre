@@ -6,6 +6,7 @@ import java.util.List;
 
 import id.ac.ump.ppp.datacentre.entities.Atap;
 import id.ac.ump.ppp.datacentre.entities.Gedung;
+import id.ac.ump.ppp.datacentre.entities.Kelistrikan;
 import id.ac.ump.ppp.datacentre.entities.Lantai;
 import id.ac.ump.ppp.datacentre.entities.Plafon;
 import id.ac.ump.ppp.datacentre.entities.Role;
@@ -17,6 +18,7 @@ import id.ac.ump.ppp.datacentre.entities.Gedung.JenisGedung;
 import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
 import id.ac.ump.ppp.datacentre.repositories.AtapRepository;
 import id.ac.ump.ppp.datacentre.repositories.GedungRepository;
+import id.ac.ump.ppp.datacentre.repositories.KelistrikanRepository;
 import id.ac.ump.ppp.datacentre.repositories.LantaiRepository;
 import id.ac.ump.ppp.datacentre.repositories.PlafonRepository;
 import id.ac.ump.ppp.datacentre.repositories.RoleRepository;
@@ -62,6 +64,9 @@ public class InitDbService {
 
 	@Autowired
 	private LantaiRepository lantaiRepository;
+
+	@Autowired
+	private KelistrikanRepository kelistrikanRepository;
 
 	@PostConstruct
 	public void initDb() {
@@ -206,6 +211,29 @@ public class InitDbService {
 		lantaiRepository.save(lantai1);
 		/* ============= Lantai ============ */
 
+		/* ============= Kelistrikan ============ */
+		Kelistrikan kelistrikan1 = new Kelistrikan();
+		kelistrikan1.setInstalasiKabelPanjang(20d);
+		kelistrikan1.setInstalasiKabelJenis("Kitani NYA");
+		kelistrikan1.setInstalasiKabelKondisi(Kondisi.BAIK);
+		kelistrikan1.setLampuJumlah(30);
+		kelistrikan1.setLampuJumlahBaik(20);
+		kelistrikan1.setLampuJumlahRusak(10);
+		kelistrikan1.setStopKontakJumlah(30);
+		kelistrikan1.setStopKontakJumlahBaik(20);
+		kelistrikan1.setStopKontakJumlahRusak(10);
+		kelistrikan1.setSaklarJumlah(30);
+		kelistrikan1.setSaklarJumlahBaik(20);
+		kelistrikan1.setSaklarJumlahRusak(10);
+		kelistrikan1.setInstalasiListrikKondisi(Kondisi.BAIK);
+		kelistrikan1.setInstalasiKabelLANPanjang(300d);
+		kelistrikan1.setInstalasiKabelLANKondisi(Kondisi.BAIK);
+		kelistrikan1.setSwitchJumlah(20);
+		kelistrikan1.setSwitchJumlahBaik(10);
+		kelistrikan1.setSwitchJumlahRusak(10);
+		kelistrikanRepository.save(kelistrikan1);
+		/* ============= Kelistrikan ============ */
+
 		Calendar tahunBerdiri = Calendar.getInstance();
 		tahunBerdiri.set(2014, 0, 1);
 
@@ -228,6 +256,7 @@ public class InitDbService {
 		gedung.setPondasi(pondasi1);
 		gedung.setRuangan(ruangan1);
 		gedung.setLantai(lantai1);
+		gedung.setKelistrikan(kelistrikan1);
 		gedungRepository.save(gedung);
 		// ====================================================================================
 
@@ -354,6 +383,29 @@ public class InitDbService {
 		lantaiRepository.save(lantai2);
 		/* ============= Lantai ============ */
 
+		/* ============= Kelistrikan ============ */
+		Kelistrikan kelistrikan2 = new Kelistrikan();
+		kelistrikan2.setInstalasiKabelPanjang(20d);
+		kelistrikan2.setInstalasiKabelJenis("Kitani NYA");
+		kelistrikan2.setInstalasiKabelKondisi(Kondisi.BAIK);
+		kelistrikan2.setLampuJumlah(30);
+		kelistrikan2.setLampuJumlahBaik(20);
+		kelistrikan2.setLampuJumlahRusak(10);
+		kelistrikan2.setStopKontakJumlah(30);
+		kelistrikan2.setStopKontakJumlahBaik(20);
+		kelistrikan2.setStopKontakJumlahRusak(10);
+		kelistrikan2.setSaklarJumlah(30);
+		kelistrikan2.setSaklarJumlahBaik(20);
+		kelistrikan2.setSaklarJumlahRusak(10);
+		kelistrikan2.setInstalasiListrikKondisi(Kondisi.BAIK);
+		kelistrikan2.setInstalasiKabelLANPanjang(300d);
+		kelistrikan2.setInstalasiKabelLANKondisi(Kondisi.BAIK);
+		kelistrikan2.setSwitchJumlah(20);
+		kelistrikan2.setSwitchJumlahBaik(10);
+		kelistrikan2.setSwitchJumlahRusak(10);
+		kelistrikanRepository.save(kelistrikan2);
+		/* ============= Kelistrikan ============ */
+
 		tahunBerdiri.set(2004, 0, 1);
 		tahunSurvey.set(2004, 0, 1);
 
@@ -373,6 +425,7 @@ public class InitDbService {
 		gedung2.setPondasi(pondasi2);
 		gedung2.setRuangan(ruangan2);
 		gedung2.setLantai(lantai2);
+		gedung2.setKelistrikan(kelistrikan2);
 		gedungRepository.save(gedung2);
 		// ====================================================================================
 	}

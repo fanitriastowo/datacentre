@@ -8,6 +8,7 @@ import id.ac.ump.ppp.datacentre.entities.Atap;
 import id.ac.ump.ppp.datacentre.entities.Gedung;
 import id.ac.ump.ppp.datacentre.entities.Plafon;
 import id.ac.ump.ppp.datacentre.entities.Role;
+import id.ac.ump.ppp.datacentre.entities.Ruangan;
 import id.ac.ump.ppp.datacentre.entities.User;
 import id.ac.ump.ppp.datacentre.entities.Struktur;
 import id.ac.ump.ppp.datacentre.entities.Pondasi;
@@ -17,6 +18,7 @@ import id.ac.ump.ppp.datacentre.repositories.AtapRepository;
 import id.ac.ump.ppp.datacentre.repositories.GedungRepository;
 import id.ac.ump.ppp.datacentre.repositories.PlafonRepository;
 import id.ac.ump.ppp.datacentre.repositories.RoleRepository;
+import id.ac.ump.ppp.datacentre.repositories.RuanganRepository;
 import id.ac.ump.ppp.datacentre.repositories.UserRepository;
 import id.ac.ump.ppp.datacentre.repositories.StrukturRepository;
 import id.ac.ump.ppp.datacentre.repositories.PondasiRepository;
@@ -52,6 +54,9 @@ public class InitDbService {
 
 	@Autowired
 	private PondasiRepository pondasiRepository;
+
+	@Autowired
+	private RuanganRepository ruanganRepository;
 
 	@PostConstruct
 	public void initDb() {
@@ -151,6 +156,43 @@ public class InitDbService {
 		pondasiRepository.save(pondasi1);
 		/* ============= Pondasi ============ */
 
+		/* ============= Ruangan ============ */
+		Ruangan ruangan1 = new Ruangan();
+		ruangan1.setDindingRuangPanjang(30d);
+		ruangan1.setDindingRuangBahan("Triplex");
+		ruangan1.setDindingRuangKondisi(Kondisi.BAIK);
+		ruangan1.setCatDindingPanjang(20d);
+		ruangan1.setCatDindingJenis("Cat Tembok");
+		ruangan1.setCatDindingKondisi(Kondisi.BAIK);
+		ruangan1.setKusenPintuJumlah(30);
+		ruangan1.setKusenPintuBahan("Jati");
+		ruangan1.setKusenPintuKondisi(Kondisi.RUSAK_RINGAN);
+		ruangan1.setDaunPintuJumlah(90);
+		ruangan1.setDaunPintuBahan("Stainless Steel");
+		ruangan1.setDaunPintuKondisi(Kondisi.BAIK);
+		ruangan1.setKunciHendelJumlah(20);
+		ruangan1.setKunciHendelBahan("Stainless Stell");
+		ruangan1.setKunciHendelKondisi(Kondisi.BAIK);
+		ruangan1.setCatPintuPanjang(20d);
+		ruangan1.setCatPintuJenis("Plistur");
+		ruangan1.setCatPintuKondisi(Kondisi.BAIK);
+		ruangan1.setKusenJendelaJumlah(20);
+		ruangan1.setKusenJendelaBahan("Jati");
+		ruangan1.setKusenJendelaKondisi(Kondisi.BAIK);
+		ruangan1.setDaunJendelaJumlah(20);
+		ruangan1.setDaunJendelaBahan("Jati");
+		ruangan1.setDaunJendelaKondisi(Kondisi.BAIK);
+		ruangan1.setKacaPanjang(30d);
+		ruangan1.setKacaKondisi(Kondisi.BAIK);
+		ruangan1.setSlotJumlah(30);
+		ruangan1.setSlotMerek("Ferarri");
+		ruangan1.setSlotKondisi(Kondisi.BAIK);
+		ruangan1.setCatJendelaPanjang(30d);
+		ruangan1.setCatJendelaJenis("Minyak");
+		ruangan1.setCatJendelaKondisi(Kondisi.BAIK);
+		ruanganRepository.save(ruangan1);
+		/* ============= Ruangan ============ */
+
 		Calendar tahunBerdiri = Calendar.getInstance();
 		tahunBerdiri.set(2014, 0, 1);
 
@@ -171,6 +213,7 @@ public class InitDbService {
 		gedung.setPlafon(plafon1);
 		gedung.setStruktur(struktur1);
 		gedung.setPondasi(pondasi1);
+		gedung.setRuangan(ruangan1);
 		gedungRepository.save(gedung);
 		// ====================================================================================
 
@@ -223,7 +266,6 @@ public class InitDbService {
 		plafonRepository.save(plafon2);
 		/* ============= Plafon ============ */
 
-
 		/* ============= Struktur ============ */
 		Struktur struktur2 = new Struktur();
 		struktur2.setKolomJumlah(30);
@@ -253,6 +295,43 @@ public class InitDbService {
 		pondasiRepository.save(pondasi2);
 		/* ============= Pondasi ============ */
 
+		/* ============= Ruangan ============ */
+		Ruangan ruangan2 = new Ruangan();
+		ruangan2.setDindingRuangPanjang(30d);
+		ruangan2.setDindingRuangBahan("Triplex");
+		ruangan2.setDindingRuangKondisi(Kondisi.BAIK);
+		ruangan2.setCatDindingPanjang(20d);
+		ruangan2.setCatDindingJenis("Cat Tembok");
+		ruangan2.setCatDindingKondisi(Kondisi.BAIK);
+		ruangan2.setKusenPintuJumlah(30);
+		ruangan2.setKusenPintuBahan("Jati");
+		ruangan2.setKusenPintuKondisi(Kondisi.RUSAK_RINGAN);
+		ruangan2.setDaunPintuJumlah(90);
+		ruangan2.setDaunPintuBahan("Stainless Steel");
+		ruangan2.setDaunPintuKondisi(Kondisi.BAIK);
+		ruangan2.setKunciHendelJumlah(20);
+		ruangan2.setKunciHendelBahan("Stainless Stell");
+		ruangan2.setKunciHendelKondisi(Kondisi.BAIK);
+		ruangan2.setCatPintuPanjang(20d);
+		ruangan2.setCatPintuJenis("Plistur");
+		ruangan2.setCatPintuKondisi(Kondisi.BAIK);
+		ruangan2.setKusenJendelaJumlah(20);
+		ruangan2.setKusenJendelaBahan("Jati");
+		ruangan2.setKusenJendelaKondisi(Kondisi.BAIK);
+		ruangan2.setDaunJendelaJumlah(20);
+		ruangan2.setDaunJendelaBahan("Jati");
+		ruangan2.setDaunJendelaKondisi(Kondisi.BAIK);
+		ruangan2.setKacaPanjang(30d);
+		ruangan2.setKacaKondisi(Kondisi.BAIK);
+		ruangan2.setSlotJumlah(30);
+		ruangan2.setSlotMerek("Ferarri");
+		ruangan2.setSlotKondisi(Kondisi.BAIK);
+		ruangan2.setCatJendelaPanjang(30d);
+		ruangan2.setCatJendelaJenis("Minyak");
+		ruangan2.setCatJendelaKondisi(Kondisi.BAIK);
+		ruanganRepository.save(ruangan2);
+		/* ============= Ruangan ============ */
+
 		tahunBerdiri.set(2004, 0, 1);
 		tahunSurvey.set(2004, 0, 1);
 
@@ -270,6 +349,7 @@ public class InitDbService {
 		gedung2.setPlafon(plafon2);
 		gedung2.setStruktur(struktur2);
 		gedung2.setPondasi(pondasi2);
+		gedung2.setRuangan(ruangan2);
 		gedungRepository.save(gedung2);
 		// ====================================================================================
 	}

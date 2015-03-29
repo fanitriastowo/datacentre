@@ -8,5 +8,6 @@
 		<class>id.ac.ump.ppp.datacentre.entities.Plafon</class>
 		<class>id.ac.ump.ppp.datacentre.entities.Struktur</class>
 		<class>id.ac.ump.ppp.datacentre.entities.Pondasi</class>
+		<class>id.ac.ump.ppp.datacentre.entities.Ruangan</class>
 	</persistence-unit>
 </persistence>

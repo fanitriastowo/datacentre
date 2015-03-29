@@ -64,6 +64,7 @@
 	<li><a href="#plafon" role="tab" data-toggle="tab">Plafon</a></li>
 	<li><a href="#struktur" role="tab" data-toggle="tab">Struktur</a></li>
 	<li><a href="#pondasi" role="tab" data-toggle="tab">Pondasi</a></li>
+	<li><a href="#ruangan" role="tab" data-toggle="tab">Ruangan</a></li>
 </ul>
 
 <div class="tab-content">
@@ -465,6 +466,274 @@
 								<tr>
 									<td><strong>Kondisi:</strong></td>
 									<td><c:out value="${gedungDetail.pondasi.sloofKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Ruangan -->
+	<div class="tab-pane" id="ruangan">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h2 class="panel-title text-center">
+					<strong>Status Ruangan</strong>
+				</h2>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Dinding Ruangan</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.dindingRuangPanjang }" /> m<sup>2</sup></td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.dindingRuangBahan }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.dindingRuangKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Cat Dinding</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.catDindingPanjang }" /> m<sup>2</sup></td>
+								</tr>
+								<tr>
+									<td><strong>Jenis:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.catDindingJenis }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.catDindingKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Kusen Pintu</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.kusenPintuJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.kusenPintuBahan }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.kusenPintuKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Daun Pintu</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.daunPintuJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.daunPintuBahan }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.daunPintuKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Kunci Hendel</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.kunciHendelJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.kunciHendelBahan }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.kunciHendelKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Cat Pintu</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.catPintuPanjang }" /> m<sup>2</sup></td>
+								</tr>
+								<tr>
+									<td><strong>Jenis:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.catPintuJenis }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.catPintuKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Kusen Jendela</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.kusenJendelaJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.kusenJendelaBahan }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.kusenJendelaKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-3">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Daun Jendela</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.daunJendelaJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.daunJendelaBahan }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.daunJendelaKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Kaca</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.kacaPanjang }" /> m<sup>2</sup></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.kacaKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-4">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Slot</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.slotJumlah }" /> Buah</td>
+								</tr>
+								<tr>
+									<td><strong>Merek:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.slotMerek }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.slotKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-4">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Cat Jendela</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.catJendelaPanjang }" /> m<sup>2</sup></td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.catJendelaJenis }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.ruangan.catJendelaKondisi }" /></td>
 								</tr>
 							</tbody>
 						</table>

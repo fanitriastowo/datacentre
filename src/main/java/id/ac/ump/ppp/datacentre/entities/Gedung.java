@@ -55,11 +55,15 @@ public class Gedung {
 	@OneToOne
 	@JoinColumn(name = "struktur_id")
 	private Struktur struktur;
-	
+
 	@OneToOne
 	@JoinColumn(name = "pondasi_id")
 	private Pondasi pondasi;
-	
+
+	@OneToOne
+	@JoinColumn(name = "ruangan_id")
+	private Ruangan ruangan;
+
 	private JenisGedung jenisGedung;
 
 	public enum JenisGedung {
@@ -170,12 +174,20 @@ public class Gedung {
 		this.struktur = struktur;
 	}
 
-	public Pondasi getPondasi(){
+	public Pondasi getPondasi() {
 		return pondasi;
 	}
 
-	public void setPondasi(Pondasi pondasi){
+	public void setPondasi(Pondasi pondasi) {
 		this.pondasi = pondasi;
+	}
+
+	public Ruangan getRuangan() {
+		return ruangan;
+	}
+
+	public void setRuangan(Ruangan ruangan) {
+		this.ruangan = ruangan;
 	}
 
 }

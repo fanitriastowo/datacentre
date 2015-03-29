@@ -64,6 +64,10 @@ public class Gedung {
 	@JoinColumn(name = "ruangan_id")
 	private Ruangan ruangan;
 
+	@OneToOne
+	@JoinColumn(name = "lantai_id")
+	private Lantai lantai;
+
 	private JenisGedung jenisGedung;
 
 	public enum JenisGedung {
@@ -188,6 +192,14 @@ public class Gedung {
 
 	public void setRuangan(Ruangan ruangan) {
 		this.ruangan = ruangan;
+	}
+
+	public Lantai getLantai() {
+		return lantai;
+	}
+
+	public void setLantai(Lantai lantai) {
+		this.lantai = lantai;
 	}
 
 }

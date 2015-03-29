@@ -65,6 +65,7 @@
 	<li><a href="#struktur" role="tab" data-toggle="tab">Struktur</a></li>
 	<li><a href="#pondasi" role="tab" data-toggle="tab">Pondasi</a></li>
 	<li><a href="#ruangan" role="tab" data-toggle="tab">Ruangan</a></li>
+	<li><a href="#lantai" role="tab" data-toggle="tab">Lantai</a></li>
 </ul>
 
 <div class="tab-content">
@@ -734,6 +735,43 @@
 								<tr>
 									<td><strong>Kondisi:</strong></td>
 									<td><c:out value="${gedungDetail.ruangan.catJendelaKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Lantai -->
+	<div class="tab-pane" id="lantai">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h2 class="panel-title text-center">
+					<strong>Status Lantai</strong>
+				</h2>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Keramik</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.lantai.keramikPanjang }" /> m<sup>2</sup></td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.lantai.keramikBahan }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.lantai.keramikKondisi }" /></td>
 								</tr>
 							</tbody>
 						</table>

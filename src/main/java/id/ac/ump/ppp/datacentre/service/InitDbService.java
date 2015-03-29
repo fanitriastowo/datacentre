@@ -6,6 +6,7 @@ import java.util.List;
 
 import id.ac.ump.ppp.datacentre.entities.Atap;
 import id.ac.ump.ppp.datacentre.entities.Gedung;
+import id.ac.ump.ppp.datacentre.entities.Lantai;
 import id.ac.ump.ppp.datacentre.entities.Plafon;
 import id.ac.ump.ppp.datacentre.entities.Role;
 import id.ac.ump.ppp.datacentre.entities.Ruangan;
@@ -16,6 +17,7 @@ import id.ac.ump.ppp.datacentre.entities.Gedung.JenisGedung;
 import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
 import id.ac.ump.ppp.datacentre.repositories.AtapRepository;
 import id.ac.ump.ppp.datacentre.repositories.GedungRepository;
+import id.ac.ump.ppp.datacentre.repositories.LantaiRepository;
 import id.ac.ump.ppp.datacentre.repositories.PlafonRepository;
 import id.ac.ump.ppp.datacentre.repositories.RoleRepository;
 import id.ac.ump.ppp.datacentre.repositories.RuanganRepository;
@@ -57,6 +59,9 @@ public class InitDbService {
 
 	@Autowired
 	private RuanganRepository ruanganRepository;
+
+	@Autowired
+	private LantaiRepository lantaiRepository;
 
 	@PostConstruct
 	public void initDb() {
@@ -193,6 +198,14 @@ public class InitDbService {
 		ruanganRepository.save(ruangan1);
 		/* ============= Ruangan ============ */
 
+		/* ============= Lantai ============ */
+		Lantai lantai1 = new Lantai();
+		lantai1.setKeramikPanjang(30d);
+		lantai1.setKeramikBahan("Keramik");
+		lantai1.setKeramikKondisi(Kondisi.BAIK);
+		lantaiRepository.save(lantai1);
+		/* ============= Lantai ============ */
+
 		Calendar tahunBerdiri = Calendar.getInstance();
 		tahunBerdiri.set(2014, 0, 1);
 
@@ -214,6 +227,7 @@ public class InitDbService {
 		gedung.setStruktur(struktur1);
 		gedung.setPondasi(pondasi1);
 		gedung.setRuangan(ruangan1);
+		gedung.setLantai(lantai1);
 		gedungRepository.save(gedung);
 		// ====================================================================================
 
@@ -332,6 +346,14 @@ public class InitDbService {
 		ruanganRepository.save(ruangan2);
 		/* ============= Ruangan ============ */
 
+		/* ============= Lantai ============ */
+		Lantai lantai2 = new Lantai();
+		lantai2.setKeramikPanjang(30d);
+		lantai2.setKeramikBahan("Keramik");
+		lantai2.setKeramikKondisi(Kondisi.BAIK);
+		lantaiRepository.save(lantai2);
+		/* ============= Lantai ============ */
+
 		tahunBerdiri.set(2004, 0, 1);
 		tahunSurvey.set(2004, 0, 1);
 
@@ -350,6 +372,7 @@ public class InitDbService {
 		gedung2.setStruktur(struktur2);
 		gedung2.setPondasi(pondasi2);
 		gedung2.setRuangan(ruangan2);
+		gedung2.setLantai(lantai2);
 		gedungRepository.save(gedung2);
 		// ====================================================================================
 	}

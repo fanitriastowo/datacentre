@@ -63,6 +63,7 @@
 	<li><a href="#atap" role="tab" data-toggle="tab">Atap</a></li>
 	<li><a href="#plafon" role="tab" data-toggle="tab">Plafon</a></li>
 	<li><a href="#struktur" role="tab" data-toggle="tab">Struktur</a></li>
+	<li><a href="#pondasi" role="tab" data-toggle="tab">Pondasi</a></li>
 </ul>
 
 <div class="tab-content">
@@ -426,6 +427,44 @@
 								<tr>
 									<td><strong>Kondisi:</strong></td>
 									<td><c:out value="${gedungDetail.struktur.pelatLantaiKondisi }" /></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Pondasi -->
+	<div class="tab-pane" id="pondasi">
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h2 class="panel-title text-center">
+					<strong>Status Pondasi</strong>
+				</h2>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table">
+							<thead>
+								<tr>
+									<th class="text-center"><strong>Sloof</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Panjang:</strong></td>
+									<td><c:out value="${gedungDetail.pondasi.sloofPanjang }" /> m<sup>2</sup></td>
+								</tr>
+								<tr>
+									<td><strong>Bahan:</strong></td>
+									<td><c:out value="${gedungDetail.pondasi.sloofBahan }" /></td>
+								</tr>
+								<tr>
+									<td><strong>Kondisi:</strong></td>
+									<td><c:out value="${gedungDetail.pondasi.sloofKondisi }" /></td>
 								</tr>
 							</tbody>
 						</table>

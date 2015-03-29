@@ -2,9 +2,13 @@ package id.ac.ump.ppp.datacentre.entities;
 
 import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "PONDASI")
 public class Pondasi  {
 
 	@Id

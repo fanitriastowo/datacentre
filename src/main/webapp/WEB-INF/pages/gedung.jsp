@@ -137,10 +137,8 @@
 					<td><c:out value="${gedung.tahunBerdiri }" /></td>
 					<td><c:out value="${gedung.tahunSurvey }" /></td>
 					<td><c:out value="${gedung.jenisGedung }" /></td>
-					<td>
-						<a href='<spring:url value="/master/gedung/detail/${gedung.id }.html" />' class="btn btn-info">Detail</a>
-						<a href='<spring:url value="/master/gedung/update/${gedung.id }.html" />' class="btn btn-success" data-toggle="modal" data-target="#updateModal">Update</a>
-						<a href='<spring:url value="/master/gedung/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a>
+					<td><a href='<spring:url value="/master/gedung/detail/${gedung.id }.html" />' class="btn btn-info">Detail</a> <a href='<spring:url value="/master/gedung/update/${gedung.id }.html" />'
+						class="btn btn-success" data-toggle="modal" data-target="#updateModal">Update</a> <a href='<spring:url value="/master/gedung/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a>
 					</td>
 				</tr>
 			</c:forEach>
@@ -175,6 +173,76 @@
 			e.preventDefault();
 			$('#modalRemove .btnRemove').attr("href", $(this).attr("href"));
 			$('#modalRemove').modal();
+		});
+
+		$('.addModalForm').validate({
+			rules : {
+				kodeGedung : {
+					required : true,
+					minlength : 3
+				},
+				namaGedung : {
+					required : true,
+				},
+				namaLain : {
+					required : true,
+					minlength : 3
+				},
+				kegunaan : {
+					required : true,
+					minlength : 3
+				},
+				tahunBerdiri : {
+					required : true
+				},
+				tahunSurvey : {
+					required : true
+				},
+				luasGedung : {
+					required : true
+				},
+				lokasiGedung : {
+					required : true,
+					minlength : 3
+				}
+
+			},
+			messages : {
+				kodeGedung : {
+					required : "Id Gedung Harap Diisi",
+					minlength : "Minimal 3 Karakter"
+				},
+				namaGedung : {
+					required : "Kode Gedung Harap Diisi",
+				},
+				namaLain : {
+					required : "Nama Gedung Harap Diisi",
+					minlength : "Minimal 3 Karakter"
+				},
+				kegunaan : {
+					required : "Kegunaan Gedung Harap Diisi",
+					minlength : "Minimal 3 Karakter"
+				},
+				tahunBerdiri : {
+					required : "Tahun Berdiri Harap Diisi"
+				},
+				tahunSurvey : {
+					required : "Tahun Survey Harap Diisi"
+				},
+				luasGedung : {
+					required : "Luas Gedung Harap Diisi"
+				},
+				lokasiGedung : {
+					required : "Lokasi Gedung Harap Diisi",
+					minlength : "Minimal 3 Karakter"
+				}
+			},
+			highlight : function(element) {
+				$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+			},
+			unhighlight : function(element) {
+				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+			}
 		});
 	})
 

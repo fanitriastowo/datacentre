@@ -12,8 +12,10 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Type;
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Table(name = "GEDUNG")
@@ -23,12 +25,19 @@ public class Gedung {
 	@GeneratedValue
 	private Integer id;
 
+	@Size(min = 3, message = "Minimal 3 Karakter")
+	@NotBlank(message = "Id Gedung Harap Diisi")
 	private String kodeGedung;
 
+	@NotBlank(message = "Kode Gedung Harap Diisi")
 	private String namaGedung;
 
+	@Size(min = 3, message = "Minimal 3 Karakter")
+	@NotBlank(message = "Nama Gedung Harap Diisi")
 	private String namaLain;
 
+	@Size(min = 3, message = "Minimal 3 Karakter")
+	@NotBlank(message = "Kegunaan Gedung Harap Diisi")
 	private String kegunaan;
 
 	@Temporal(TemporalType.DATE)
@@ -42,6 +51,8 @@ public class Gedung {
 	@Lob
 	@Column(length = Integer.MAX_VALUE)
 	@Type(type = "org.hibernate.type.StringClobType")
+	@Size(min = 3, message = "Minimal 3 Karakter")
+	@NotBlank(message = "Lokasi Gedung Harap Diisi")
 	private String lokasiGedung;
 
 	@OneToOne

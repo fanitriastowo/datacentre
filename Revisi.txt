@@ -1,12 +1,14 @@
 Revisi
 1. Tambah jumlah lantai
-2. Hak Akses Aplikasi
-	- Tombol delete dan update khusus untuk user Pemeliharaan dan Perawatan
-3. Tambah table Pemeliharaan dan Perawatan - B A U
-4. Form pergedung dan hak akses
-	- Form 1 kali submit
+2. Export Berupa Laporan dalam bentuk PDF
 
 Hak Akses
-- B.A.U (Perawatan dan Pemeliharaan)
-- User tiap unit (Gedung)
-- BTS
+1. B.A.U (Perawatan dan Pemeliharaan)
+   - Tombol delete dan update khusus untuk user B.A.U (Pemeliharaan dan Perawatan)
+   - Tambah table transaksi Pemeliharaan dan Perawatan
+2. User tiap unit (Gedung)
+   - Form pergedung dan hak akses
+   - Form 1 kali submit
+3 BTS
+   - Maintenence Sistem (User Management, Bussiness Management) 
+   - Import dari Excel dan CSV

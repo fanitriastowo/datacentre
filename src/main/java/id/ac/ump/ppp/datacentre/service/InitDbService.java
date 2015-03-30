@@ -280,7 +280,7 @@ public class InitDbService {
 		gedung.setTahunBerdiri(tahunBerdiri.getTime());
 		gedung.setTahunSurvey(tahunSurvey.getTime());
 		gedung.setLuasGedung(350.0);
-		gedung.setJenisGedung(JenisGedung.BERTINGKAT);
+		gedung.setJenisGedung(JenisGedung.BERLANTAI_5);
 		gedung.setLokasiGedung("Kampus 1 UMP Dukuhwaluh Purwokerto");
 		gedung.setAtap(atap1);
 		gedung.setPlafon(plafon1);
@@ -477,7 +477,7 @@ public class InitDbService {
 		gedung2.setTahunBerdiri(tahunBerdiri.getTime());
 		gedung2.setTahunSurvey(tahunSurvey.getTime());
 		gedung2.setLuasGedung(600.0);
-		gedung2.setJenisGedung(JenisGedung.BERTINGKAT);
+		gedung2.setJenisGedung(JenisGedung.BERLANTAI_3);
 		gedung2.setLokasiGedung("Kampus 1 UMP Dukuhwaluh Purwokerto");
 		gedung2.setAtap(atap2);
 		gedung2.setPlafon(plafon2);

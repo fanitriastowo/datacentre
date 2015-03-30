@@ -88,8 +88,13 @@
 						<label for="jenisGedung" class="col-sm-2 control-label">Jenis Gedung:</label>
 						<div class="col-sm-10">
 							<form:select path="jenisGedung" cssClass="form-control">
-								<form:option value="BERTINGKAT">Bertingkat</form:option>
 								<form:option value="TIDAK_BERTINGKAT">Tidak Bertingkat</form:option>
+								<form:option value="BERLANTAI_2">Berlantai 2</form:option>
+								<form:option value="BERLANTAI_3">Berlantai 3</form:option>
+								<form:option value="BERLANTAI_4">Berlantai 4</form:option>
+								<form:option value="BERLANTAI_5">Berlantai 5</form:option>
+								<form:option value="BERLANTAI_6">Berlantai 6</form:option>
+								<form:option value="LAIN_LAIN">Lain-Lain</form:option>
 							</form:select>
 							<form:errors path="jenisGedung" />
 						</div>

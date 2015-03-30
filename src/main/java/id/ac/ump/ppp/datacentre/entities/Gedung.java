@@ -90,7 +90,7 @@ public class Gedung {
 	private JenisGedung jenisGedung;
 
 	public enum JenisGedung {
-		BERTINGKAT, TIDAK_BERTINGKAT
+		BERLANTAI_2, BERLANTAI_3, BERLANTAI_4, BERLANTAI_5, BERLANTAI_6, TIDAK_BERTINGKAT, LAIN_LAIN
 	}
 
 	public Integer getId() {

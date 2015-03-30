@@ -1,0 +1,12 @@
+Revisi
+1. Tambah jumlah lantai
+2. Hak Akses Aplikasi
+	- Tombol delete dan update khusus untuk user Pemeliharaan dan Perawatan
+3. Tambah table Pemeliharaan dan Perawatan - B A U
+4. Form pergedung dan hak akses
+	- Form 1 kali submit
+
+Hak Akses
+- B.A.U (Perawatan dan Pemeliharaan)
+- User tiap unit (Gedung)
+- BTS

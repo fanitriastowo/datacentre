@@ -74,3 +74,44 @@
 		</tbody>
 	</table>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.addModalForm').validate({
+			rules : {
+				username : {
+					required : true,
+					minlength : 2
+				},
+				password : {
+					required : true,
+				},
+				phone : {
+					required : true,
+					number : true,
+					minlength : 2
+				}
+			},
+			messages : {
+				username : {
+					required : "Username Harap Diisi",
+					minlength : "Minimal 2 karakter"
+				},
+				password : {
+					required : "Password Harap Diisi"
+				},
+				phone : {
+					required : "Telephon Harap Diisi",
+					number : "Input Tidak Valid, Hanya Boleh Berupa Angka",
+					minlength : "Minimal 2 Karakter"
+				}
+			},
+			highlight : function(element) {
+				$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+			},
+			unhighlight : function(element) {
+				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+			}
+		});
+	});
+</script>

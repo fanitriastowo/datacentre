@@ -8,6 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Table(name = "USER")
@@ -17,10 +21,16 @@ public class User {
 	@GeneratedValue
 	private Integer id;
 
+	@NotBlank(message = "Username Harap Diisi")
+	@Size(min = 2, message = "Minimal 2 Karakter")
 	private String username;
 
+	@NotBlank(message = "Password Harap Diisi")
 	private String password;
 
+	@NotBlank(message = "Telephone Harap Diisi")
+	@Size(min = 2, message = "Minimal 2 Karakter")
+	@Pattern(regexp = "(^$|[0-9]{10})")
 	private String phone;
 
 	private boolean enabled;

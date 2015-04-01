@@ -77,7 +77,15 @@ public class InitDbService {
 	public void initDb() {
 		Role roleAdmin = new Role();
 		roleAdmin.setName("ROLE_ADMIN");
-		roleRepository.saveAndFlush(roleAdmin);
+		roleRepository.save(roleAdmin);
+		
+		Role roleUser = new Role();
+		roleUser.setName("ROLE_USER");
+		roleRepository.save(roleUser);
+		
+		Role roleMaintenence = new Role();
+		roleMaintenence.setName("ROLE_MAINTENENCE");
+		roleRepository.save(roleMaintenence);
 
 		List<Role> roles = new ArrayList<>();
 		roles.add(roleAdmin);
@@ -86,7 +94,7 @@ public class InitDbService {
 		userAdmin.setUsername("admin");
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		userAdmin.setPassword(encoder.encode("admin"));
-		userAdmin.setEmail("fani.triastowo@gmail.com");
+		userAdmin.setPhone("110");
 		userAdmin.setEnabled(true);
 		userAdmin.setRoles(roles);
 		userRepository.save(userAdmin);

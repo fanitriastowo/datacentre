@@ -14,10 +14,10 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="email" class="col-sm-2 control-label">Email:</label>
+		<label for="phone" class="col-sm-2 control-label">Phone:</label>
 		<div class="col-sm-9">
-			<form:input path="email" cssClass="form-control" placeholder="Email" />
-			<form:errors path="Email" />
+			<form:input path="phone" cssClass="form-control" placeholder="Phone" />
+			<form:errors path="phone" />
 		</div>
 	</div>
 	<div class="form-group">
@@ -48,8 +48,8 @@
 					required : true,
 					minlength : 3
 				},
-				email : {
-					email : true
+				phone : {
+					number : true
 				},
 				password : {
 					required : true,
@@ -66,8 +66,8 @@
 					required : "Username harap diisi",
 					minlength : "Minimal 3 Karakter"
 				},
-				email : {
-					email : "Format Email tidak valid"
+				phone : {
+					number : "Input harus berupa angka"
 				},
 				password : {
 					required : "Password harap diisi",

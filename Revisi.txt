@@ -1,5 +1,5 @@
 Revisi
-1. Tambah jumlah lantai
+1. Tambah jumlah lantai - Finish
 2. Export Berupa Laporan dalam bentuk PDF
 
 Hak Akses

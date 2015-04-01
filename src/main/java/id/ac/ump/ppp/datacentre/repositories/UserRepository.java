@@ -13,6 +13,6 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
 	User findOneByUsername(String username);
 
-	List<User> findAllByRoles(Role role);
+	List<User> findAllByRolesNot(Role role);
 
 }

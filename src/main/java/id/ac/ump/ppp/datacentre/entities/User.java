@@ -21,7 +21,7 @@ public class User {
 
 	private String password;
 
-	private String email;
+	private String phone;
 
 	private boolean enabled;
 
@@ -61,12 +61,12 @@ public class User {
 		this.roles = roles;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 	public boolean isEnabled() {
@@ -77,11 +77,11 @@ public class User {
 		this.enabled = enabled;
 	}
 
-	public void update(Integer id, String username, String password, String email, boolean enabled, List<Role> roles) {
+	public void update(Integer id, String username, String password, String phone, boolean enabled, List<Role> roles) {
 		this.id = id;
 		this.username = username;
 		this.password = password;
-		this.email = email;
+		this.phone = phone;
 		this.enabled = enabled;
 		this.roles = roles;
 	}

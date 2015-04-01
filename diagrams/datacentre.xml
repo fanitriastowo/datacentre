@@ -3,8 +3,19 @@
 		<entity-name>id.ac.ump.ppp.datacentre.entities.Atap</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>30</entity-height>
-		<entity-X-Coordinate>348</entity-X-Coordinate>
-		<entity-Y-Coordinate>158</entity-Y-Coordinate>
+		<entity-X-Coordinate>230</entity-X-Coordinate>
+		<entity-Y-Coordinate>80</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.Struktur</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>30</entity-height>
+		<entity-X-Coordinate>338</entity-X-Coordinate>
+		<entity-Y-Coordinate>619</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -36,8 +47,8 @@
 		<entity-name>id.ac.ump.ppp.datacentre.entities.Plafon</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>30</entity-height>
-		<entity-X-Coordinate>488</entity-X-Coordinate>
-		<entity-Y-Coordinate>158</entity-Y-Coordinate>
+		<entity-X-Coordinate>580</entity-X-Coordinate>
+		<entity-Y-Coordinate>90</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -46,20 +57,64 @@
 	<entity>
 		<entity-name>id.ac.ump.ppp.datacentre.entities.Gedung</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>346</entity-height>
-		<entity-X-Coordinate>423</entity-X-Coordinate>
-		<entity-Y-Coordinate>249</entity-Y-Coordinate>
+		<entity-height>446</entity-height>
+		<entity-X-Coordinate>410</entity-X-Coordinate>
+		<entity-Y-Coordinate>130</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
 	</entity>
 
 	<entity>
-		<entity-name>id.ac.ump.ppp.datacentre.entities.Struktur</entity-name>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.Air</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>30</entity-height>
-		<entity-X-Coordinate>238</entity-X-Coordinate>
-		<entity-Y-Coordinate>407</entity-Y-Coordinate>
+		<entity-X-Coordinate>650</entity-X-Coordinate>
+		<entity-Y-Coordinate>620</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.Kelistrikan</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>30</entity-height>
+		<entity-X-Coordinate>173</entity-X-Coordinate>
+		<entity-Y-Coordinate>619</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.Lantai</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>30</entity-height>
+		<entity-X-Coordinate>482</entity-X-Coordinate>
+		<entity-Y-Coordinate>620</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.Pondasi</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>30</entity-height>
+		<entity-X-Coordinate>254</entity-X-Coordinate>
+		<entity-Y-Coordinate>338</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.Ruangan</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>30</entity-height>
+		<entity-X-Coordinate>562</entity-X-Coordinate>
+		<entity-Y-Coordinate>338</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>

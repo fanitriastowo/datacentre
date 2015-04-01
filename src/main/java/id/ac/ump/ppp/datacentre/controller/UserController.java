@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -37,6 +38,12 @@ public class UserController {
 	@RequestMapping(value = "/users/save", method = RequestMethod.POST)
 	public String userSave(@ModelAttribute(value = "user") User user) {
 		userService.saveNewUser(user);
+		return "redirect:/master/users.html";
+	}
+
+	@RequestMapping(value = "/users/delete/{id}")
+	public String userDelete(@PathVariable Integer id) {
+		userService.deleteUser(id);
 		return "redirect:/master/users.html";
 	}
 

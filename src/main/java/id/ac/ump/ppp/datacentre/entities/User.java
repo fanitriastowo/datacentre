@@ -8,10 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.format.annotation.NumberFormat;
+import org.springframework.format.annotation.NumberFormat.Style;
 
 @Entity
 @Table(name = "USER")
@@ -29,8 +30,8 @@ public class User {
 	private String password;
 
 	@NotBlank(message = "Telephone Harap Diisi")
-	@Size(min = 2, message = "Minimal 2 Karakter")
-	@Pattern(regexp = "(^$|[0-9]{10})")
+	@Size(min = 2, max = 15, message = "Minimal 2 Karakter dan Maksimal 15 Karakter")
+	@NumberFormat(style = Style.NUMBER)
 	private String phone;
 
 	private boolean enabled;

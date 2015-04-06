@@ -21,7 +21,10 @@
 						<h3 class="panel-title">Silahkan Login</h3>
 					</div>
 					<div class="panel-body">
-						<form role="form" action="/j_spring_security_check" method="POST">
+						<form role="form" action='<spring:url value="/j_spring_security_check" />' method="POST">
+							<c:if test="${success eq false }">
+								<div class="alert alert-danger">Username atau Password tidak valid!</div>
+							</c:if>
 							<fieldset>
 								<div class="form-group">
 									<input class="form-control" placeholder="Username" name="j_username" type="text" autofocus required>

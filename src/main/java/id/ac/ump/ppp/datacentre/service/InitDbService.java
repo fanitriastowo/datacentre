@@ -1,21 +1,17 @@
 package id.ac.ump.ppp.datacentre.service;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-
 import id.ac.ump.ppp.datacentre.entities.Air;
 import id.ac.ump.ppp.datacentre.entities.Atap;
 import id.ac.ump.ppp.datacentre.entities.Gedung;
+import id.ac.ump.ppp.datacentre.entities.Gedung.JenisGedung;
 import id.ac.ump.ppp.datacentre.entities.Kelistrikan;
 import id.ac.ump.ppp.datacentre.entities.Lantai;
 import id.ac.ump.ppp.datacentre.entities.Plafon;
+import id.ac.ump.ppp.datacentre.entities.Pondasi;
 import id.ac.ump.ppp.datacentre.entities.Role;
 import id.ac.ump.ppp.datacentre.entities.Ruangan;
-import id.ac.ump.ppp.datacentre.entities.User;
 import id.ac.ump.ppp.datacentre.entities.Struktur;
-import id.ac.ump.ppp.datacentre.entities.Pondasi;
-import id.ac.ump.ppp.datacentre.entities.Gedung.JenisGedung;
+import id.ac.ump.ppp.datacentre.entities.User;
 import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
 import id.ac.ump.ppp.datacentre.repositories.AirRepository;
 import id.ac.ump.ppp.datacentre.repositories.AtapRepository;
@@ -23,11 +19,13 @@ import id.ac.ump.ppp.datacentre.repositories.GedungRepository;
 import id.ac.ump.ppp.datacentre.repositories.KelistrikanRepository;
 import id.ac.ump.ppp.datacentre.repositories.LantaiRepository;
 import id.ac.ump.ppp.datacentre.repositories.PlafonRepository;
+import id.ac.ump.ppp.datacentre.repositories.PondasiRepository;
 import id.ac.ump.ppp.datacentre.repositories.RoleRepository;
 import id.ac.ump.ppp.datacentre.repositories.RuanganRepository;
-import id.ac.ump.ppp.datacentre.repositories.UserRepository;
 import id.ac.ump.ppp.datacentre.repositories.StrukturRepository;
-import id.ac.ump.ppp.datacentre.repositories.PondasiRepository;
+import id.ac.ump.ppp.datacentre.repositories.UserRepository;
+
+import java.util.Calendar;
 
 import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
@@ -75,29 +73,39 @@ public class InitDbService {
 
 	@PostConstruct
 	public void initDb() {
-		Role roleAdmin = new Role();
-		roleAdmin.setName("ROLE_ADMIN");
-		roleRepository.save(roleAdmin);
 		
-		Role roleUser = new Role();
-		roleUser.setName("ROLE_USER");
-		roleRepository.save(roleUser);
-		
+		// Insert Role
+		Role roleBTS = new Role();
+		roleBTS.setName("ROLE_BTS");
+		roleRepository.save(roleBTS);
+
+		Role roleGedung = new Role();
+		roleGedung.setName("ROLE_GEDUNG");
+		roleRepository.save(roleGedung);
+
 		Role roleMaintenence = new Role();
-		roleMaintenence.setName("ROLE_MAINTENENCE");
+		roleMaintenence.setName("ROLE_BAU");
 		roleRepository.save(roleMaintenence);
 
-		List<Role> roles = new ArrayList<>();
-		roles.add(roleAdmin);
-
-		User userAdmin = new User();
-		userAdmin.setUsername("admin");
+		// User BTS
+		User userBTS = new User();
+		userBTS.setUsername("BTS");
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		userAdmin.setPassword(encoder.encode("admin"));
-		userAdmin.setPhone("110");
-		userAdmin.setEnabled(true);
-		userAdmin.setRoles(roles);
-		userRepository.save(userAdmin);
+		userBTS.setPassword(encoder.encode("admin"));
+		userBTS.setPhone("110");
+		userBTS.setEnabled(true);
+		userBTS.setRole(roleBTS);
+		userRepository.save(userBTS);
+
+		// User BAU
+		User userMaintenence = new User();
+		userMaintenence.setUsername("BAU");
+		BCryptPasswordEncoder encoder2 = new BCryptPasswordEncoder();
+		userMaintenence.setPassword(encoder2.encode("akademik"));
+		userMaintenence.setPhone("330");
+		userMaintenence.setEnabled(true);
+		userMaintenence.setRole(roleMaintenence);
+		userRepository.save(userMaintenence);
 
 		// ====================================================================================
 		/* ============= ATAP ============ */

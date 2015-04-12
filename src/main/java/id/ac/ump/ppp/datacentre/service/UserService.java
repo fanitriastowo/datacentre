@@ -5,7 +5,6 @@ import id.ac.ump.ppp.datacentre.entities.User;
 import id.ac.ump.ppp.datacentre.repositories.RoleRepository;
 import id.ac.ump.ppp.datacentre.repositories.UserRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -35,19 +34,17 @@ public class UserService {
 	public void updateUser(User user) {
 		User updated = userRepository.findOne(user.getId());
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		updated.update(user.getId(), user.getUsername(), encoder.encode(user.getPassword()), user.getPhone(), updated.isEnabled(), updated.getRoles());
+		updated.update(user.getId(), user.getUsername(), encoder.encode(user.getPassword()), user.getPhone(), updated.isEnabled(), updated.getRole());
 		userRepository.save(updated);
 	}
 
-	public List<User> findAllByRolesNotRoleAdmin(Role role) {
-		return userRepository.findAllByRolesNot(role);
+	public List<User> findAllByRoleNotRoleBTS(Role role) {
+		return userRepository.findAllByRoleNot(role);
 	}
 
 	public void saveNewUser(User user) {
-		Role roleUser = roleRepository.findOneByName("ROLE_USER");
-		List<Role> roles = new ArrayList<>();
-		roles.add(roleUser);
-		user.setRoles(roles);
+		Role roleGedung = roleRepository.findOneByName("ROLE_GEDUNG");
+		user.setRole(roleGedung);
 		user.setEnabled(true);
 		userRepository.save(user);
 	}

@@ -13,7 +13,7 @@
 
 		<intercept-url pattern="/static/**" access="permitAll" />
 		<intercept-url pattern="/account.html" access="isAuthenticated()" />
-		<intercept-url pattern="/master/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/master/**" access="hasRole('ROLE_BTS')" />
 		<intercept-url pattern="/" access="isAuthenticated()" />
 	</http>
 
@@ -22,9 +22,9 @@
 			<password-encoder hash="bcrypt" />
 			<jdbc-user-service data-source-ref="dataSource"
 				authorities-by-username-query="
-				SELECT USER.username, ROLE.name FROM USER
-				JOIN USER_ROLE ON USER.id = USER_ROLE.users_id 
-				JOIN ROLE ON USER_ROLE.roles_id = ROLE.id  				
+				SELECT USER.username, ROLE.name 
+				FROM USER JOIN ROLE ON 
+				USER.role_id = ROLE.id 
 				WHERE USER.username = ?"
 
 				users-by-username-query="SELECT username, password, enabled FROM USER WHERE username = ?" />

@@ -1,12 +1,10 @@
 package id.ac.ump.ppp.datacentre.entities;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
@@ -36,9 +34,9 @@ public class User {
 
 	private boolean enabled;
 
-	@ManyToMany
-	@JoinTable
-	private List<Role> roles;
+	@ManyToOne
+	@JoinColumn(name = "role_id")
+	private Role role;
 
 	public String getUsername() {
 		return username;
@@ -64,12 +62,12 @@ public class User {
 		this.id = id;
 	}
 
-	public List<Role> getRoles() {
-		return roles;
+	public Role getRole() {
+		return role;
 	}
 
-	public void setRoles(List<Role> roles) {
-		this.roles = roles;
+	public void setRole(Role role) {
+		this.role = role;
 	}
 
 	public String getPhone() {
@@ -88,13 +86,13 @@ public class User {
 		this.enabled = enabled;
 	}
 
-	public void update(Integer id, String username, String password, String phone, boolean enabled, List<Role> roles) {
+	public void update(Integer id, String username, String password, String phone, boolean enabled, Role role) {
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.phone = phone;
 		this.enabled = enabled;
-		this.roles = roles;
+		this.role = role;
 	}
 
 }

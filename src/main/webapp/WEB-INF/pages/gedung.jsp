@@ -142,8 +142,10 @@
 					<td><c:out value="${gedung.tahunBerdiri }" /></td>
 					<td><c:out value="${gedung.tahunSurvey }" /></td>
 					<td><c:out value="${gedung.jenisGedung }" /></td>
-					<td><a href='<spring:url value="/master/gedung/detail/${gedung.id }.html" />' class="btn btn-info">Detail</a> <a href='<spring:url value="/master/gedung/update/${gedung.id }.html" />'
-						class="btn btn-success" data-toggle="modal" data-target="#updateModal">Update</a> <a href='<spring:url value="/master/gedung/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a>
+					<td>
+						<a href='<spring:url value="/master/gedung/detail/${gedung.id }.html" />' class="btn btn-info">Detail</a> 
+						<a href='<spring:url value="/master/gedung/update/${gedung.id }.html" />' class="btn btn-success" data-toggle="modal" data-target="#updateModal">Update</a> 
+						<a href='<spring:url value="/master/gedung/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a>
 					</td>
 				</tr>
 			</c:forEach>

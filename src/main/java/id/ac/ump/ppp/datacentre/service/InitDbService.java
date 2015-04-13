@@ -12,7 +12,7 @@ import id.ac.ump.ppp.datacentre.entities.Role;
 import id.ac.ump.ppp.datacentre.entities.Ruangan;
 import id.ac.ump.ppp.datacentre.entities.Struktur;
 import id.ac.ump.ppp.datacentre.entities.User;
-import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
+import id.ac.ump.ppp.datacentre.entities.enumeration.Kondisi;
 import id.ac.ump.ppp.datacentre.repositories.AirRepository;
 import id.ac.ump.ppp.datacentre.repositories.AtapRepository;
 import id.ac.ump.ppp.datacentre.repositories.GedungRepository;
@@ -73,7 +73,7 @@ public class InitDbService {
 
 	@PostConstruct
 	public void initDb() {
-		
+
 		// Insert Role
 		Role roleBTS = new Role();
 		roleBTS.setName("ROLE_BTS");

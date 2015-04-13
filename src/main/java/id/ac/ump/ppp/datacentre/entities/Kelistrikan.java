@@ -1,6 +1,6 @@
 package id.ac.ump.ppp.datacentre.entities;
 
-import id.ac.ump.ppp.datacentre.entities.kondisi.Kondisi;
+import id.ac.ump.ppp.datacentre.entities.enumeration.Kondisi;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

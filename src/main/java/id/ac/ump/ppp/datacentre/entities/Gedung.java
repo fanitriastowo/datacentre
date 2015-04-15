@@ -87,6 +87,10 @@ public class Gedung {
 	@JoinColumn(name = "air_id")
 	private Air air;
 
+	@OneToOne
+	@JoinColumn(name = "user_id")
+	private User user;
+
 	private JenisGedung jenisGedung;
 
 	public enum JenisGedung {
@@ -235,6 +239,14 @@ public class Gedung {
 
 	public void setAir(Air air) {
 		this.air = air;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 }

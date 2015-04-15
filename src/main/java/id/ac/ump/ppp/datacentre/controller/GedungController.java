@@ -3,6 +3,7 @@ package id.ac.ump.ppp.datacentre.controller;
 import id.ac.ump.ppp.datacentre.entities.Gedung;
 import id.ac.ump.ppp.datacentre.service.GedungService;
 
+import java.security.Principal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -59,8 +60,9 @@ public class GedungController {
 	}
 
 	@RequestMapping(value = "/gedung/inputGedung/save", method = RequestMethod.POST)
-	public String save(@ModelAttribute(value = "gedung") Gedung gedung) {
-		gedungService.save(gedung);
+	public String save(@ModelAttribute(value = "gedung") Gedung gedung, Principal principal) {
+		String username = principal.getName();
+		gedungService.save(gedung, username);
 		return "redirect:/gedung/inputGedung.html";
 	}
 

@@ -1,43 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><entities>
 	<entity>
-		<entity-name>id.ac.ump.ppp.datacentre.entities.Atap</entity-name>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.Gedung</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>30</entity-height>
-		<entity-X-Coordinate>230</entity-X-Coordinate>
-		<entity-Y-Coordinate>80</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>id.ac.ump.ppp.datacentre.entities.Struktur</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>30</entity-height>
-		<entity-X-Coordinate>338</entity-X-Coordinate>
-		<entity-Y-Coordinate>619</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>id.ac.ump.ppp.datacentre.entities.Role</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>30</entity-height>
-		<entity-X-Coordinate>520</entity-X-Coordinate>
-		<entity-Y-Coordinate>23</entity-Y-Coordinate>
-		<primary-collapsed>false</primary-collapsed>
-		<relation-collapsed>false</relation-collapsed>
-		<basic-collapsed>false</basic-collapsed>
-	</entity>
-
-	<entity>
-		<entity-name>id.ac.ump.ppp.datacentre.entities.User</entity-name>
-		<entity-width>120</entity-width>
-		<entity-height>30</entity-height>
-		<entity-X-Coordinate>300</entity-X-Coordinate>
-		<entity-Y-Coordinate>23</entity-Y-Coordinate>
+		<entity-height>466</entity-height>
+		<entity-X-Coordinate>410</entity-X-Coordinate>
+		<entity-Y-Coordinate>130</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -55,11 +22,11 @@
 	</entity>
 
 	<entity>
-		<entity-name>id.ac.ump.ppp.datacentre.entities.Gedung</entity-name>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.Role</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>446</entity-height>
-		<entity-X-Coordinate>410</entity-X-Coordinate>
-		<entity-Y-Coordinate>130</entity-Y-Coordinate>
+		<entity-height>30</entity-height>
+		<entity-X-Coordinate>520</entity-X-Coordinate>
+		<entity-Y-Coordinate>23</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -99,11 +66,11 @@
 	</entity>
 
 	<entity>
-		<entity-name>id.ac.ump.ppp.datacentre.entities.Pondasi</entity-name>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.Struktur</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>30</entity-height>
-		<entity-X-Coordinate>254</entity-X-Coordinate>
-		<entity-Y-Coordinate>338</entity-Y-Coordinate>
+		<entity-X-Coordinate>338</entity-X-Coordinate>
+		<entity-Y-Coordinate>619</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -115,6 +82,39 @@
 		<entity-height>30</entity-height>
 		<entity-X-Coordinate>562</entity-X-Coordinate>
 		<entity-Y-Coordinate>338</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.Pondasi</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>30</entity-height>
+		<entity-X-Coordinate>254</entity-X-Coordinate>
+		<entity-Y-Coordinate>338</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.Atap</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>30</entity-height>
+		<entity-X-Coordinate>230</entity-X-Coordinate>
+		<entity-Y-Coordinate>80</entity-Y-Coordinate>
+		<primary-collapsed>false</primary-collapsed>
+		<relation-collapsed>false</relation-collapsed>
+		<basic-collapsed>false</basic-collapsed>
+	</entity>
+
+	<entity>
+		<entity-name>id.ac.ump.ppp.datacentre.entities.User</entity-name>
+		<entity-width>120</entity-width>
+		<entity-height>30</entity-height>
+		<entity-X-Coordinate>300</entity-X-Coordinate>
+		<entity-Y-Coordinate>23</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>

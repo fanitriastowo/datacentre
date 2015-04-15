@@ -101,7 +101,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('.addModalForm').validate({
+		$('.formInputGedung').validate({
 			rules : {
 				kodeGedung : {
 					required : true,
@@ -169,6 +169,15 @@
 			unhighlight : function(element) {
 				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
 			}
+		});
+		
+		$(function() {
+			$('#tahunBerdiri').datetimepicker({
+				locale : 'id'
+			});
+			$('#tahunSurvey').datetimepicker({
+				locale : 'id'
+			});
 		});
 	})
 </script>

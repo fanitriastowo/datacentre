@@ -61,7 +61,7 @@ public class GedungController {
 	@RequestMapping(value = "/gedung/inputGedung/save", method = RequestMethod.POST)
 	public String save(@ModelAttribute(value = "gedung") Gedung gedung) {
 		gedungService.save(gedung);
-		return "redirect:/master/gedung.html";
+		return "redirect:/gedung/inputGedung.html";
 	}
 
 }

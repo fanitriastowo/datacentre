@@ -40,17 +40,6 @@ public class GedungController {
 		model.addAttribute("gedungList", gedungService.findAll());
 		return "gedung";
 	}
-	
-	@RequestMapping(value = "/gedung/inputGedung", method = RequestMethod.GET)
-	public String inputGedung(Model model) {
-		return "inputGedung";
-	}
-
-	@RequestMapping(value = "/gedung/save", method = RequestMethod.POST)
-	public String save(@ModelAttribute(value = "gedung") Gedung gedung) {
-		gedungService.save(gedung);
-		return "redirect:/master/gedung.html";
-	}
 
 	@RequestMapping("/master/gedung/delete/{id}")
 	public String delete(@PathVariable(value = "id") Integer id) {
@@ -63,4 +52,16 @@ public class GedungController {
 		model.addAttribute("gedungDetail", gedungService.findOne(id));
 		return "gedungDetail";
 	}
+
+	@RequestMapping(value = "/gedung/inputGedung", method = RequestMethod.GET)
+	public String inputGedung(Model model) {
+		return "inputGedung";
+	}
+
+	@RequestMapping(value = "/gedung/inputGedung/save", method = RequestMethod.POST)
+	public String save(@ModelAttribute(value = "gedung") Gedung gedung) {
+		gedungService.save(gedung);
+		return "redirect:/master/gedung.html";
+	}
+
 }

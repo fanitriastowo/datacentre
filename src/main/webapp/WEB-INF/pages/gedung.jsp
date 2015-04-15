@@ -2,13 +2,13 @@
 <%@ include file="../template/taglib.jsp"%>
 <h2>Daftar Gedung</h2>
 
-<!-- Button trigger modal -->
+<!-- Button trigger modal
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Tambah Gedung</button>
 <br />
-<br />
+<br /> -->
 
 <!-- Add Modal -->
-<form:form commandName="gedung" action="${pageContext.request.contextPath }/master/gedung/save.html" method="post" cssClass="form-horizontal addModalForm">
+<!-- <form:form commandName="gedung" action="${pageContext.request.contextPath }/master/gedung/save.html" method="post" cssClass="form-horizontal addModalForm">
 	<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
@@ -116,7 +116,7 @@
 			</div>
 		</div>
 	</div>
-</form:form>
+</form:form> -->
 
 <div class="table-responsive">
 	<table class="table table-striped table-bordered table-hover">
@@ -182,7 +182,7 @@
 			$('#modalRemove').modal();
 		});
 
-		$('.addModalForm').validate({
+		/* $('.addModalForm').validate({
 			rules : {
 				kodeGedung : {
 					required : true,
@@ -250,7 +250,7 @@
 			unhighlight : function(element) {
 				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
 			}
-		});
+		}); */
 	})
 
 	$(function() {

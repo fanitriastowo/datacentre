@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/master")
 public class GedungController {
 
 	@Autowired
@@ -36,10 +35,15 @@ public class GedungController {
 		binder.registerCustomEditor(Date.class, "tahunSurvey", new CustomDateEditor(dateFormat, false));
 	}
 
-	@RequestMapping(value = "/gedung", method = RequestMethod.GET)
+	@RequestMapping(value = "/master/gedung", method = RequestMethod.GET)
 	public String gedung(Model model) {
 		model.addAttribute("gedungList", gedungService.findAll());
 		return "gedung";
+	}
+	
+	@RequestMapping(value = "/gedung/inputGedung", method = RequestMethod.GET)
+	public String inputGedung(Model model) {
+		return "inputGedung";
 	}
 
 	@RequestMapping(value = "/gedung/save", method = RequestMethod.POST)
@@ -48,13 +52,13 @@ public class GedungController {
 		return "redirect:/master/gedung.html";
 	}
 
-	@RequestMapping("/gedung/delete/{id}")
+	@RequestMapping("/master/gedung/delete/{id}")
 	public String delete(@PathVariable(value = "id") Integer id) {
 		gedungService.delete(id);
 		return "redirect:/master/gedung.html";
 	}
 
-	@RequestMapping(value = "/gedung/detail/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/master/gedung/detail/{id}", method = RequestMethod.GET)
 	public String gedungDetail(@PathVariable(value = "id") Integer id, Model model) {
 		model.addAttribute("gedungDetail", gedungService.findOne(id));
 		return "gedungDetail";

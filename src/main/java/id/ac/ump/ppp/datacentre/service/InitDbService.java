@@ -89,7 +89,7 @@ public class InitDbService {
 
 		// User BTS
 		User userBTS = new User();
-		userBTS.setUsername("BTS");
+		userBTS.setUsername("pusat");
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		userBTS.setPassword(encoder.encode("admin"));
 		userBTS.setPhone("110");
@@ -106,6 +106,16 @@ public class InitDbService {
 		userMaintenence.setEnabled(true);
 		userMaintenence.setRole(roleMaintenence);
 		userRepository.save(userMaintenence);
+
+		// User Gedung Teknik
+		User userGedungTeknik = new User();
+		userGedungTeknik.setUsername("TEKNIK");
+		BCryptPasswordEncoder encoder3 = new BCryptPasswordEncoder();
+		userGedungTeknik.setPassword(encoder3.encode("teknik"));
+		userGedungTeknik.setPhone("320");
+		userGedungTeknik.setEnabled(true);
+		userGedungTeknik.setRole(roleGedung);
+		userRepository.save(userGedungTeknik);
 
 		// ====================================================================================
 		/* ============= ATAP ============ */

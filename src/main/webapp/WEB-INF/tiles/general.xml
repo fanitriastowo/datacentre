@@ -53,11 +53,11 @@
 		<put-attribute name="current" value="master" />
 	</definition>
 	
-	<definition name="inputGedung" extends="base">
-		<put-attribute name="title" value="Aplikasi Datacentre - Input Gedung" />
+	<definition name="identity" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Input Identitas Gedung" />
 		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
 		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/pages/inputGedung.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/input/identity.jsp" />
 		<put-attribute name="current" value="" />
 	</definition>
 

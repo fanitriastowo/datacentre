@@ -25,7 +25,18 @@
 			</security:authorize>
 			<security:authorize access="hasRole('ROLE_GEDUNG')">
 			<li>
-				<a href='<spring:url value="/gedung/inputGedung.html" />'><i class="fa fa-dashboard fa-fw"></i> Input Data</a>
+				<a href="#"><i class="fa fa-cog fa-fw"></i> Input Data</a>
+				<ul class="nav nav-second-level">
+					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Identitas</a></li>
+					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Atap</a></li>
+					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Plafon</a></li>
+					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Pondasi</a></li>
+					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Ruangan</a></li>
+					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Kelistrikan</a></li>
+					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Struktur</a></li>
+					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Lantai</a></li>
+					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Air</a></li>
+				</ul>
 			</li>
 			</security:authorize>
 		</ul>

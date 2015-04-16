@@ -17,17 +17,17 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-public class GedungController {
-
+@RequestMapping(value = "/pages/input")
+public class InputGedungController {
+	
 	@Autowired
 	private GedungService gedungService;
-
+	
 	@ModelAttribute(value = "gedung")
 	public Gedung construct() {
 		return new Gedung();
@@ -40,38 +40,19 @@ public class GedungController {
 		binder.registerCustomEditor(Date.class, "tahunSurvey", new CustomDateEditor(dateFormat, false));
 	}
 
-	@RequestMapping(value = "/master/gedung", method = RequestMethod.GET)
-	public String gedung(Model model) {
-		model.addAttribute("gedungList", gedungService.findAll());
-		return "gedung";
-	}
-
-	@RequestMapping("/master/gedung/delete/{id}")
-	public String delete(@PathVariable(value = "id") Integer id) {
-		gedungService.delete(id);
-		return "redirect:/master/gedung.html";
-	}
-
-	@RequestMapping(value = "/master/gedung/detail/{id}", method = RequestMethod.GET)
-	public String gedungDetail(@PathVariable(value = "id") Integer id, Model model) {
-		model.addAttribute("gedungDetail", gedungService.findOne(id));
-		return "gedungDetail";
-	}
-
-	@RequestMapping(value = "/gedung/inputGedung", method = RequestMethod.GET)
+	@RequestMapping(value = "/identity", method = RequestMethod.GET)
 	public String inputGedung(Model model) {
-		return "inputGedung";
+		return "identity";
 	}
 
-	@RequestMapping(value = "/gedung/inputGedung/save", method = RequestMethod.POST)
+	@RequestMapping(value = "/identity/save", method = RequestMethod.POST)
 	public String save(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes ) {
 		if (result.hasErrors()) {
-			return "inputGedung";
+			return "identity";
 		}
 		String username = principal.getName();
 		gedungService.save(gedung, username);
 		redirectAttributes.addFlashAttribute("success", true);
-		return "redirect:/gedung/inputGedung.html";
+		return "redirect:/pages/input/identity.html";
 	}
-
 }

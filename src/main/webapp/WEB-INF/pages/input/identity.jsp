@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../template/taglib.jsp"%>
+<%@ include file="../../template/taglib.jsp"%>
 
 <h3>Input Gedung</h3>
 
-<form:form commandName="gedung" action="${pageContext.request.contextPath }/gedung/inputGedung/save.html" method="post" cssClass="form-horizontal formInputGedung">
+<form:form commandName="gedung" action="${pageContext.request.contextPath }/pages/input/identity/save.html" method="post" cssClass="form-horizontal formInputGedung">
 
 	<c:if test="${success eq true }">
 		<div class="alert alert-success">Data Berhasil Diinputkan</div>

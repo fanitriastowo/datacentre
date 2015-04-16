@@ -7,7 +7,7 @@
 	<definition name="base" template="/WEB-INF/template/base.jsp">
 		<put-attribute name="footer" value="/WEB-INF/template/footer.jsp" />
 	</definition>
-	
+
 	<definition name="login" template="/WEB-INF/pages/login.jsp">
 		<put-attribute name="title" value="Aplikasi Datacentre - Please Sign In" />
 		<put-attribute name="footer" value="/WEB-INF/template/footer.jsp" />
@@ -44,7 +44,7 @@
 		<put-attribute name="body" value="/WEB-INF/pages/gedung.jsp" />
 		<put-attribute name="current" value="master" />
 	</definition>
-	
+
 	<definition name="gedungDetail" extends="base">
 		<put-attribute name="title" value="Aplikasi Datacentre - Detail Gedung" />
 		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
@@ -52,12 +52,76 @@
 		<put-attribute name="body" value="/WEB-INF/pages/gedungDetail.jsp" />
 		<put-attribute name="current" value="master" />
 	</definition>
-	
+
 	<definition name="identity" extends="base">
-		<put-attribute name="title" value="Aplikasi Datacentre - Input Identitas Gedung" />
+		<put-attribute name="title" value="Aplikasi Datacentre - Identitas Gedung" />
 		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
 		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
 		<put-attribute name="body" value="/WEB-INF/pages/input/identity.jsp" />
+		<put-attribute name="current" value="" />
+	</definition>
+
+	<definition name="atap" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Atap Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/input/atap.jsp" />
+		<put-attribute name="current" value="" />
+	</definition>
+
+	<definition name="plafon" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Plafon Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/input/plafon.jsp" />
+		<put-attribute name="current" value="" />
+	</definition>
+
+	<definition name="pondasi" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Pondasi Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/input/pondasi.jsp" />
+		<put-attribute name="current" value="" />
+	</definition>
+
+	<definition name="ruangan" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Ruangan Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/input/ruangan.jsp" />
+		<put-attribute name="current" value="" />
+	</definition>
+
+	<definition name="kelistrikan" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Kelistrikan Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/input/kelistrikan.jsp" />
+		<put-attribute name="current" value="" />
+	</definition>
+
+	<definition name="struktur" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Struktur Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/input/struktur.jsp" />
+		<put-attribute name="current" value="" />
+	</definition>
+
+	<definition name="lantai" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Lantai Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/input/lantai.jsp" />
+		<put-attribute name="current" value="" />
+	</definition>
+
+	<definition name="air" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Air Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/input/air.jsp" />
 		<put-attribute name="current" value="" />
 	</definition>
 

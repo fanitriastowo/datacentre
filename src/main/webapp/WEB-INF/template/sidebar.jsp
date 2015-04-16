@@ -28,14 +28,14 @@
 				<a href="#"><i class="fa fa-cog fa-fw"></i> Input Data</a>
 				<ul class="nav nav-second-level">
 					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Identitas</a></li>
-					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Atap</a></li>
-					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Plafon</a></li>
-					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Pondasi</a></li>
-					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Ruangan</a></li>
-					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Kelistrikan</a></li>
-					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Struktur</a></li>
-					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Lantai</a></li>
-					<li><a href='<spring:url value="/pages/input/identity.html" />'><i class="fa fa-building fa-fw"></i> Air</a></li>
+					<li><a href='<spring:url value="/pages/input/atap.html" />'><i class="fa fa-building fa-fw"></i> Atap</a></li>
+					<li><a href='<spring:url value="/pages/input/plafon.html" />'><i class="fa fa-building fa-fw"></i> Plafon</a></li>
+					<li><a href='<spring:url value="/pages/input/pondasi.html" />'><i class="fa fa-building fa-fw"></i> Pondasi</a></li>
+					<li><a href='<spring:url value="/pages/input/ruangan.html" />'><i class="fa fa-building fa-fw"></i> Ruangan</a></li>
+					<li><a href='<spring:url value="/pages/input/kelistrikan.html" />'><i class="fa fa-building fa-fw"></i> Kelistrikan</a></li>
+					<li><a href='<spring:url value="/pages/input/struktur.html" />'><i class="fa fa-building fa-fw"></i> Struktur</a></li>
+					<li><a href='<spring:url value="/pages/input/lantai.html" />'><i class="fa fa-building fa-fw"></i> Lantai</a></li>
+					<li><a href='<spring:url value="/pages/input/air.html" />'><i class="fa fa-building fa-fw"></i> Air</a></li>
 				</ul>
 			</li>
 			</security:authorize>

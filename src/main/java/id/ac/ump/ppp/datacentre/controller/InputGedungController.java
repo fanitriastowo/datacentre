@@ -12,7 +12,6 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -24,10 +23,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 @RequestMapping(value = "/pages/input")
 public class InputGedungController {
-	
+
 	@Autowired
 	private GedungService gedungService;
-	
+
 	@ModelAttribute(value = "gedung")
 	public Gedung construct() {
 		return new Gedung();
@@ -40,13 +39,14 @@ public class InputGedungController {
 		binder.registerCustomEditor(Date.class, "tahunSurvey", new CustomDateEditor(dateFormat, false));
 	}
 
+	// IDENTITY
 	@RequestMapping(value = "/identity", method = RequestMethod.GET)
-	public String inputGedung(Model model) {
+	public String identity() {
 		return "identity";
 	}
 
 	@RequestMapping(value = "/identity/save", method = RequestMethod.POST)
-	public String save(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes ) {
+	public String identitySave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "identity";
 		}
@@ -54,5 +54,141 @@ public class InputGedungController {
 		gedungService.save(gedung, username);
 		redirectAttributes.addFlashAttribute("success", true);
 		return "redirect:/pages/input/identity.html";
+	}
+
+	// ATAP
+	@RequestMapping(value = "/atap", method = RequestMethod.GET)
+	public String atap() {
+		return "atap";
+	}
+
+	@RequestMapping(value = "/atap/save", method = RequestMethod.POST)
+	public String atapSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+		if (result.hasErrors()) {
+			return "atap";
+		}
+		String username = principal.getName();
+		gedungService.save(gedung, username);
+		redirectAttributes.addFlashAttribute("success", true);
+		return "redirect:/pages/input/atap.html";
+	}
+
+	// PLAFON
+	@RequestMapping(value = "/plafon", method = RequestMethod.GET)
+	public String plafon() {
+		return "plafon";
+	}
+
+	@RequestMapping(value = "/plafon/save", method = RequestMethod.POST)
+	public String plafonSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+		if (result.hasErrors()) {
+			return "plafon";
+		}
+		String username = principal.getName();
+		gedungService.save(gedung, username);
+		redirectAttributes.addFlashAttribute("success", true);
+		return "redirect:/pages/input/plafon.html";
+	}
+
+	// PONDASI
+	@RequestMapping(value = "/pondasi", method = RequestMethod.GET)
+	public String pondasi() {
+		return "pondasi";
+	}
+
+	@RequestMapping(value = "/pondasi/save", method = RequestMethod.POST)
+	public String pondasiSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+		if (result.hasErrors()) {
+			return "pondasi";
+		}
+		String username = principal.getName();
+		gedungService.save(gedung, username);
+		redirectAttributes.addFlashAttribute("success", true);
+		return "redirect:/pages/input/pondasi.html";
+	}
+
+	// RUANGAN
+	@RequestMapping(value = "/ruangan", method = RequestMethod.GET)
+	public String ruangan() {
+		return "ruangan";
+	}
+
+	@RequestMapping(value = "/ruangan/save", method = RequestMethod.POST)
+	public String ruanganSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+		if (result.hasErrors()) {
+			return "ruangan";
+		}
+		String username = principal.getName();
+		gedungService.save(gedung, username);
+		redirectAttributes.addFlashAttribute("success", true);
+		return "redirect:/pages/input/ruangan.html";
+	}
+
+	// KELISTRIKAN
+	@RequestMapping(value = "/kelistrikan", method = RequestMethod.GET)
+	public String kelistrikan() {
+		return "kelistrikan";
+	}
+
+	@RequestMapping(value = "/kelistrikan/save", method = RequestMethod.POST)
+	public String kelistrikanSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+		if (result.hasErrors()) {
+			return "kelistrikan";
+		}
+		String username = principal.getName();
+		gedungService.save(gedung, username);
+		redirectAttributes.addFlashAttribute("success", true);
+		return "redirect:/pages/input/kelistrikan.html";
+	}
+
+	// STRUKTUR
+	@RequestMapping(value = "/struktur", method = RequestMethod.GET)
+	public String struktur() {
+		return "struktur";
+	}
+
+	@RequestMapping(value = "/struktur/save", method = RequestMethod.POST)
+	public String strukturSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+		if (result.hasErrors()) {
+			return "struktur";
+		}
+		String username = principal.getName();
+		gedungService.save(gedung, username);
+		redirectAttributes.addFlashAttribute("success", true);
+		return "redirect:/pages/input/struktur.html";
+	}
+
+	// LANTAI
+	@RequestMapping(value = "/lantai", method = RequestMethod.GET)
+	public String lantai() {
+		return "lantai";
+	}
+
+	@RequestMapping(value = "/lantai/save", method = RequestMethod.POST)
+	public String lantaiSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+		if (result.hasErrors()) {
+			return "lantai";
+		}
+		String username = principal.getName();
+		gedungService.save(gedung, username);
+		redirectAttributes.addFlashAttribute("success", true);
+		return "redirect:/pages/input/lantai.html";
+	}
+
+	// AIR
+	@RequestMapping(value = "/air", method = RequestMethod.GET)
+	public String air() {
+		return "air";
+	}
+
+	@RequestMapping(value = "/air/save", method = RequestMethod.POST)
+	public String airSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+		if (result.hasErrors()) {
+			return "air";
+		}
+		String username = principal.getName();
+		gedungService.save(gedung, username);
+		redirectAttributes.addFlashAttribute("success", true);
+		return "redirect:/pages/input/air.html";
 	}
 }

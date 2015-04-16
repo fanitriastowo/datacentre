@@ -14,6 +14,7 @@
 		<intercept-url pattern="/static/**" access="permitAll" />
 		<intercept-url pattern="/account.html" access="isAuthenticated()" />
 		<intercept-url pattern="/master/**" access="hasRole('ROLE_BTS')" />
+		<intercept-url pattern="//pages/input/**" access="hasRole('ROLE_GEDUNG')" />
 		<intercept-url pattern="/" access="isAuthenticated()" />
 	</http>
 

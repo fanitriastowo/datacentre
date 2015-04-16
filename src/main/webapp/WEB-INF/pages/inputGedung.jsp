@@ -4,6 +4,10 @@
 <h3>Input Gedung</h3>
 
 <form:form commandName="gedung" action="${pageContext.request.contextPath }/gedung/inputGedung/save.html" method="post" cssClass="form-horizontal formInputGedung">
+
+	<c:if test="${success eq true }">
+		<div class="alert alert-success">Data Berhasil Diinputkan</div>
+	</c:if>
 	<div class="form-group">
 		<label for="kodeGedung" class="col-sm-2 control-label">Id Gedung:</label>
 		<div class="col-sm-10">

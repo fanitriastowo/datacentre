@@ -7,16 +7,20 @@ import java.security.Principal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class GedungController {
@@ -60,9 +64,13 @@ public class GedungController {
 	}
 
 	@RequestMapping(value = "/gedung/inputGedung/save", method = RequestMethod.POST)
-	public String save(@ModelAttribute(value = "gedung") Gedung gedung, Principal principal) {
+	public String save(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes ) {
+		if (result.hasErrors()) {
+			return "inputGedung";
+		}
 		String username = principal.getName();
 		gedungService.save(gedung, username);
+		redirectAttributes.addFlashAttribute("success", true);
 		return "redirect:/gedung/inputGedung.html";
 	}
 

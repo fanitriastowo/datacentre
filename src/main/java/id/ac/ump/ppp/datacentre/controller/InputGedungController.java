@@ -1,6 +1,8 @@
 package id.ac.ump.ppp.datacentre.controller;
 
+import id.ac.ump.ppp.datacentre.entities.Air;
 import id.ac.ump.ppp.datacentre.entities.Gedung;
+import id.ac.ump.ppp.datacentre.service.AirService;
 import id.ac.ump.ppp.datacentre.service.GedungService;
 
 import java.security.Principal;
@@ -26,10 +28,18 @@ public class InputGedungController {
 
 	@Autowired
 	private GedungService gedungService;
+	
+	@Autowired
+	private AirService airService;
 
 	@ModelAttribute(value = "gedung")
-	public Gedung construct() {
+	public Gedung constructGedung() {
 		return new Gedung();
+	}
+
+	@ModelAttribute(value = "air")
+	public Air constructAir() {
+		return new Air();
 	}
 
 	@InitBinder
@@ -182,12 +192,12 @@ public class InputGedungController {
 	}
 
 	@RequestMapping(value = "/air/save", method = RequestMethod.POST)
-	public String airSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String airSave(@Valid @ModelAttribute(value = "air") Air air, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "air";
 		}
 		String username = principal.getName();
-		gedungService.save(gedung, username);
+		airService.save(air, username);
 		redirectAttributes.addFlashAttribute("success", true);
 		return "redirect:/pages/input/air.html";
 	}

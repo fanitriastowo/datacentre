@@ -1,8 +1,10 @@
 package id.ac.ump.ppp.datacentre.controller;
 
 import id.ac.ump.ppp.datacentre.entities.Air;
+import id.ac.ump.ppp.datacentre.entities.Atap;
 import id.ac.ump.ppp.datacentre.entities.Gedung;
 import id.ac.ump.ppp.datacentre.service.AirService;
+import id.ac.ump.ppp.datacentre.service.AtapService;
 import id.ac.ump.ppp.datacentre.service.GedungService;
 
 import java.security.Principal;
@@ -28,9 +30,12 @@ public class InputGedungController {
 
 	@Autowired
 	private GedungService gedungService;
-	
+
 	@Autowired
 	private AirService airService;
+	
+	@Autowired
+	private AtapService atapService;
 
 	@ModelAttribute(value = "gedung")
 	public Gedung constructGedung() {
@@ -40,6 +45,11 @@ public class InputGedungController {
 	@ModelAttribute(value = "air")
 	public Air constructAir() {
 		return new Air();
+	}
+
+	@ModelAttribute(value = "atap")
+	public Atap constructAtap() {
+		return new Atap();
 	}
 
 	@InitBinder
@@ -73,12 +83,12 @@ public class InputGedungController {
 	}
 
 	@RequestMapping(value = "/atap/save", method = RequestMethod.POST)
-	public String atapSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String atapSave(@Valid @ModelAttribute(value = "atap") Atap atap, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "atap";
 		}
 		String username = principal.getName();
-		gedungService.save(gedung, username);
+		atapService.save(atap, username);
 		redirectAttributes.addFlashAttribute("success", true);
 		return "redirect:/pages/input/atap.html";
 	}

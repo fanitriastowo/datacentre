@@ -289,3 +289,120 @@
 	</div>
 
 </form:form>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".formInputAir").validate({
+			rules : {
+				instalasiPipaAirBersihPanjang : {
+					required : true,
+					number : true
+				},
+				instalasiPipaAirBersihBahan : {
+					required : true
+				},
+				tankiAirVolume : {
+					required : true,
+					number : true
+				},
+				pompaJumlah : {
+					required : true,
+					number : true
+				},
+				kranJumlah : {
+					required : true,
+					number : true
+				},
+				kranMerek : {
+					required : true
+				},
+				groundtankJumlah : {
+					required : true,
+					number : true
+				},
+				groundtankMerek : {
+					required : true
+				},
+				instalasiAirKotorPanjang : {
+					required : true,
+					number : true
+				},
+				instalasiAirKotorBahan : {
+					required : true
+				},
+				drainaseJumlah : {
+					required : true,
+					number : true
+				},
+				drainaseBahan : {
+					required : true
+				},
+				waterClosedJumlah : {
+					required : true,
+					number : true
+				},
+				waterClosedMerek : {
+					required : true
+				}
+			},
+			messages : {
+				instalasiPipaAirBersihPanjang : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				instalasiPipaAirBersihBahan : {
+					required : "Data Harap Diisi"
+				},
+				tankiAirVolume : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				pompaJumlah : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				kranJumlah : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				kranMerek : {
+					required : "Data Harap Diisi"
+				},
+				groundtankJumlah : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				groundtankMerek : {
+					required : "Data Harap Diisi"
+				},
+				instalasiAirKotorPanjang : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				instalasiAirKotorBahan : {
+					required : "Data Harap Diisi"
+				},
+				drainaseJumlah : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				drainaseBahan : {
+					required : "Data Harap Diisi"
+				},
+				waterClosedJumlah : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				waterClosedMerek : {
+					required : "Data Harap Diisi"
+				}
+			},
+			highlight : function(element) {
+				$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+			},
+			unhighlight : function(element) {
+				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+			}
+		});
+	})
+</script>

@@ -225,3 +225,156 @@
 		</div>
 	</div>
 </form:form>
+    
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".formInputKelistrikan").validate({
+            rules : {
+                instalasiKabelPanjang : {
+                    required : true,
+                    number : true
+                },
+                instalasiKabelJenis : {
+                    required : true
+                },
+                instalasiKabelKondisi : {
+                    required : true
+                },
+                lampuJumlah : {
+                    required : true,
+                    number : true
+                },
+                lampuJumlahBaik : {
+                    required : true,
+                    number : true
+                },
+                lampuJumlahRusak : {
+                    required : true,
+                    number : true
+                },
+                stopKontakJumlah : {
+                    required : true,
+                    number : true
+                },
+                stopKontakJumlahBaik : {
+                    required : true,
+                    number : true
+                },
+                stopKontakJumlahRusak : {
+                    required : true,
+                    number : true
+                },
+                saklarJumlah : {
+                    required : true,
+                    number : true
+                },
+                saklarJumlahBaik : {
+                    required : true,
+                    number : true
+                },
+                saklarJumlahRusak : {
+                    required : true,
+                    number : true
+                },
+                instalasiListrikKondisi : {
+                    required : true
+                },
+                instalasiKabelLANPanjang : {
+                    required : true,
+                    number : true
+                },
+                instalasiKabelLANKondisi : {
+                    required : true
+                },
+                switchJumlah : {
+                    required : true,
+                    number : true
+                },
+                switchJumlahBaik : {
+                    required : true,
+                    number : true
+                },
+                switchJumlahRusak : {
+                    required : true,
+                    number : true
+                }
+            },
+            messages : {
+                instalasiKabelPanjang : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                instalasiKabelJenis : {
+                    required : "Data Harap Diisi"
+                },
+                instalasiKabelKondisi : {
+                    required : "Data Harap Diisi"
+                },
+                lampuJumlah : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                lampuJumlahBaik : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                lampuJumlahRusak : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                stopKontakJumlah : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                stopKontakJumlahBaik : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                stopKontakJumlahRusak : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                saklarJumlah : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                saklarJumlahBaik : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                saklarJumlahRusak : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                instalasiListrikKondisi : {
+                    required : "Data Harap Diisi"
+                },
+                instalasiKabelLANPanjang : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                instalasiKabelLANKondisi : {
+                    required : "Data Harap Diisi"
+                },
+                switchJumlah : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                switchJumlahBaik : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                },
+                switchJumlahRusak : {
+                    required : "Data Harap Diisi",
+                    number : "Input Hanya Berupa Angka"
+                }
+            },
+            highlight : function(element) {
+				$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+			},
+			unhighlight : function(element) {
+				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+			}
+        });
+    })
+</script>

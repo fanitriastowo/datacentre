@@ -3,9 +3,11 @@ package id.ac.ump.ppp.datacentre.controller;
 import id.ac.ump.ppp.datacentre.entities.Air;
 import id.ac.ump.ppp.datacentre.entities.Atap;
 import id.ac.ump.ppp.datacentre.entities.Gedung;
+import id.ac.ump.ppp.datacentre.entities.Kelistrikan;
 import id.ac.ump.ppp.datacentre.service.AirService;
 import id.ac.ump.ppp.datacentre.service.AtapService;
 import id.ac.ump.ppp.datacentre.service.GedungService;
+import id.ac.ump.ppp.datacentre.service.KelistrikanService;
 
 import java.security.Principal;
 import java.text.SimpleDateFormat;
@@ -36,6 +38,9 @@ public class InputGedungController {
 
 	@Autowired
 	private AtapService atapService;
+    
+	@Autowired
+	private KelistrikanService kelistrikanService;
 
 	@ModelAttribute(value = "gedung")
 	public Gedung constructGedung() {
@@ -51,6 +56,12 @@ public class InputGedungController {
 	public Atap constructAtap() {
 		return new Atap();
 	}
+    
+    @ModelAttribute(value = "kelistrikan")
+	public Kelistrikan constructKelistrikan() {
+		return new Kelistrikan();
+	}
+
 
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
@@ -151,12 +162,12 @@ public class InputGedungController {
 	}
 
 	@RequestMapping(value = "/kelistrikan/save", method = RequestMethod.POST)
-	public String kelistrikanSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String kelistrikanSave(@Valid @ModelAttribute(value = "kelistrikan") Kelistrikan kelistrikan, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "kelistrikan";
 		}
 		String username = principal.getName();
-		gedungService.save(gedung, username);
+		kelistrikanService.save(kelistrikan, username);
 		redirectAttributes.addFlashAttribute("success", true);
 		return "redirect:/pages/input/kelistrikan.html";
 	}

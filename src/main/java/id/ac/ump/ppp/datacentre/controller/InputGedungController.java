@@ -33,7 +33,7 @@ public class InputGedungController {
 
 	@Autowired
 	private AirService airService;
-	
+
 	@Autowired
 	private AtapService atapService;
 

@@ -260,10 +260,167 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="col-md-1 col-md-offset-10 col-sm-offset-10 col-xs-offset-10">
 		<div class="form-group">
 			<input type="submit" class="btn btn-lg btn-primary" value="Simpan" />
 		</div>
 	</div>
 </form:form>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".formInputAtap").validate({
+			rules : {
+				usukPanjang : {
+					required : true,
+					number : true
+				},
+				usukBahan : {
+					required : true
+				},
+				usukKondisi : {
+					required : true
+				},
+				gordingPanjang : {
+					required : true,
+					number : true
+				},
+				gordingBahan : {
+					required : true
+				},
+				gordingKondisi : {
+					required : true
+				},
+				rengPanjang : {
+					required : true,
+					number : true
+				},
+				rengBahan : {
+					required : true
+				},
+				rengKondisi : {
+					required : true
+				},
+				kudaKudaPanjang : {
+					required : true,
+					number : true
+				},
+				kudaKudaBahan : {
+					required : true
+				},
+				kudaKudaKondisi : {
+					required : true
+				},
+				ikatanAnginPanjang : {
+					required : true,
+					number : true
+				},
+				ikatanAnginBahan : {
+					required : true
+				},
+				ikatanAnginKondisi : {
+					required : true
+				},
+				gentengPanjang : {
+					required : true,
+					number : true
+				},
+				gentengBahan : {
+					required : true
+				},
+				gentengKondisi : {
+					required : true
+				},
+				bumbunganPanjang : {
+					required : true,
+					number : true
+				},
+				bumbunganBahan : {
+					required : true
+				},
+				bumbunganKondisi : {
+					required : true
+				}
+			},
+			messages : {
+				usukPanjang : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				usukBahan : {
+					required : "Data Harap Diisi"
+				},
+				usukKondisi : {
+					required : "Data Harap Diisi"
+				},
+				gordingPanjang : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				gordingBahan : {
+					required : "Data Harap Diisi"
+				},
+				gordingKondisi : {
+					required : "Data Harap Diisi"
+				},
+				rengPanjang : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				rengBahan : {
+					required : "Data Harap Diisi"
+				},
+				rengKondisi : {
+					required : "Data Harap Diisi"
+				},
+				kudaKudaPanjang : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				kudaKudaBahan : {
+					required : "Data Harap Diisi"
+				},
+				kudaKudaKondisi : {
+					required : "Data Harap Diisi"
+				},
+				ikatanAnginPanjang : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				ikatanAnginBahan : {
+					required : "Data Harap Diisi"
+				},
+				ikatanAnginKondisi : {
+					required : "Data Harap Diisi"
+				},
+				gentengPanjang : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				gentengBahan : {
+					required : "Data Harap Diisi"
+				},
+				gentengKondisi : {
+					required : "Data Harap Diisi"
+				},
+				bumbunganPanjang : {
+					required : "Data Harap Diisi",
+					number : "Input Hanya Berupa Angka"
+				},
+				bumbunganBahan : {
+					required : "Data Harap Diisi"
+				},
+				bumbunganKondisi : {
+					required : "Data Harap Diisi"
+				}
+			},
+			highlight : function(element) {
+				$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+			},
+			unhighlight : function(element) {
+				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+			}
+		});
+	})
+</script>

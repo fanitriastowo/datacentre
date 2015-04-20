@@ -4,10 +4,12 @@ import id.ac.ump.ppp.datacentre.entities.Air;
 import id.ac.ump.ppp.datacentre.entities.Atap;
 import id.ac.ump.ppp.datacentre.entities.Gedung;
 import id.ac.ump.ppp.datacentre.entities.Kelistrikan;
+import id.ac.ump.ppp.datacentre.entities.Lantai;
 import id.ac.ump.ppp.datacentre.service.AirService;
 import id.ac.ump.ppp.datacentre.service.AtapService;
 import id.ac.ump.ppp.datacentre.service.GedungService;
 import id.ac.ump.ppp.datacentre.service.KelistrikanService;
+import id.ac.ump.ppp.datacentre.service.LantaiService;
 
 import java.security.Principal;
 import java.text.SimpleDateFormat;
@@ -38,9 +40,12 @@ public class InputGedungController {
 
 	@Autowired
 	private AtapService atapService;
-    
+
 	@Autowired
 	private KelistrikanService kelistrikanService;
+
+	@Autowired
+	private LantaiService lantaiService;
 
 	@ModelAttribute(value = "gedung")
 	public Gedung constructGedung() {
@@ -56,12 +61,16 @@ public class InputGedungController {
 	public Atap constructAtap() {
 		return new Atap();
 	}
-    
-    @ModelAttribute(value = "kelistrikan")
+
+	@ModelAttribute(value = "kelistrikan")
 	public Kelistrikan constructKelistrikan() {
 		return new Kelistrikan();
 	}
 
+	@ModelAttribute(value = "lantai")
+	public Lantai constructLantai() {
+		return new Lantai();
+	}
 
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
@@ -196,12 +205,12 @@ public class InputGedungController {
 	}
 
 	@RequestMapping(value = "/lantai/save", method = RequestMethod.POST)
-	public String lantaiSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String lantaiSave(@Valid @ModelAttribute(value = "lantai") Lantai lantai, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "lantai";
 		}
 		String username = principal.getName();
-		gedungService.save(gedung, username);
+		lantaiService.save(lantai, username);
 		redirectAttributes.addFlashAttribute("success", true);
 		return "redirect:/pages/input/lantai.html";
 	}

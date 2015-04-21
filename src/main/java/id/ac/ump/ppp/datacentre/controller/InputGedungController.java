@@ -5,11 +5,13 @@ import id.ac.ump.ppp.datacentre.entities.Atap;
 import id.ac.ump.ppp.datacentre.entities.Gedung;
 import id.ac.ump.ppp.datacentre.entities.Kelistrikan;
 import id.ac.ump.ppp.datacentre.entities.Lantai;
+import id.ac.ump.ppp.datacentre.entities.Plafon;
 import id.ac.ump.ppp.datacentre.service.AirService;
 import id.ac.ump.ppp.datacentre.service.AtapService;
 import id.ac.ump.ppp.datacentre.service.GedungService;
 import id.ac.ump.ppp.datacentre.service.KelistrikanService;
 import id.ac.ump.ppp.datacentre.service.LantaiService;
+import id.ac.ump.ppp.datacentre.service.PlafonService;
 
 import java.security.Principal;
 import java.text.SimpleDateFormat;
@@ -46,6 +48,9 @@ public class InputGedungController {
 
 	@Autowired
 	private LantaiService lantaiService;
+	
+	@Autowired
+	private PlafonService plafonService;
 
 	@ModelAttribute(value = "gedung")
 	public Gedung constructGedung() {
@@ -70,6 +75,11 @@ public class InputGedungController {
 	@ModelAttribute(value = "lantai")
 	public Lantai constructLantai() {
 		return new Lantai();
+	}
+	
+	@ModelAttribute(value = "plafon")
+	public Plafon constructPlafon() {
+		return new Plafon();
 	}
 
 	@InitBinder
@@ -120,12 +130,12 @@ public class InputGedungController {
 	}
 
 	@RequestMapping(value = "/plafon/save", method = RequestMethod.POST)
-	public String plafonSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String plafonSave(@Valid @ModelAttribute(value = "plafon") Plafon plafon, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "plafon";
 		}
 		String username = principal.getName();
-		gedungService.save(gedung, username);
+		plafonService.save(plafon, username);
 		redirectAttributes.addFlashAttribute("success", true);
 		return "redirect:/pages/input/plafon.html";
 	}

@@ -6,12 +6,14 @@ import id.ac.ump.ppp.datacentre.entities.Gedung;
 import id.ac.ump.ppp.datacentre.entities.Kelistrikan;
 import id.ac.ump.ppp.datacentre.entities.Lantai;
 import id.ac.ump.ppp.datacentre.entities.Plafon;
+import id.ac.ump.ppp.datacentre.entities.Pondasi;
 import id.ac.ump.ppp.datacentre.service.AirService;
 import id.ac.ump.ppp.datacentre.service.AtapService;
 import id.ac.ump.ppp.datacentre.service.GedungService;
 import id.ac.ump.ppp.datacentre.service.KelistrikanService;
 import id.ac.ump.ppp.datacentre.service.LantaiService;
 import id.ac.ump.ppp.datacentre.service.PlafonService;
+import id.ac.ump.ppp.datacentre.service.PondasiService;
 
 import java.security.Principal;
 import java.text.SimpleDateFormat;
@@ -48,9 +50,12 @@ public class InputGedungController {
 
 	@Autowired
 	private LantaiService lantaiService;
-	
+
 	@Autowired
 	private PlafonService plafonService;
+
+	@Autowired
+	private PondasiService pondasiService;
 
 	@ModelAttribute(value = "gedung")
 	public Gedung constructGedung() {
@@ -76,10 +81,15 @@ public class InputGedungController {
 	public Lantai constructLantai() {
 		return new Lantai();
 	}
-	
+
 	@ModelAttribute(value = "plafon")
 	public Plafon constructPlafon() {
 		return new Plafon();
+	}
+
+	@ModelAttribute(value = "pondasi")
+	public Pondasi constructPondasi() {
+		return new Pondasi();
 	}
 
 	@InitBinder
@@ -147,12 +157,12 @@ public class InputGedungController {
 	}
 
 	@RequestMapping(value = "/pondasi/save", method = RequestMethod.POST)
-	public String pondasiSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String pondasiSave(@Valid @ModelAttribute(value = "pondasi") Pondasi pondasi, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "pondasi";
 		}
 		String username = principal.getName();
-		gedungService.save(gedung, username);
+		pondasiService.save(pondasi, username);
 		redirectAttributes.addFlashAttribute("success", true);
 		return "redirect:/pages/input/pondasi.html";
 	}

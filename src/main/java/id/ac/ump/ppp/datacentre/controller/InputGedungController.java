@@ -7,6 +7,7 @@ import id.ac.ump.ppp.datacentre.entities.Kelistrikan;
 import id.ac.ump.ppp.datacentre.entities.Lantai;
 import id.ac.ump.ppp.datacentre.entities.Plafon;
 import id.ac.ump.ppp.datacentre.entities.Pondasi;
+import id.ac.ump.ppp.datacentre.entities.Ruangan;
 import id.ac.ump.ppp.datacentre.service.AirService;
 import id.ac.ump.ppp.datacentre.service.AtapService;
 import id.ac.ump.ppp.datacentre.service.GedungService;
@@ -14,6 +15,7 @@ import id.ac.ump.ppp.datacentre.service.KelistrikanService;
 import id.ac.ump.ppp.datacentre.service.LantaiService;
 import id.ac.ump.ppp.datacentre.service.PlafonService;
 import id.ac.ump.ppp.datacentre.service.PondasiService;
+import id.ac.ump.ppp.datacentre.service.RuanganService;
 
 import java.security.Principal;
 import java.text.SimpleDateFormat;
@@ -56,6 +58,9 @@ public class InputGedungController {
 
 	@Autowired
 	private PondasiService pondasiService;
+	
+	@Autowired
+	private RuanganService ruanganService;
 
 	@ModelAttribute(value = "gedung")
 	public Gedung constructGedung() {
@@ -90,6 +95,11 @@ public class InputGedungController {
 	@ModelAttribute(value = "pondasi")
 	public Pondasi constructPondasi() {
 		return new Pondasi();
+	}
+	
+	@ModelAttribute(value = "ruangan")
+	public Ruangan constructRuangan() {
+		return new Ruangan();
 	}
 
 	@InitBinder
@@ -174,12 +184,12 @@ public class InputGedungController {
 	}
 
 	@RequestMapping(value = "/ruangan/save", method = RequestMethod.POST)
-	public String ruanganSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String ruanganSave(@Valid @ModelAttribute(value = "ruangan") Ruangan ruangan, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "ruangan";
 		}
 		String username = principal.getName();
-		gedungService.save(gedung, username);
+		ruanganService.save(ruangan, username);
 		redirectAttributes.addFlashAttribute("success", true);
 		return "redirect:/pages/input/ruangan.html";
 	}

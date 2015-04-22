@@ -8,6 +8,7 @@ import id.ac.ump.ppp.datacentre.entities.Lantai;
 import id.ac.ump.ppp.datacentre.entities.Plafon;
 import id.ac.ump.ppp.datacentre.entities.Pondasi;
 import id.ac.ump.ppp.datacentre.entities.Ruangan;
+import id.ac.ump.ppp.datacentre.entities.Struktur;
 import id.ac.ump.ppp.datacentre.service.AirService;
 import id.ac.ump.ppp.datacentre.service.AtapService;
 import id.ac.ump.ppp.datacentre.service.GedungService;
@@ -16,6 +17,7 @@ import id.ac.ump.ppp.datacentre.service.LantaiService;
 import id.ac.ump.ppp.datacentre.service.PlafonService;
 import id.ac.ump.ppp.datacentre.service.PondasiService;
 import id.ac.ump.ppp.datacentre.service.RuanganService;
+import id.ac.ump.ppp.datacentre.service.StrukturService;
 
 import java.security.Principal;
 import java.text.SimpleDateFormat;
@@ -58,9 +60,12 @@ public class InputGedungController {
 
 	@Autowired
 	private PondasiService pondasiService;
-	
+
 	@Autowired
 	private RuanganService ruanganService;
+
+	@Autowired
+	private StrukturService strukturService;
 
 	@ModelAttribute(value = "gedung")
 	public Gedung constructGedung() {
@@ -96,10 +101,15 @@ public class InputGedungController {
 	public Pondasi constructPondasi() {
 		return new Pondasi();
 	}
-	
+
 	@ModelAttribute(value = "ruangan")
 	public Ruangan constructRuangan() {
 		return new Ruangan();
+	}
+
+	@ModelAttribute(value = "struktur")
+	public Struktur constructStruktur() {
+		return new Struktur();
 	}
 
 	@InitBinder
@@ -218,12 +228,12 @@ public class InputGedungController {
 	}
 
 	@RequestMapping(value = "/struktur/save", method = RequestMethod.POST)
-	public String strukturSave(@Valid @ModelAttribute(value = "gedung") Gedung gedung, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String strukturSave(@Valid @ModelAttribute(value = "struktur") Struktur struktur, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
 			return "struktur";
 		}
 		String username = principal.getName();
-		gedungService.save(gedung, username);
+		strukturService.save(struktur, username);
 		redirectAttributes.addFlashAttribute("success", true);
 		return "redirect:/pages/input/struktur.html";
 	}

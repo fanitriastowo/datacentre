@@ -95,6 +95,7 @@ public class InitDbService {
 		userBTS.setPhone("110");
 		userBTS.setEnabled(true);
 		userBTS.setRole(roleBTS);
+		userBTS.setIdentity(true);
 		userRepository.save(userBTS);
 
 		// User BAU
@@ -105,6 +106,7 @@ public class InitDbService {
 		userMaintenence.setPhone("330");
 		userMaintenence.setEnabled(true);
 		userMaintenence.setRole(roleMaintenence);
+		userMaintenence.setIdentity(true);
 		userRepository.save(userMaintenence);
 
 		// User Gedung Teknik
@@ -115,6 +117,7 @@ public class InitDbService {
 		userGedungTeknik.setPhone("320");
 		userGedungTeknik.setEnabled(true);
 		userGedungTeknik.setRole(roleGedung);
+		userGedungTeknik.setIdentity(false);
 		userRepository.save(userGedungTeknik);
 
 		// ====================================================================================

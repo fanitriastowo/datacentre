@@ -26,7 +26,9 @@ public class GedungService {
 	public void save(Gedung gedung, String username) {
 		User user = userRepository.findOneByUsername(username);
 		gedung.setUser(user);
+		user.setIdentity(true);
 		gedungRepository.save(gedung);
+		userRepository.save(user);
 	}
 
 	public void delete(Integer id) {

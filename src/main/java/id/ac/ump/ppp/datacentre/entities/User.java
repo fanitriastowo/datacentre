@@ -34,6 +34,8 @@ public class User {
 
 	private boolean enabled;
 
+	private boolean identity;
+
 	@ManyToOne
 	@JoinColumn(name = "role_id")
 	private Role role;
@@ -86,13 +88,22 @@ public class User {
 		this.enabled = enabled;
 	}
 
-	public void update(Integer id, String username, String password, String phone, boolean enabled, Role role) {
+	public boolean isIdentity() {
+		return identity;
+	}
+
+	public void setIdentity(boolean identity) {
+		this.identity = identity;
+	}
+
+	public void update(Integer id, String username, String password, String phone, boolean enabled, Role role, boolean identity) {
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.phone = phone;
 		this.enabled = enabled;
 		this.role = role;
+		this.identity = identity;
 	}
 
 }

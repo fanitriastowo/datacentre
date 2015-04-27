@@ -6,7 +6,16 @@
 <form:form commandName="gedung" action="${pageContext.request.contextPath }/pages/input/identity/save.html" method="post" cssClass="form-horizontal formInputGedung">
 
 	<c:if test="${success eq true }">
-		<div class="alert alert-success">Data Berhasil Diinputkan</div>
+		<div class="alert alert-success alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			Data Berhasil Diinputkan
+		</div>
+	</c:if>
+	<c:if test="${invalid eq true }">
+		<div class="alert alert-warning alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<strong>Warning!</strong> Inputkan Identitas Gedung Terlebih Dahulu
+		</div>
 	</c:if>
 	<div class="form-group">
 		<label for="kodeGedung" class="col-sm-2 control-label">Id Gedung:</label>
@@ -95,7 +104,7 @@
 			<form:errors path="lokasiGedung" />
 		</div>
 	</div>
-	
+
 	<div class="col-md-1 col-md-offset-10 col-sm-offset-10 col-xs-offset-10">
 		<div class="form-group">
 			<input type="submit" class="btn btn-lg btn-primary" value="Simpan" />
@@ -174,7 +183,7 @@
 				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
 			}
 		});
-		
+
 		$(function() {
 			$('#tahunBerdiri').datetimepicker({
 				locale : 'id'

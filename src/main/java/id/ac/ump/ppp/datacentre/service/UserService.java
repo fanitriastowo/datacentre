@@ -34,7 +34,7 @@ public class UserService {
 	public void updateUser(User user) {
 		User updated = userRepository.findOne(user.getId());
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		updated.update(user.getId(), user.getUsername(), encoder.encode(user.getPassword()), user.getPhone(), updated.isEnabled(), updated.getRole());
+		updated.update(user.getId(), user.getUsername(), encoder.encode(user.getPassword()), user.getPhone(), updated.isEnabled(), updated.getRole(), updated.isIdentity());
 		userRepository.save(updated);
 	}
 

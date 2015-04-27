@@ -9,6 +9,7 @@ import id.ac.ump.ppp.datacentre.entities.Plafon;
 import id.ac.ump.ppp.datacentre.entities.Pondasi;
 import id.ac.ump.ppp.datacentre.entities.Ruangan;
 import id.ac.ump.ppp.datacentre.entities.Struktur;
+import id.ac.ump.ppp.datacentre.entities.User;
 import id.ac.ump.ppp.datacentre.service.AirService;
 import id.ac.ump.ppp.datacentre.service.AtapService;
 import id.ac.ump.ppp.datacentre.service.GedungService;
@@ -18,6 +19,7 @@ import id.ac.ump.ppp.datacentre.service.PlafonService;
 import id.ac.ump.ppp.datacentre.service.PondasiService;
 import id.ac.ump.ppp.datacentre.service.RuanganService;
 import id.ac.ump.ppp.datacentre.service.StrukturService;
+import id.ac.ump.ppp.datacentre.service.UserService;
 
 import java.security.Principal;
 import java.text.SimpleDateFormat;
@@ -39,6 +41,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 @RequestMapping(value = "/pages/input")
 public class InputGedungController {
+
+	@Autowired
+	private UserService userService;
 
 	@Autowired
 	private GedungService gedungService;
@@ -138,7 +143,13 @@ public class InputGedungController {
 
 	// ATAP
 	@RequestMapping(value = "/atap", method = RequestMethod.GET)
-	public String atap() {
+	public String atap(Principal principal, RedirectAttributes redirectAttributes) {
+		String username = principal.getName();
+		User user = userService.findOneByUsername(username);
+		if (!user.isIdentity()) {
+			redirectAttributes.addFlashAttribute("invalid", true);
+			return "redirect:/pages/input/identity.html";
+		}
 		return "atap";
 	}
 
@@ -155,7 +166,13 @@ public class InputGedungController {
 
 	// PLAFON
 	@RequestMapping(value = "/plafon", method = RequestMethod.GET)
-	public String plafon() {
+	public String plafon(Principal principal, RedirectAttributes redirectAttributes) {
+		String username = principal.getName();
+		User user = userService.findOneByUsername(username);
+		if (!user.isIdentity()) {
+			redirectAttributes.addFlashAttribute("invalid", true);
+			return "redirect:/pages/input/identity.html";
+		}
 		return "plafon";
 	}
 
@@ -172,7 +189,13 @@ public class InputGedungController {
 
 	// PONDASI
 	@RequestMapping(value = "/pondasi", method = RequestMethod.GET)
-	public String pondasi() {
+	public String pondasi(Principal principal, RedirectAttributes redirectAttributes) {
+		String username = principal.getName();
+		User user = userService.findOneByUsername(username);
+		if (!user.isIdentity()) {
+			redirectAttributes.addFlashAttribute("invalid", true);
+			return "redirect:/pages/input/identity.html";
+		}
 		return "pondasi";
 	}
 
@@ -189,7 +212,13 @@ public class InputGedungController {
 
 	// RUANGAN
 	@RequestMapping(value = "/ruangan", method = RequestMethod.GET)
-	public String ruangan() {
+	public String ruangan(Principal principal, RedirectAttributes redirectAttributes) {
+		String username = principal.getName();
+		User user = userService.findOneByUsername(username);
+		if (!user.isIdentity()) {
+			redirectAttributes.addFlashAttribute("invalid", true);
+			return "redirect:/pages/input/identity.html";
+		}
 		return "ruangan";
 	}
 
@@ -206,7 +235,13 @@ public class InputGedungController {
 
 	// KELISTRIKAN
 	@RequestMapping(value = "/kelistrikan", method = RequestMethod.GET)
-	public String kelistrikan() {
+	public String kelistrikan(Principal principal, RedirectAttributes redirectAttributes) {
+		String username = principal.getName();
+		User user = userService.findOneByUsername(username);
+		if (!user.isIdentity()) {
+			redirectAttributes.addFlashAttribute("invalid", true);
+			return "redirect:/pages/input/identity.html";
+		}
 		return "kelistrikan";
 	}
 
@@ -223,7 +258,13 @@ public class InputGedungController {
 
 	// STRUKTUR
 	@RequestMapping(value = "/struktur", method = RequestMethod.GET)
-	public String struktur() {
+	public String struktur(Principal principal, RedirectAttributes redirectAttributes) {
+		String username = principal.getName();
+		User user = userService.findOneByUsername(username);
+		if (!user.isIdentity()) {
+			redirectAttributes.addFlashAttribute("invalid", true);
+			return "redirect:/pages/input/identity.html";
+		}
 		return "struktur";
 	}
 
@@ -240,7 +281,13 @@ public class InputGedungController {
 
 	// LANTAI
 	@RequestMapping(value = "/lantai", method = RequestMethod.GET)
-	public String lantai() {
+	public String lantai(Principal principal, RedirectAttributes redirectAttributes) {
+		String username = principal.getName();
+		User user = userService.findOneByUsername(username);
+		if (!user.isIdentity()) {
+			redirectAttributes.addFlashAttribute("invalid", true);
+			return "redirect:/pages/input/identity.html";
+		}
 		return "lantai";
 	}
 
@@ -257,7 +304,13 @@ public class InputGedungController {
 
 	// AIR
 	@RequestMapping(value = "/air", method = RequestMethod.GET)
-	public String air() {
+	public String air(Principal principal, RedirectAttributes redirectAttributes) {
+		String username = principal.getName();
+		User user = userService.findOneByUsername(username);
+		if (!user.isIdentity()) {
+			redirectAttributes.addFlashAttribute("invalid", true);
+			return "redirect:/pages/input/identity.html";
+		}
 		return "air";
 	}
 

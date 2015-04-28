@@ -28,6 +28,14 @@
 		<put-attribute name="body" value="/WEB-INF/pages/home.jsp" />
 		<put-attribute name="current" value="home" />
 	</definition>
+	
+	<definition name="homeAdmin" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/admin.jsp" />
+		<put-attribute name="current" value="admin" />
+	</definition>
 
 	<definition name="users" extends="base">
 		<put-attribute name="title" value="Aplikasi Datacentre - List of User" />

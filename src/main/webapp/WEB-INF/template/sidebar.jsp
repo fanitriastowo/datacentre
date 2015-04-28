@@ -4,10 +4,10 @@
 <div class="navbar-default sidebar" role="navigation">
 	<div class="sidebar-nav navbar-collapse">
 		<ul class="nav" id="side-menu">
-			<li>
-				<a href='<spring:url value="/" />'><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-			</li>
 			<security:authorize access="hasRole('ROLE_BTS')">
+				<li>
+					<a href='<spring:url value="/admin.html" />'><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+				</li>
 				<li>
 					<a href="#"><i class="fa fa-cog fa-fw"></i> Operation<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
@@ -24,6 +24,9 @@
 				</li>
 			</security:authorize>
 			<security:authorize access="hasRole('ROLE_GEDUNG')">
+			<li>
+				<a href='<spring:url value="/" />'><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+			</li>
 			<li>
 				<a href="#"><i class="fa fa-cog fa-fw"></i> Input Data</a>
 				<ul class="nav nav-second-level">

@@ -1,7 +1,5 @@
 $(function() {
-
 	$('#side-menu').metisMenu({});
-
 });
 
 // Loads the correct sidebar on window load,
@@ -33,7 +31,5 @@ $(function() {
 	}).addClass('active').parent().parent().addClass('in').parent();
 	if (element.is('li')) {
 		element.addClass('active');
-	} else {
-		element.removeClass('active');
 	}
 });

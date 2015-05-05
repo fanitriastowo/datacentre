@@ -36,6 +36,22 @@ public class User {
 
 	private boolean identity;
 
+	private boolean atap;
+
+	private boolean plafon;
+
+	private boolean pondasi;
+
+	private boolean ruangan;
+
+	private boolean kelistrikan;
+
+	private boolean struktur;
+
+	private boolean lantai;
+
+	private boolean air;
+
 	@ManyToOne
 	@JoinColumn(name = "role_id")
 	private Role role;
@@ -96,14 +112,75 @@ public class User {
 		this.identity = identity;
 	}
 
-	public void update(Integer id, String username, String password, String phone, boolean enabled, Role role, boolean identity) {
+	public boolean isAtap() {
+		return atap;
+	}
+
+	public void setAtap(boolean atap) {
+		this.atap = atap;
+	}
+
+	public boolean isPlafon() {
+		return plafon;
+	}
+
+	public void setPlafon(boolean plafon) {
+		this.plafon = plafon;
+	}
+
+	public boolean isPondasi() {
+		return pondasi;
+	}
+
+	public void setPondasi(boolean pondasi) {
+		this.pondasi = pondasi;
+	}
+
+	public boolean isRuangan() {
+		return ruangan;
+	}
+
+	public void setRuangan(boolean ruangan) {
+		this.ruangan = ruangan;
+	}
+
+	public boolean isKelistrikan() {
+		return kelistrikan;
+	}
+
+	public void setKelistrikan(boolean kelistrikan) {
+		this.kelistrikan = kelistrikan;
+	}
+
+	public boolean isStruktur() {
+		return struktur;
+	}
+
+	public void setStruktur(boolean struktur) {
+		this.struktur = struktur;
+	}
+
+	public boolean isLantai() {
+		return lantai;
+	}
+
+	public void setLantai(boolean lantai) {
+		this.lantai = lantai;
+	}
+
+	public boolean isAir() {
+		return air;
+	}
+
+	public void setAir(boolean air) {
+		this.air = air;
+	}
+
+	public void update(Integer id, String username, String password, String phone) {
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.phone = phone;
-		this.enabled = enabled;
-		this.role = role;
-		this.identity = identity;
 	}
 
 }

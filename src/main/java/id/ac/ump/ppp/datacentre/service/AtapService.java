@@ -28,5 +28,7 @@ public class AtapService {
 		atapRepository.save(atap);
 		gedung.setAtap(atap);
 		gedungRepository.save(gedung);
+		user.setAtap(true);
+		userRepository.save(user);
 	}
 }

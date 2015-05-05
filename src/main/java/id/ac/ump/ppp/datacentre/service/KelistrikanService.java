@@ -12,21 +12,23 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class KelistrikanService {
-    
-    @Autowired
-    private GedungRepository gedungRepository;
-    
-    @Autowired
-    private UserRepository userRepository;
-    
-    @Autowired
-    private KelistrikanRepository kelistrikanRepository;
-    
-    public void save(Kelistrikan kelistrikan, String username) {
+
+	@Autowired
+	private GedungRepository gedungRepository;
+
+	@Autowired
+	private UserRepository userRepository;
+
+	@Autowired
+	private KelistrikanRepository kelistrikanRepository;
+
+	public void save(Kelistrikan kelistrikan, String username) {
 		User user = userRepository.findOneByUsername(username);
 		Gedung gedung = gedungRepository.findOneByUser(user);
 		kelistrikanRepository.save(kelistrikan);
 		gedung.setKelistrikan(kelistrikan);
 		gedungRepository.save(gedung);
+		user.setKelistrikan(true);
+		userRepository.save(user);
 	}
 }

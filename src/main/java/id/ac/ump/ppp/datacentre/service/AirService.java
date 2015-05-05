@@ -28,5 +28,7 @@ public class AirService {
 		airRepository.save(air);
 		gedung.setAir(air);
 		gedungRepository.save(gedung);
+		user.setAir(true);
+		userRepository.save(user);
 	}
 }

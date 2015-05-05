@@ -28,5 +28,7 @@ public class PlafonService {
 		plafonRepository.save(plafon);
 		gedung.setPlafon(plafon);
 		gedungRepository.save(gedung);
+		user.setPlafon(true);
+		userRepository.save(user);
 	}
 }

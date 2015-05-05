@@ -28,5 +28,7 @@ public class LantaiService {
 		lantaiRepository.save(lantai);
 		gedung.setLantai(lantai);
 		gedungRepository.save(gedung);
+		user.setLantai(true);
+		userRepository.save(user);
 	}
 }

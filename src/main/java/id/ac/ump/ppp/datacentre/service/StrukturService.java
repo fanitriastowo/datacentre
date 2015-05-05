@@ -28,6 +28,8 @@ public class StrukturService {
 		strukturRepository.save(struktur);
 		gedung.setStruktur(struktur);
 		gedungRepository.save(gedung);
+		user.setStruktur(true);
+		userRepository.save(user);
 	}
 
 }

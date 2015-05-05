@@ -34,7 +34,7 @@ public class UserService {
 	public void updateUser(User user) {
 		User updated = userRepository.findOne(user.getId());
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		updated.update(user.getId(), user.getUsername(), encoder.encode(user.getPassword()), user.getPhone(), updated.isEnabled(), updated.getRole(), updated.isIdentity());
+		updated.update(user.getId(), user.getUsername(), encoder.encode(user.getPassword()), user.getPhone());
 		userRepository.save(updated);
 	}
 
@@ -42,6 +42,7 @@ public class UserService {
 		return userRepository.findAllByRoleNot(role);
 	}
 
+	@Transactional
 	public void saveNewUser(User user) {
 		Role roleGedung = roleRepository.findOneByName("ROLE_GEDUNG");
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -51,6 +52,7 @@ public class UserService {
 		userRepository.save(user);
 	}
 
+	@Transactional
 	public void deleteUser(Integer id) {
 		userRepository.delete(id);
 	}

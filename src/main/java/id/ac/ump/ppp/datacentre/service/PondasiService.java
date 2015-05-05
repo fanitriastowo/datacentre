@@ -28,5 +28,7 @@ public class PondasiService {
 		pondasiRepository.save(pondasi);
 		gedung.setPondasi(pondasi);
 		gedungRepository.save(gedung);
+		user.setPondasi(true);
+		userRepository.save(user);
 	}
 }

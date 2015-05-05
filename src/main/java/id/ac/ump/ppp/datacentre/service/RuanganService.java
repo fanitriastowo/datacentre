@@ -28,6 +28,8 @@ public class RuanganService {
 		ruanganRepository.save(ruangan);
 		gedung.setRuangan(ruangan);
 		gedungRepository.save(gedung);
+		user.setRuangan(true);
+		userRepository.save(user);
 	}
 
 }

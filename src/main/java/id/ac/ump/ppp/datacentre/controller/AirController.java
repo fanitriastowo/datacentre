@@ -39,18 +39,19 @@ public class AirController {
 		if (!user.isIdentity()) {
 			redirectAttributes.addFlashAttribute("invalid", true);
 			return "redirect:/pages/input/identity.html";
+		} else if (user.isAir()) {
+			return "error403";
 		}
 		return "air";
 	}
 
 	@RequestMapping(value = "/air/save", method = RequestMethod.POST)
-	public String airSave(@Valid @ModelAttribute(value = "air") Air air, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String airSave(@Valid @ModelAttribute(value = "air") Air air, Principal principal, BindingResult result) {
 		if (result.hasErrors()) {
 			return "air";
 		}
 		String username = principal.getName();
 		airService.save(air, username);
-		redirectAttributes.addFlashAttribute("success", true);
-		return "redirect:/pages/input/air.html";
+		return "redirect:/";
 	}
 }

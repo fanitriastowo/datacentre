@@ -39,18 +39,19 @@ public class AtapController {
 		if (!user.isIdentity()) {
 			redirectAttributes.addFlashAttribute("invalid", true);
 			return "redirect:/pages/input/identity.html";
+		} else if (user.isAtap()) {
+			return "error403";
 		}
 		return "atap";
 	}
 
 	@RequestMapping(value = "/atap/save", method = RequestMethod.POST)
-	public String atapSave(@Valid @ModelAttribute(value = "atap") Atap atap, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String atapSave(@Valid @ModelAttribute(value = "atap") Atap atap, Principal principal, BindingResult result) {
 		if (result.hasErrors()) {
 			return "atap";
 		}
 		String username = principal.getName();
 		atapService.save(atap, username);
-		redirectAttributes.addFlashAttribute("success", true);
-		return "redirect:/pages/input/atap.html";
+		return "redirect:/";
 	}
 }

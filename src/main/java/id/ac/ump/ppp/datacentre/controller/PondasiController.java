@@ -39,19 +39,20 @@ public class PondasiController {
 		if (!user.isIdentity()) {
 			redirectAttributes.addFlashAttribute("invalid", true);
 			return "redirect:/pages/input/identity.html";
+		} else if (user.isPondasi()) {
+			return "error403";
 		}
 		return "pondasi";
 	}
 
 	@RequestMapping(value = "/pondasi/save", method = RequestMethod.POST)
-	public String pondasiSave(@Valid @ModelAttribute(value = "pondasi") Pondasi pondasi, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String pondasiSave(@Valid @ModelAttribute(value = "pondasi") Pondasi pondasi, Principal principal, BindingResult result) {
 		if (result.hasErrors()) {
 			return "pondasi";
 		}
 		String username = principal.getName();
 		pondasiService.save(pondasi, username);
-		redirectAttributes.addFlashAttribute("success", true);
-		return "redirect:/pages/input/pondasi.html";
+		return "redirect:/";
 	}
 
 }

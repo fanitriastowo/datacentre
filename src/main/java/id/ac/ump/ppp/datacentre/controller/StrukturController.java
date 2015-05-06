@@ -39,19 +39,20 @@ public class StrukturController {
 		if (!user.isIdentity()) {
 			redirectAttributes.addFlashAttribute("invalid", true);
 			return "redirect:/pages/input/identity.html";
+		} else if (user.isStruktur()) {
+			return "error403";
 		}
 		return "struktur";
 	}
 
 	@RequestMapping(value = "/struktur/save", method = RequestMethod.POST)
-	public String strukturSave(@Valid @ModelAttribute(value = "struktur") Struktur struktur, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String strukturSave(@Valid @ModelAttribute(value = "struktur") Struktur struktur, Principal principal, BindingResult result) {
 		if (result.hasErrors()) {
 			return "struktur";
 		}
 		String username = principal.getName();
 		strukturService.save(struktur, username);
-		redirectAttributes.addFlashAttribute("success", true);
-		return "redirect:/pages/input/struktur.html";
+		return "redirect:/";
 	}
 
 }

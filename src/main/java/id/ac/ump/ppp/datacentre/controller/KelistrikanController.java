@@ -39,19 +39,20 @@ public class KelistrikanController {
 		if (!user.isIdentity()) {
 			redirectAttributes.addFlashAttribute("invalid", true);
 			return "redirect:/pages/input/identity.html";
+		} else if (user.isKelistrikan()) {
+			return "error403";
 		}
 		return "kelistrikan";
 	}
 
 	@RequestMapping(value = "/kelistrikan/save", method = RequestMethod.POST)
-	public String kelistrikanSave(@Valid @ModelAttribute(value = "kelistrikan") Kelistrikan kelistrikan, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String kelistrikanSave(@Valid @ModelAttribute(value = "kelistrikan") Kelistrikan kelistrikan, Principal principal, BindingResult result) {
 		if (result.hasErrors()) {
 			return "kelistrikan";
 		}
 		String username = principal.getName();
 		kelistrikanService.save(kelistrikan, username);
-		redirectAttributes.addFlashAttribute("success", true);
-		return "redirect:/pages/input/kelistrikan.html";
+		return "redirect:/";
 	}
 
 }

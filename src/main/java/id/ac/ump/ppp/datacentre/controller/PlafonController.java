@@ -39,18 +39,19 @@ public class PlafonController {
 		if (!user.isIdentity()) {
 			redirectAttributes.addFlashAttribute("invalid", true);
 			return "redirect:/pages/input/identity.html";
+		} else if (user.isPlafon()) {
+			return "error403";
 		}
 		return "plafon";
 	}
 
 	@RequestMapping(value = "/plafon/save", method = RequestMethod.POST)
-	public String plafonSave(@Valid @ModelAttribute(value = "plafon") Plafon plafon, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String plafonSave(@Valid @ModelAttribute(value = "plafon") Plafon plafon, Principal principal, BindingResult result) {
 		if (result.hasErrors()) {
 			return "plafon";
 		}
 		String username = principal.getName();
 		plafonService.save(plafon, username);
-		redirectAttributes.addFlashAttribute("success", true);
-		return "redirect:/pages/input/plafon.html";
+		return "redirect:/";
 	}
 }

@@ -39,19 +39,20 @@ public class RuanganController {
 		if (!user.isIdentity()) {
 			redirectAttributes.addFlashAttribute("invalid", true);
 			return "redirect:/pages/input/identity.html";
+		} else if (user.isRuangan()) {
+			return "error403";
 		}
 		return "ruangan";
 	}
 
 	@RequestMapping(value = "/ruangan/save", method = RequestMethod.POST)
-	public String ruanganSave(@Valid @ModelAttribute(value = "ruangan") Ruangan ruangan, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String ruanganSave(@Valid @ModelAttribute(value = "ruangan") Ruangan ruangan, Principal principal, BindingResult result) {
 		if (result.hasErrors()) {
 			return "ruangan";
 		}
 		String username = principal.getName();
 		ruanganService.save(ruangan, username);
-		redirectAttributes.addFlashAttribute("success", true);
-		return "redirect:/pages/input/ruangan.html";
+		return "redirect:/";
 	}
 
 }

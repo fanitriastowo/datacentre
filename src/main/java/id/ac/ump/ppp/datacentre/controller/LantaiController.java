@@ -39,18 +39,19 @@ public class LantaiController {
 		if (!user.isIdentity()) {
 			redirectAttributes.addFlashAttribute("invalid", true);
 			return "redirect:/pages/input/identity.html";
+		} else if (user.isLantai()) {
+			return "error403";
 		}
 		return "lantai";
 	}
 
 	@RequestMapping(value = "/lantai/save", method = RequestMethod.POST)
-	public String lantaiSave(@Valid @ModelAttribute(value = "lantai") Lantai lantai, Principal principal, BindingResult result, RedirectAttributes redirectAttributes) {
+	public String lantaiSave(@Valid @ModelAttribute(value = "lantai") Lantai lantai, Principal principal, BindingResult result) {
 		if (result.hasErrors()) {
 			return "lantai";
 		}
 		String username = principal.getName();
 		lantaiService.save(lantai, username);
-		redirectAttributes.addFlashAttribute("success", true);
-		return "redirect:/pages/input/lantai.html";
+		return "redirect:/";
 	}
 }

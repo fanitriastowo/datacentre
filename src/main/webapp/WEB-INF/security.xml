@@ -8,6 +8,8 @@
 	<global-method-security pre-post-annotations="enabled" />
 
 	<http use-expressions="true">
+		<access-denied-handler error-page="/403.html" />
+		
 		<form-login login-page="/login.html" authentication-failure-url="/loginfail.html" default-target-url="/" />
 		<logout logout-url="/logout.html" logout-success-url="/login.html" delete-cookies="JSESSIONID" />
 
@@ -16,6 +18,7 @@
 		<intercept-url pattern="/master/**" access="hasRole('ROLE_BTS')" />
 		<intercept-url pattern="/pages/input/**" access="hasRole('ROLE_GEDUNG')" />
 		<intercept-url pattern="/" access="isAuthenticated()" />
+		
 	</http>
 
 	<authentication-manager>

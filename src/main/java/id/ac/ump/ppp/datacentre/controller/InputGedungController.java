@@ -29,6 +29,8 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.security.access.method.P;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -126,7 +128,8 @@ public class InputGedungController {
 
 	// IDENTITY
 	@RequestMapping(value = "/identity", method = RequestMethod.GET)
-	public String identity() {
+	@PreAuthorize("#user.identity == 'false'")
+	public String identity(@P("user") User user) {
 		return "identity";
 	}
 

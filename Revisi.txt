@@ -7,8 +7,8 @@ Hak Akses
    - Tombol delete dan update khusus untuk user B.A.U (Pemeliharaan dan Perawatan)
    - Tambah table transaksi Pemeliharaan dan Perawatan
 2. User tiap unit (Gedung)
-   - Form pergedung dan hak akses
-   - Form 1 kali submit
+   - Form pergedung dan hak akses - Finish
+   - Form 1 kali submit - Finish
 3 BTS
    - Maintenence Sistem (User Management, Bussiness Management) 
    - Import dari Excel dan CSV

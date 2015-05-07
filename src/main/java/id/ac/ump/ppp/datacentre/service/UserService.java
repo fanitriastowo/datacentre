@@ -10,6 +10,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,7 @@ public class UserService {
 	@Autowired
 	private RoleRepository roleRepository;
 
+	@Cacheable(value = "findAllUser")
 	public List<User> findAll() {
 		return userRepository.findAll();
 	}
@@ -49,6 +51,15 @@ public class UserService {
 		user.setPassword(encoder.encode(user.getPassword()));
 		user.setRole(roleGedung);
 		user.setEnabled(true);
+		user.setIdentity(false);
+		user.setAir(false);
+		user.setAtap(false);
+		user.setKelistrikan(false);
+		user.setLantai(false);
+		user.setPlafon(false);
+		user.setPondasi(false);
+		user.setRuangan(false);
+		user.setStruktur(false);
 		userRepository.save(user);
 	}
 

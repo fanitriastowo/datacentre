@@ -2,12 +2,15 @@ package id.ac.ump.ppp.datacentre.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import id.ac.ump.ppp.datacentre.entities.Gedung;
 import id.ac.ump.ppp.datacentre.entities.User;
 import id.ac.ump.ppp.datacentre.repositories.GedungRepository;
 import id.ac.ump.ppp.datacentre.repositories.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -19,10 +22,12 @@ public class GedungService {
 	@Autowired
 	private UserRepository userRepository;
 
+	@Cacheable(value = "findAllGedung")
 	public List<Gedung> findAll() {
 		return gedungRepository.findAll();
 	}
 
+	@Transactional
 	public void save(Gedung gedung, String username) {
 		User user = userRepository.findOneByUsername(username);
 		gedung.setUser(user);
@@ -31,6 +36,7 @@ public class GedungService {
 		userRepository.save(user);
 	}
 
+	@Transactional
 	public void delete(Integer id) {
 		gedungRepository.delete(id);
 	}

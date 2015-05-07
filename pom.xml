@@ -13,21 +13,19 @@
 		<spring-data-jpa.version>1.5.1.RELEASE</spring-data-jpa.version>
 		<org.hsqldb.version>2.3.2</org.hsqldb.version>
 		<spring.security.version>3.2.3.RELEASE</spring.security.version>
-		<jackson.version>1.9.13</jackson.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>2.9.1</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<version>${hibernate-validator.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-jaxrs</artifactId>
-			<version>${jackson.version}</version>
 		</dependency>
 
 		<dependency>

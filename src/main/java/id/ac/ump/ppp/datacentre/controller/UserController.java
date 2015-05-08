@@ -30,7 +30,7 @@ public class UserController {
 
 	@RequestMapping("/users")
 	public String users(Model model) {
-		Role role = roleService.findOneByName("ROLE_BTS");
+		Role role = roleService.findOneByName("ROLE_PUSAT");
 		model.addAttribute("users", userService.findAllByRoleNotRoleBTS(role));
 		return "users";
 	}

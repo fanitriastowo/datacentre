@@ -10,5 +10,4 @@ Hak Akses
    - Form pergedung dan hak akses - Finish
    - Form 1 kali submit - Finish
 3 BTS
-   - Maintenence Sistem (User Management, Bussiness Management) 
-   - Import dari Excel dan CSV
+   - Maintenence Sistem (User Management, Bussiness Management) - Finish

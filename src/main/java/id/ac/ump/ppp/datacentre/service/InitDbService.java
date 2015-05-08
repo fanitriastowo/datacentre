@@ -76,7 +76,7 @@ public class InitDbService {
 
 		// Insert Role
 		Role roleBTS = new Role();
-		roleBTS.setName("ROLE_BTS");
+		roleBTS.setName("ROLE_PUSAT");
 		roleRepository.save(roleBTS);
 
 		Role roleGedung = new Role();
@@ -84,14 +84,14 @@ public class InitDbService {
 		roleRepository.save(roleGedung);
 
 		Role roleMaintenence = new Role();
-		roleMaintenence.setName("ROLE_BAU");
+		roleMaintenence.setName("ROLE_AKADEMIK");
 		roleRepository.save(roleMaintenence);
 
 		// User BTS
 		User userBTS = new User();
 		userBTS.setUsername("pusat");
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		userBTS.setPassword(encoder.encode("admin"));
+		userBTS.setPassword(encoder.encode("pusat"));
 		userBTS.setPhone("110");
 		userBTS.setEnabled(true);
 		userBTS.setRole(roleBTS);
@@ -100,7 +100,7 @@ public class InitDbService {
 
 		// User BAU
 		User userMaintenence = new User();
-		userMaintenence.setUsername("BAU");
+		userMaintenence.setUsername("akademik");
 		BCryptPasswordEncoder encoder2 = new BCryptPasswordEncoder();
 		userMaintenence.setPassword(encoder2.encode("akademik"));
 		userMaintenence.setPhone("330");

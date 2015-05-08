@@ -10,12 +10,15 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
+	
+	private final String cacheUserList = "findAllUser";
 
 	@Autowired
 	private UserRepository userRepository;
@@ -23,7 +26,7 @@ public class UserService {
 	@Autowired
 	private RoleRepository roleRepository;
 
-	@Cacheable(value = "findAllUser")
+	@Cacheable(value = cacheUserList)
 	public List<User> findAll() {
 		return userRepository.findAll();
 	}
@@ -33,6 +36,7 @@ public class UserService {
 	}
 
 	@Transactional
+	@CacheEvict(value = cacheUserList, allEntries = true)
 	public void updateUser(User user) {
 		User updated = userRepository.findOne(user.getId());
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -64,6 +68,7 @@ public class UserService {
 	}
 
 	@Transactional
+	@CacheEvict(value = cacheUserList, allEntries = true)
 	public void deleteUser(Integer id) {
 		userRepository.delete(id);
 	}

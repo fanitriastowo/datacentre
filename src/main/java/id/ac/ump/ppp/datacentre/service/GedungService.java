@@ -10,11 +10,14 @@ import id.ac.ump.ppp.datacentre.repositories.GedungRepository;
 import id.ac.ump.ppp.datacentre.repositories.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
 public class GedungService {
+	
+	private final String cacheGedungList = "findAllGedung";
 
 	@Autowired
 	private GedungRepository gedungRepository;
@@ -22,7 +25,7 @@ public class GedungService {
 	@Autowired
 	private UserRepository userRepository;
 
-	@Cacheable(value = "findAllGedung")
+	@Cacheable(value = cacheGedungList)
 	public List<Gedung> findAll() {
 		return gedungRepository.findAll();
 	}
@@ -37,6 +40,7 @@ public class GedungService {
 	}
 
 	@Transactional
+	@CacheEvict(value = cacheGedungList, allEntries = true)
 	public void delete(Integer id) {
 		gedungRepository.delete(id);
 	}

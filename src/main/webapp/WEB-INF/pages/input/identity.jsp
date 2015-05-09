@@ -7,13 +7,17 @@
 
 	<c:if test="${success eq true }">
 		<div class="alert alert-success alert-dismissible" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
 			Data Berhasil Diinputkan
 		</div>
 	</c:if>
 	<c:if test="${invalid eq true }">
 		<div class="alert alert-warning alert-dismissible" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
 			<strong>Warning!</strong> Inputkan Identitas Gedung Terlebih Dahulu
 		</div>
 	</c:if>
@@ -138,7 +142,8 @@
 					required : true
 				},
 				luasGedung : {
-					required : true
+					required : true,
+					number : true
 				},
 				lokasiGedung : {
 					required : true,
@@ -169,7 +174,8 @@
 					required : "Tahun Survey Harap Diisi"
 				},
 				luasGedung : {
-					required : "Luas Gedung Harap Diisi"
+					required : "Luas Gedung Harap Diisi",
+					number : "Input hanya berupa angka"
 				},
 				lokasiGedung : {
 					required : "Lokasi Gedung Harap Diisi",

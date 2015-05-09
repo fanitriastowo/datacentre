@@ -12,6 +12,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -46,11 +47,12 @@ public class UserService {
 	}
 
 	@Cacheable(value = cacheUserListByRole, key = "#role")
-	public List<User> findAllByRoleNotRoleBTS(Role role) {
+	public List<User> findAllByRoleNotRolePusat(Role role) {
 		return userRepository.findAllByRoleNot(role);
 	}
 
 	@Transactional
+	@CacheEvict(value = cacheUserListByRole, allEntries = true)
 	public void saveNewUser(User user) {
 		Role roleGedung = roleRepository.findOneByName("ROLE_GEDUNG");
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -70,6 +72,7 @@ public class UserService {
 	}
 
 	@Transactional
+	@PreAuthorize("hasRole('ROLE_PUSAT')")
 	@CacheEvict(value = cacheUserListByRole, allEntries = true)
 	public void deleteUser(Integer id) {
 		userRepository.delete(id);

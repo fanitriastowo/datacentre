@@ -111,7 +111,7 @@ public class InitDbService {
 
 		// User Gedung Teknik
 		User userGedungTeknik = new User();
-		userGedungTeknik.setUsername("KEDOKTERAN");
+		userGedungTeknik.setUsername("kedokteran");
 		BCryptPasswordEncoder encoder3 = new BCryptPasswordEncoder();
 		userGedungTeknik.setPassword(encoder3.encode("kedokteran"));
 		userGedungTeknik.setPhone("320");

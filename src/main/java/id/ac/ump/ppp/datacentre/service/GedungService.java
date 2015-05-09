@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class GedungService {
-	
+
 	private final String cacheGedungList = "findAllGedung";
 
 	@Autowired
@@ -31,6 +31,7 @@ public class GedungService {
 	}
 
 	@Transactional
+	@CacheEvict(value = cacheGedungList, allEntries = true)
 	public void save(Gedung gedung, String username) {
 		User user = userRepository.findOneByUsername(username);
 		gedung.setUser(user);

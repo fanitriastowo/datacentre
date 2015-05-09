@@ -17,8 +17,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-	
+
 	private final String cacheUserList = "findAllUser";
+	private final String cacheUserListByRole = "findAllUserByRole";
 
 	@Autowired
 	private UserRepository userRepository;
@@ -36,7 +37,7 @@ public class UserService {
 	}
 
 	@Transactional
-	@CacheEvict(value = cacheUserList, allEntries = true)
+	@CacheEvict(value = cacheUserListByRole, allEntries = true)
 	public void updateUser(User user) {
 		User updated = userRepository.findOne(user.getId());
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -44,6 +45,7 @@ public class UserService {
 		userRepository.save(updated);
 	}
 
+	@Cacheable(value = cacheUserListByRole, key = "#role")
 	public List<User> findAllByRoleNotRoleBTS(Role role) {
 		return userRepository.findAllByRoleNot(role);
 	}
@@ -68,7 +70,7 @@ public class UserService {
 	}
 
 	@Transactional
-	@CacheEvict(value = cacheUserList, allEntries = true)
+	@CacheEvict(value = cacheUserListByRole, allEntries = true)
 	public void deleteUser(Integer id) {
 		userRepository.delete(id);
 	}

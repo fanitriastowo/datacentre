@@ -5,8 +5,10 @@ import id.ac.ump.ppp.datacentre.entities.enumeration.Kondisi;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "PLAFON")
 public class Plafon {
 
 	@Id

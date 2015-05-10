@@ -43,7 +43,7 @@
 							<form:errors path="phone" />
 						</div>
 					</div>
-
+					
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
@@ -68,7 +68,10 @@
 				<tr>
 					<td><c:out value="${user.username }" /></td>
 					<td><c:out value="${user.phone }" /></td>
-					<td><a href="#" class="btn btn-info">Detail</a> <a href='<spring:url value="/master/users/delete/${user.id }.html"/>' class="btn btn-danger triggerRemove">Delete</a></td>
+					<td>
+						<a href="#" class="btn btn-info">Detail</a> 
+						<a href='<spring:url value="/master/users/delete/${user.id }.html"/>' class="btn btn-danger triggerRemove">Delete</a>
+					</td>
 				</tr>
 			</c:forEach>
 		</tbody>

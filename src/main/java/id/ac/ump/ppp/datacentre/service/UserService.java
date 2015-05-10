@@ -19,8 +19,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-	private final String cacheUserList = "findAllUser";
-	private final String cacheUserListByRole = "findAllUserByRole";
+	private final String USERLISTCACHE = "userList";
+	private final String USERLISTBYROLEGEDUNG = "userListByRoleGedung";
 
 	@Autowired
 	private UserRepository userRepository;
@@ -28,7 +28,7 @@ public class UserService {
 	@Autowired
 	private RoleRepository roleRepository;
 
-	@Cacheable(value = cacheUserList)
+	@Cacheable(value = USERLISTCACHE)
 	public List<User> findAll() {
 		return userRepository.findAll();
 	}
@@ -38,7 +38,7 @@ public class UserService {
 	}
 
 	@Transactional
-	@CacheEvict(value = cacheUserListByRole, allEntries = true)
+	@CacheEvict(value = USERLISTBYROLEGEDUNG, allEntries = true)
 	public void updateUser(User user) {
 		User updated = userRepository.findOne(user.getId());
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -46,13 +46,14 @@ public class UserService {
 		userRepository.save(updated);
 	}
 
-	@Cacheable(value = cacheUserListByRole, key = "#role")
-	public List<User> findAllByRoleNotRolePusat(Role role) {
-		return userRepository.findAllByRoleNot(role);
+	@Cacheable(value = USERLISTBYROLEGEDUNG)
+	public List<User> findAllByRoleGedung() {
+		Role role = roleRepository.findOneByName("ROLE_GEDUNG");
+		return userRepository.findAllByRole(role);
 	}
 
 	@Transactional
-	@CacheEvict(value = cacheUserListByRole, allEntries = true)
+	@CacheEvict(value = USERLISTBYROLEGEDUNG, allEntries = true)
 	public void saveNewUser(User user) {
 		Role roleGedung = roleRepository.findOneByName("ROLE_GEDUNG");
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
@@ -73,7 +74,7 @@ public class UserService {
 
 	@Transactional
 	@PreAuthorize("hasRole('ROLE_PUSAT')")
-	@CacheEvict(value = cacheUserListByRole, allEntries = true)
+	@CacheEvict(value = USERLISTBYROLEGEDUNG, allEntries = true)
 	public void deleteUser(Integer id) {
 		userRepository.delete(id);
 	}

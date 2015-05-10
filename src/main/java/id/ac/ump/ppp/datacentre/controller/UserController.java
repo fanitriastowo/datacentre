@@ -1,6 +1,5 @@
 package id.ac.ump.ppp.datacentre.controller;
 
-import id.ac.ump.ppp.datacentre.entities.Role;
 import id.ac.ump.ppp.datacentre.entities.User;
 import id.ac.ump.ppp.datacentre.service.RoleService;
 import id.ac.ump.ppp.datacentre.service.UserService;
@@ -30,8 +29,7 @@ public class UserController {
 
 	@RequestMapping("/users")
 	public String users(Model model) {
-		Role role = roleService.findOneByName("ROLE_PUSAT");
-		model.addAttribute("users", userService.findAllByRoleNotRolePusat(role));
+		model.addAttribute("users", userService.findAllByRoleGedung());
 		return "users";
 	}
 

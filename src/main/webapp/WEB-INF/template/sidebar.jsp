@@ -8,7 +8,6 @@
 			<security:authorize access="hasRole('ROLE_PUSAT')">
 				<li><a href="#"><i class="fa fa-cog fa-fw"></i> Operation<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
-						<li><a href="#"><i class="fa fa-arrow-circle-up fa-fw"></i> Import</a></li>
 						<li><a href="#"><i class="fa fa-arrow-circle-down fa-fw"></i> Export</a></li>
 					</ul></li>
 				<li><a href="#"><i class="fa fa-th-list fa-fw"></i> Master<span class="fa arrow"></span></a>

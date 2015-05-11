@@ -7,4 +7,8 @@
 	<bean id="usersPdf" class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView" 
 		p:url="classpath:/reports/users.jrxml"
 		p:reportDataKey="dataSource" />
+
+	<bean id="gedungPdf" class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView" 
+		p:url="classpath:/reports/gedung.jrxml"
+		p:reportDataKey="dataSource" />
 </beans>

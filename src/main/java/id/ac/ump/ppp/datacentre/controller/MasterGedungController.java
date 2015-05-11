@@ -5,6 +5,7 @@ import id.ac.ump.ppp.datacentre.service.GedungService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -34,5 +35,9 @@ public class MasterGedungController {
 		return "gedungDetail";
 	}
 
-
+	@RequestMapping(value = "/cetak/gedung", method = RequestMethod.GET)
+	public String gedungDetail(ModelMap modelMap) {
+		modelMap.addAttribute("dataSource", gedungService.findAll());
+		return "gedungPdf";
+	}
 }

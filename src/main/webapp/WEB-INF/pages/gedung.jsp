@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../template/taglib.jsp"%>
 <h2>Daftar Gedung</h2>
+<a class="btn btn-primary" href='<spring:url value="/master/gedung/cetak/gedung.html" />'>Cetak</a>
+<br />
+<br />
 
 <div class="table-responsive">
 	<table class="table table-striped table-bordered table-hover">
@@ -28,6 +31,7 @@
 					<td><c:out value="${gedung.jenisGedung }" /></td>
 					<td>
 						<a href='<spring:url value="/master/gedung/detail/${gedung.id }.html" />' class="btn btn-info">Detail</a> 
+						<a href="#" class="btn btn-info">Cetak Detail</a> 
 						<%-- <a href='<spring:url value="/master/gedung/update/${gedung.id }.html" />' class="btn btn-success" data-toggle="modal" data-target="#updateModal">Update</a> --%> 
 						<%-- <a href='<spring:url value="/master/gedung/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a> --%>
 					</td>

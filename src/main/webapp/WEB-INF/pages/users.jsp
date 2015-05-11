@@ -4,6 +4,7 @@
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModalForm">Tambah User</button>
+<a href='<spring:url value="/master/users/cetak/usersPdf.html" />' class="btn btn-primary">Cetak</a>
 <br />
 <br />
 

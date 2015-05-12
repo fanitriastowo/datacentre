@@ -52,6 +52,22 @@
 		<put-attribute name="body" value="/WEB-INF/pages/gedungDetail.jsp" />
 		<put-attribute name="current" value="master" />
 	</definition>
+	
+	<definition name="gedungAkademik" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Daftar Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/gedungAkademik.jsp" />
+		<put-attribute name="current" value="master" />
+	</definition>
+	
+	<definition name="gedungDetailAkademik" extends="base">
+		<put-attribute name="title" value="Aplikasi Datacentre - Detail Gedung" />
+		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/gedungDetailAkademik.jsp" />
+		<put-attribute name="current" value="master" />
+	</definition>
 
 	<definition name="identity" extends="base">
 		<put-attribute name="title" value="Aplikasi Datacentre - Identitas Gedung" />

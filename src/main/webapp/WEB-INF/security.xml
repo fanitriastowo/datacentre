@@ -12,6 +12,7 @@
 		<intercept-url pattern="/index.html" access="isAuthenticated()" />
 		<intercept-url pattern="/account.html" access="isAuthenticated()" />
 		<intercept-url pattern="/master/**" access="hasRole('ROLE_PUSAT')" />
+		<intercept-url pattern="/akademik/**" access="hasRole('ROLE_AKADEMIK')" />
 		<intercept-url pattern="/pages/input/**" access="hasRole('ROLE_GEDUNG')" />
 		
 		<access-denied-handler error-page="/403.html" />

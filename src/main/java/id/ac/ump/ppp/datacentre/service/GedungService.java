@@ -12,12 +12,13 @@ import id.ac.ump.ppp.datacentre.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 @Service
 public class GedungService {
 
-	private final String cacheGedungList = "findAllGedung";
+	private final String CACHEGEDUNGLIST = "gedungList";
 
 	@Autowired
 	private GedungRepository gedungRepository;
@@ -25,13 +26,13 @@ public class GedungService {
 	@Autowired
 	private UserRepository userRepository;
 
-	@Cacheable(value = cacheGedungList)
+	@Cacheable(value = CACHEGEDUNGLIST)
 	public List<Gedung> findAll() {
 		return gedungRepository.findAll();
 	}
 
 	@Transactional
-	@CacheEvict(value = cacheGedungList, allEntries = true)
+	@CacheEvict(value = CACHEGEDUNGLIST, allEntries = true)
 	public void save(Gedung gedung, String username) {
 		User user = userRepository.findOneByUsername(username);
 		gedung.setUser(user);
@@ -41,7 +42,8 @@ public class GedungService {
 	}
 
 	@Transactional
-	@CacheEvict(value = cacheGedungList, allEntries = true)
+	@PreAuthorize("hasRole('ROLE_AKADEMIK')")
+	@CacheEvict(value = CACHEGEDUNGLIST, allEntries = true)
 	public void delete(Integer id) {
 		gedungRepository.delete(id);
 	}

@@ -5,17 +5,32 @@
 	<div class="sidebar-nav navbar-collapse">
 		<ul class="nav" id="side-menu">
 			<li><a href='<spring:url value="/" />'><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
+			
+			<!-- ROLE PUSAT -->
 			<security:authorize access="hasRole('ROLE_PUSAT')">
 				<li><a href="#"><i class="fa fa-cog fa-fw"></i> Operation<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
 						<li><a href="#"><i class="fa fa-arrow-circle-down fa-fw"></i> Export</a></li>
-					</ul></li>
+					</ul>
+				</li>
 				<li><a href="#"><i class="fa fa-th-list fa-fw"></i> Master<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
 						<li><a href='<spring:url value="/master/gedung.html"/>'><i class="fa fa-building fa-fw"></i> Gedung</a></li>
 						<li><a href='<spring:url value="/master/users.html"/>'><i class="fa fa-user fa-fw"></i> User</a></li>
-					</ul></li>
+					</ul>
+				</li>
 			</security:authorize>
+			
+			<!-- ROLE AKADEMIK -->
+			<security:authorize access="hasRole('ROLE_AKADEMIK')">
+				<li><a href="#"><i class="fa fa-th-list fa-fw"></i> Master<span class="fa arrow"></span></a>
+					<ul class="nav nav-second-level">
+						<li><a href='<spring:url value="/akademik/gedung.html" />'><i class="fa fa-building fa-fw"></i> Gedung</a></li>
+					</ul>
+				</li>
+			</security:authorize>
+			
+			<!-- ROLE GEDUNG -->
 			<security:authorize access="hasRole('ROLE_GEDUNG')">
 				<li><a href="#"><i class="fa fa-cog fa-fw"></i> Input Data</a>
 					<ul class="nav nav-second-level">
@@ -28,7 +43,8 @@
 						<li><a href='<spring:url value="/pages/input/struktur.html" />'><i class="fa fa-university fa-fw"></i> Struktur</a></li>
 						<li><a href='<spring:url value="/pages/input/lantai.html" />'><i class="fa fa-bookmark fa-fw"></i> Lantai</a></li>
 						<li><a href='<spring:url value="/pages/input/air.html" />'><i class="fa fa-anchor fa-fw"></i> Air</a></li>
-					</ul></li>
+					</ul>
+				</li>
 			</security:authorize>
 		</ul>
 	</div>

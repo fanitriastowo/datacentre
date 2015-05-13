@@ -29,6 +29,7 @@
 				<config>src/main/webapp/WEB-INF/cache.xml</config>
 				<config>src/main/webapp/WEB-INF/database-dev.xml</config>
 				<config>src/main/webapp/WEB-INF/database-prod.xml</config>
+				<config>src/main/webapp/WEB-INF/jasper-views.xml</config>
 			</configs>
 			<profiles>
 			</profiles>

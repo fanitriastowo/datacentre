@@ -20,6 +20,7 @@ public class HomeController {
 	public String home(Model model, Principal principal) {
 		String username = principal.getName();
 		User user = userService.findOneByUsername(username);
+		model.addAttribute("users", userService.findAllByRoleGedung());
 		model.addAttribute("user", user);
 		return "home";
 	}

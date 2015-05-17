@@ -6,7 +6,6 @@
 		<ul class="nav" id="side-menu">
 			<li><a href='<spring:url value="/" />'><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
 			
-			<!-- ROLE PUSAT -->
 			<security:authorize access="hasRole('ROLE_PUSAT')">
 				<li><a href="#"><i class="fa fa-cog fa-fw"></i> Operation<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
@@ -21,7 +20,6 @@
 				</li>
 			</security:authorize>
 			
-			<!-- ROLE AKADEMIK -->
 			<security:authorize access="hasRole('ROLE_AKADEMIK')">
 				<li><a href="#"><i class="fa fa-th-list fa-fw"></i> Master<span class="fa arrow"></span></a>
 					<ul class="nav nav-second-level">
@@ -30,7 +28,6 @@
 				</li>
 			</security:authorize>
 			
-			<!-- ROLE GEDUNG -->
 			<security:authorize access="hasRole('ROLE_GEDUNG')">
 				<li><a href="#"><i class="fa fa-cog fa-fw"></i> Input Data</a>
 					<ul class="nav nav-second-level">

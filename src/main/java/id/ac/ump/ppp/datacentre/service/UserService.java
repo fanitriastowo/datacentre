@@ -79,4 +79,9 @@ public class UserService {
 		userRepository.delete(id);
 	}
 
+	public List<User> findAllByRoleGedungForHomePusat() {
+		Role role = roleRepository.findOneByName("ROLE_GEDUNG");
+		return userRepository.findAllByRole(role);
+	}
+
 }

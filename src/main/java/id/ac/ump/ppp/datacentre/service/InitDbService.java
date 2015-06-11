@@ -87,10 +87,10 @@ public class InitDbService {
 		roleMaintenence.setName("ROLE_AKADEMIK");
 		roleRepository.save(roleMaintenence);
 
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		// User BTS
 		User userBTS = new User();
 		userBTS.setUsername("pusat");
-		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		userBTS.setPassword(encoder.encode("pusat"));
 		userBTS.setPhone("110");
 		userBTS.setEnabled(true);
@@ -101,8 +101,7 @@ public class InitDbService {
 		// User BAU
 		User userMaintenence = new User();
 		userMaintenence.setUsername("akademik");
-		BCryptPasswordEncoder encoder2 = new BCryptPasswordEncoder();
-		userMaintenence.setPassword(encoder2.encode("akademik"));
+		userMaintenence.setPassword(encoder.encode("akademik"));
 		userMaintenence.setPhone("330");
 		userMaintenence.setEnabled(true);
 		userMaintenence.setRole(roleMaintenence);
@@ -111,14 +110,39 @@ public class InitDbService {
 
 		// User Gedung Teknik
 		User userGedungTeknik = new User();
-		userGedungTeknik.setUsername("kedokteran");
-		BCryptPasswordEncoder encoder3 = new BCryptPasswordEncoder();
-		userGedungTeknik.setPassword(encoder3.encode("kedokteran"));
+		userGedungTeknik.setUsername("teknik");
+		userGedungTeknik.setPassword(encoder.encode("teknik"));
 		userGedungTeknik.setPhone("320");
 		userGedungTeknik.setEnabled(true);
 		userGedungTeknik.setRole(roleGedung);
-		userGedungTeknik.setIdentity(false);
+		userGedungTeknik.setIdentity(true);
+		userGedungTeknik.setAir(true);
+		userGedungTeknik.setAtap(true);
+		userGedungTeknik.setKelistrikan(true);
+		userGedungTeknik.setLantai(true);
+		userGedungTeknik.setPlafon(true);
+		userGedungTeknik.setPondasi(true);
+		userGedungTeknik.setRuangan(true);
+		userGedungTeknik.setStruktur(true);
 		userRepository.save(userGedungTeknik);
+
+		// User Gedung Ekonomi
+		User userGedungEkonomi = new User();
+		userGedungEkonomi.setUsername("ekonomi");
+		userGedungEkonomi.setPassword(encoder.encode("ekonomi"));
+		userGedungEkonomi.setPhone("440");
+		userGedungEkonomi.setEnabled(true);
+		userGedungEkonomi.setRole(roleGedung);
+		userGedungEkonomi.setIdentity(true);
+		userGedungEkonomi.setAir(true);
+		userGedungEkonomi.setAtap(true);
+		userGedungEkonomi.setKelistrikan(true);
+		userGedungEkonomi.setLantai(true);
+		userGedungEkonomi.setPlafon(true);
+		userGedungEkonomi.setPondasi(true);
+		userGedungEkonomi.setRuangan(true);
+		userGedungEkonomi.setStruktur(true);
+		userRepository.save(userGedungEkonomi);
 
 		// ====================================================================================
 		/* ============= ATAP ============ */
@@ -319,6 +343,7 @@ public class InitDbService {
 		gedung.setLantai(lantai1);
 		gedung.setKelistrikan(kelistrikan1);
 		gedung.setAir(air1);
+		gedung.setUser(userGedungTeknik);
 		gedungRepository.save(gedung);
 		// ====================================================================================
 
@@ -516,6 +541,7 @@ public class InitDbService {
 		gedung2.setLantai(lantai2);
 		gedung2.setKelistrikan(kelistrikan2);
 		gedung2.setAir(air2);
+		gedung2.setUser(userGedungEkonomi);
 		gedungRepository.save(gedung2);
 		// ====================================================================================
 	}

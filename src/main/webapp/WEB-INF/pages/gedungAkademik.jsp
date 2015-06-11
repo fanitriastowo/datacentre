@@ -27,7 +27,7 @@
 					<td><c:out value="${gedung.jenisGedung }" /></td>
 					<td>
 						<a href='<spring:url value="/akademik/gedung/detail/${gedung.id }.html" />' class="btn btn-info">Detail</a> 
-						<a href='<spring:url value="/akademik/gedung/update/${gedung.id }.html" />' class="btn btn-success" data-toggle="modal" data-target="#updateModal">Update</a> 
+						<a href='<spring:url value="/akademik/gedung/update/${gedung.id }.html" />' class="btn btn-success">Update</a> 
 						<a href='<spring:url value="/akademik/gedung/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a>
 					</td>
 				</tr>

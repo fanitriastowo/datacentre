@@ -17,15 +17,15 @@
 						</div>
 						<div class="col-xs-9 text-right">
 							<div class="huge">
-								Identitas : <c:out value="${users.identity }" /><br />
-								Atap : <c:out value="${users.atap }" /> <br />
-								Plafon : <c:out value="${users.plafon }" /> <br />
-								Pondasi : <c:out value="${users.pondasi }" /> <br />
-								Ruangan : <c:out value="${users.ruangan }" /> <br />
-								Kelistrikan : <c:out value="${users.kelistrikan }" /> <br />
-								Struktur : <c:out value="${users.struktur }" /> <br />
-								Lantai : <c:out value="${users.lantai }" /> <br />
-								Air : <c:out value="${users.air }" />
+								Identitas : ${users.identity eq true ? 'Selesai' : 'Belum'}<br />
+								Atap : ${users.atap eq true ? 'Selesai' : 'Belum'} <br />
+								Plafon : ${users.plafon eq true ? 'Selesai' : 'Belum'} <br />
+								Pondasi : ${users.pondasi eq true ? 'Selesai' : 'Belum'} <br />
+								Ruangan : ${users.ruangan eq true ? 'Selesai' : 'Belum'} <br />
+								Kelistrikan : ${users.kelistrikan eq true ? 'Selesai' : 'Belum'} <br />
+								Struktur : ${users.struktur eq true ? 'Selesai' : 'Belum'} <br />
+								Lantai : ${users.lantai eq true ? 'Selesai' : 'Belum'} <br />
+								Air : ${users.air eq true ? 'Selesai' : 'Belum'}
 							</div>
 						</div>
 					</div>

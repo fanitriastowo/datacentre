@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../template/taglib.jsp"%>
+<%@ include file="../../template/taglib.jsp"%>
 <h1>Daftar Pengguna</h1>
 
 <!-- Button trigger modal -->

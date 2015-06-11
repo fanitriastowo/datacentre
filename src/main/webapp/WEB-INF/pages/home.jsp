@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../template/taglib.jsp"%>
-<%@ include file="homeAkademik.jsp" %>
-<%@ include file="homePusat.jsp" %>
+<%@ include file="akademik/homeAkademik.jsp" %>
+<%@ include file="admin/homePusat.jsp" %>
 
 
 <security:authorize access="hasRole('ROLE_GEDUNG')">

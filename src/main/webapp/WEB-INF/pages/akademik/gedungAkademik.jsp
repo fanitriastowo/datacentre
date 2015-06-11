@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../template/taglib.jsp"%>
+<%@ include file="../../template/taglib.jsp"%>
 
 <div class="table-responsive">
 	<table class="table table-striped table-bordered table-hover">

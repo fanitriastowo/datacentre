@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../template/taglib.jsp"%>
+<%@ include file="../../template/taglib.jsp"%>
 <h2>Daftar Gedung</h2>
 <a class="btn btn-primary" href='<spring:url value="/master/gedung/cetak/gedung.html" />'>Cetak</a>
 <br />

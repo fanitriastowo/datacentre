@@ -4,7 +4,7 @@
 <h3>Input Atap Gedung</h3>
 
 
-<form:form commandName="atap" action="${pageContext.request.contextPath }/pages/input/atap/save.html" cssClass="form-horizontal formInputAtap">
+<form:form commandName="atap" action="${pageContext.request.contextPath }/pages/gedung/atap/save.html" cssClass="form-horizontal formInputAtap">
 	<c:if test="${success eq true }">
 		<div class="alert alert-success">Data Berhasil Diinputkan</div>
 	</c:if>

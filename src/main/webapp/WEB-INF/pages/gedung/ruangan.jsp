@@ -3,7 +3,7 @@
 
 <h3>Input Ruangan Gedung</h3>
 
-<form:form commandName="ruangan" action="${pageContext.request.contextPath }/pages/input/ruangan/save.html" cssClass="form-horizontal formInputRuangan">
+<form:form commandName="ruangan" action="${pageContext.request.contextPath }/pages/gedung/ruangan/save.html" cssClass="form-horizontal formInputRuangan">
 	<c:if test="${success eq true }">
 		<div class="alert alert-success">Data Berhasil Diinputkan</div>
 	</c:if>

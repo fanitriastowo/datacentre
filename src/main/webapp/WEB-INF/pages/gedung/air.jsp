@@ -3,7 +3,7 @@
 
 <h3>Input Kondisi Air Gedung</h3>
 
-<form:form commandName="air" action="${pageContext.request.contextPath }/pages/input/air/save.html" cssClass="form-horizontal formInputAir">
+<form:form commandName="air" action="${pageContext.request.contextPath }/pages/gedung/air/save.html" cssClass="form-horizontal formInputAir">
 	<c:if test="${success eq true }">
 		<div class="alert alert-success">Data Berhasil Diinputkan</div>
 	</c:if>

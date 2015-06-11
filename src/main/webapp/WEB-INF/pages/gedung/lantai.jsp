@@ -3,7 +3,7 @@
 
 <h3>Input Lantai Gedung</h3>
 
-<form:form commandName="lantai" action="${pageContext.request.contextPath }/pages/input/lantai/save.html" cssClass="form-horizontal formInputLantai">
+<form:form commandName="lantai" action="${pageContext.request.contextPath }/pages/gedung/lantai/save.html" cssClass="form-horizontal formInputLantai">
 	<c:if test="${success eq true }">
 		<div class="alert alert-success">Data Berhasil Diinputkan</div>
 	</c:if>

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/master")
+@RequestMapping("/pages/admin")
 public class UserController {
 
 	@Autowired
@@ -37,13 +37,13 @@ public class UserController {
 	@RequestMapping(value = "/users/save", method = RequestMethod.POST)
 	public String userSave(@ModelAttribute(value = "user") User user) {
 		userService.saveNewUser(user);
-		return "redirect:/master/users.html";
+		return "redirect:/pages/admin/users.html";
 	}
 
 	@RequestMapping(value = "/users/delete/{id}")
 	public String userDelete(@PathVariable Integer id) {
 		userService.deleteUser(id);
-		return "redirect:/master/users.html";
+		return "redirect:/pages/admin/users.html";
 	}
 
 	@RequestMapping(value = "/users/cetak/usersPdf")

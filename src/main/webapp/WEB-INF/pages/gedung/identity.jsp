@@ -3,7 +3,7 @@
 
 <h3>Input Gedung</h3>
 
-<form:form commandName="gedung" action="${pageContext.request.contextPath }/pages/input/identity/save.html" method="post" cssClass="form-horizontal formInputGedung">
+<form:form commandName="gedung" action="${pageContext.request.contextPath }/pages/gedung/identity/save.html" method="post" cssClass="form-horizontal formInputGedung">
 
 	<c:if test="${success eq true }">
 		<div class="alert alert-success alert-dismissible" role="alert">

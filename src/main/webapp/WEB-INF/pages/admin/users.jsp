@@ -4,12 +4,12 @@
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModalForm">Tambah User</button>
-<a href='<spring:url value="/master/users/cetak/usersPdf.html" />' class="btn btn-primary">Cetak</a>
+<a href='<spring:url value="/pages/admin/users/cetak/usersPdf.html" />' class="btn btn-primary">Cetak</a>
 <br />
 <br />
 
 <!-- Add Modal -->
-<form:form commandName="user" action="${pageContext.request.contextPath }/master/users/save.html" method="post" cssClass="form-horizontal addModalForm">
+<form:form commandName="user" action="${pageContext.request.contextPath }/pages/admin/users/save.html" method="post" cssClass="form-horizontal addModalForm">
 	<div class="modal fade" id="addModalForm" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -71,7 +71,7 @@
 					<td><c:out value="${user.phone }" /></td>
 					<td>
 						<a href="#" class="btn btn-info">Detail</a> 
-						<a href='<spring:url value="/master/users/delete/${user.id }.html"/>' class="btn btn-danger triggerRemove">Delete</a>
+						<a href='<spring:url value="/pages/admin/users/delete/${user.id }.html"/>' class="btn btn-danger triggerRemove">Delete</a>
 					</td>
 				</tr>
 			</c:forEach>

@@ -27,7 +27,7 @@
 						</div>
 					</div>
 				</div>
-				<a href='<spring:url value="/pages/input/identity.html" />'>
+				<a href='<spring:url value="/pages/gedung/identity.html" />'>
 					<div class="panel-footer">
 						<span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 						<div class="clearfix"></div>
@@ -50,7 +50,7 @@
 						</div>
 					</div>
 				</div>
-				<a href='<spring:url value="/pages/input/atap.html" />'>
+				<a href='<spring:url value="/pages/gedung/atap.html" />'>
 					<div class="panel-footer">
 						<span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 						<div class="clearfix"></div>
@@ -73,7 +73,7 @@
 						</div>
 					</div>
 				</div>
-				<a href='<spring:url value="/pages/input/plafon.html" />'>
+				<a href='<spring:url value="/pages/gedung/plafon.html" />'>
 					<div class="panel-footer">
 						<span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 						<div class="clearfix"></div>
@@ -96,7 +96,7 @@
 						</div>
 					</div>
 				</div>
-				<a href='<spring:url value="/pages/input/pondasi.html" />'>
+				<a href='<spring:url value="/pages/gedung/pondasi.html" />'>
 					<div class="panel-footer">
 						<span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 						<div class="clearfix"></div>
@@ -124,7 +124,7 @@
 						</div>
 					</div>
 				</div>
-				<a href='<spring:url value="/pages/input/ruangan.html" />'>
+				<a href='<spring:url value="/pages/gedung/ruangan.html" />'>
 					<div class="panel-footer">
 						<span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 						<div class="clearfix"></div>
@@ -147,7 +147,7 @@
 						</div>
 					</div>
 				</div>
-				<a href='<spring:url value="/pages/input/kelistrikan.html" />'>
+				<a href='<spring:url value="/pages/gedung/kelistrikan.html" />'>
 					<div class="panel-footer">
 						<span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 						<div class="clearfix"></div>
@@ -170,7 +170,7 @@
 						</div>
 					</div>
 				</div>
-				<a href='<spring:url value="/pages/input/struktur.html" />'>
+				<a href='<spring:url value="/pages/gedung/struktur.html" />'>
 					<div class="panel-footer">
 						<span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 						<div class="clearfix"></div>
@@ -193,7 +193,7 @@
 						</div>
 					</div>
 				</div>
-				<a href='<spring:url value="/pages/input/lantai.html" />'>
+				<a href='<spring:url value="/pages/gedung/lantai.html" />'>
 					<div class="panel-footer">
 						<span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 						<div class="clearfix"></div>
@@ -220,7 +220,7 @@
 						</div>
 					</div>
 				</div>
-				<a href='<spring:url value="/pages/input/air.html" />'>
+				<a href='<spring:url value="/pages/gedung/air.html" />'>
 					<div class="panel-footer">
 						<span class="pull-left">View Details</span> <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 						<div class="clearfix"></div>

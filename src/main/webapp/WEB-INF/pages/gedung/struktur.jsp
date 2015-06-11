@@ -3,7 +3,7 @@
 
 <h3>Input Struktur Gedung</h3>
 
-<form:form commandName="struktur" action="${pageContext.request.contextPath }/pages/input/struktur/save.html" cssClass="form-horizontal formInputStruktur">
+<form:form commandName="struktur" action="${pageContext.request.contextPath }/pages/gedung/struktur/save.html" cssClass="form-horizontal formInputStruktur">
 	<c:if test="${success eq true }">
 		<div class="alert alert-success">Data Berhasil Diinputkan</div>
 	</c:if>

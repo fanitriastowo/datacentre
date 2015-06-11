@@ -3,7 +3,7 @@
 
 <h3>Input Plafon Gedung</h3>
 
-<form:form commandName="plafon" action="${pageContext.request.contextPath }/pages/input/plafon/save.html" cssClass="form-horizontal formInputPlafon">
+<form:form commandName="plafon" action="${pageContext.request.contextPath }/pages/gedung/plafon/save.html" cssClass="form-horizontal formInputPlafon">
 
 	<c:if test="${success eq true }">
 		<div class="alert alert-success">Data Berhasil Diinputkan</div>

@@ -3,7 +3,7 @@
 
 <h3>Input Kelistrikan Gedung</h3>
 
-<form:form commandName="kelistrikan" action="${pageContext.request.contextPath }/pages/input/kelistrikan/save.html" cssClass="form-horizontal formInputKelistrikan">
+<form:form commandName="kelistrikan" action="${pageContext.request.contextPath }/pages/gedung/kelistrikan/save.html" cssClass="form-horizontal formInputKelistrikan">
     <c:if test="${success eq true }">
 		<div class="alert alert-success">Data Berhasil Diinputkan</div>
 	</c:if>

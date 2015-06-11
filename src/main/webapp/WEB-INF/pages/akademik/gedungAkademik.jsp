@@ -12,7 +12,7 @@
 				<th>Tahun Berdiri</th>
 				<th>Tahun Survey</th>
 				<th>Jenis Gedung</th>
-				<th>Operation</th>
+				<th width="23%">Operation</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -26,9 +26,9 @@
 					<td><c:out value="${gedung.tahunSurvey }" /></td>
 					<td><c:out value="${gedung.jenisGedung }" /></td>
 					<td>
-						<a href='<spring:url value="/akademik/gedung/detail/${gedung.id }.html" />' class="btn btn-info">Detail</a> 
-						<a href='<spring:url value="/akademik/gedung/update/${gedung.id }.html" />' class="btn btn-success">Update</a> 
-						<a href='<spring:url value="/akademik/gedung/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a>
+						<a href='<spring:url value="/pages/akademik/detail/${gedung.id }.html" />' class="btn btn-info">Detail</a> 
+						<a href='<spring:url value="/pages/akademik/update/${gedung.id }.html" />' class="btn btn-success">Update</a> 
+						<a href='<spring:url value="/pages/akademik/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a>
 					</td>
 				</tr>
 			</c:forEach>

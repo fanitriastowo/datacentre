@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("/pages/input")
+@RequestMapping("/pages/gedung")
 public class PondasiController {
 
 	@Autowired
@@ -38,7 +38,7 @@ public class PondasiController {
 		User user = userService.findOneByUsername(username);
 		if (!user.isIdentity()) {
 			redirectAttributes.addFlashAttribute("invalid", true);
-			return "redirect:/pages/input/identity.html";
+			return "redirect:/pages/gedung/identity.html";
 		} else if (user.isPondasi()) {
 			return "error403";
 		}

@@ -33,7 +33,7 @@
 		<put-attribute name="title" value="Aplikasi Datacentre - List of User" />
 		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
 		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/pages//master/users.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/admin/users.jsp" />
 		<put-attribute name="current" value="master" />
 	</definition>
 
@@ -41,7 +41,7 @@
 		<put-attribute name="title" value="Aplikasi Datacentre - Daftar Gedung" />
 		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
 		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/pages/master/gedung.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/admin/gedung.jsp" />
 		<put-attribute name="current" value="master" />
 	</definition>
 
@@ -49,7 +49,7 @@
 		<put-attribute name="title" value="Aplikasi Datacentre - Detail Gedung" />
 		<put-attribute name="header" value="/WEB-INF/template/header.jsp" />
 		<put-attribute name="sidebar" value="/WEB-INF/template/sidebar.jsp" />
-		<put-attribute name="body" value="/WEB-INF/pages/master/gedungDetail.jsp" />
+		<put-attribute name="body" value="/WEB-INF/pages/admin/gedungDetail.jsp" />
 		<put-attribute name="current" value="master" />
 	</definition>
 	

@@ -3,7 +3,7 @@
 
 <h3>Input Pondasi Gedung</h3>
 
-<form:form commandName="pondasi" action="${pageContext.request.contextPath }/pages/input/pondasi/save.html" cssClass="form-horizontal formInputPondasi">
+<form:form commandName="pondasi" action="${pageContext.request.contextPath }/pages/gedung/pondasi/save.html" cssClass="form-horizontal formInputPondasi">
 	<c:if test="${success eq true }">
 		<div class="alert alert-success">Data Berhasil Diinputkan</div>
 	</c:if>

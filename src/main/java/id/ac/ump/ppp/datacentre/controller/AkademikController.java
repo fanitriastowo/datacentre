@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(value = "/akademik/gedung")
+@RequestMapping(value = "/pages/akademik")
 public class AkademikController {
 
 	@Autowired
@@ -31,6 +31,6 @@ public class AkademikController {
 	@RequestMapping("/delete/{id}")
 	public String delete(@PathVariable(value = "id") Integer id) {
 		gedungService.delete(id);
-		return "redirect:/akademik/gedung.html";
+		return "redirect:/pages/akademik.html";
 	}
 }

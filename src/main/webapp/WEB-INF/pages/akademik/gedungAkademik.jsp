@@ -28,7 +28,7 @@
 					<td>
 						<a href='<spring:url value="/pages/akademik/detail/${gedung.id }.html" />' class="btn btn-info">Detail</a> 
 						<a href='<spring:url value="/pages/akademik/update/${gedung.id }.html" />' class="btn btn-success">Update</a> 
-						<a href='<spring:url value="/pages/akademik/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a>
+						<%-- <a href='<spring:url value="/pages/akademik/delete/${gedung.id }.html" />' class="btn btn-danger triggerRemove">Delete</a> --%>
 					</td>
 				</tr>
 			</c:forEach>

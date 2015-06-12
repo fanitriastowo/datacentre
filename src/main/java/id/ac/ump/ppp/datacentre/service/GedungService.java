@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 public class GedungService {
 
 	private final String CACHEGEDUNGLIST = "gedungList";
+	private final String USERLISTBYROLEGEDUNG = "userListByRoleGedung";
 
 	@Autowired
 	private GedungRepository gedungRepository;
@@ -32,7 +33,7 @@ public class GedungService {
 	}
 
 	@Transactional
-	@CacheEvict(value = CACHEGEDUNGLIST, allEntries = true)
+	@CacheEvict(value = { CACHEGEDUNGLIST, USERLISTBYROLEGEDUNG }, allEntries = true)
 	public void save(Gedung gedung, String username) {
 		User user = userRepository.findOneByUsername(username);
 		gedung.setUser(user);
@@ -43,7 +44,7 @@ public class GedungService {
 
 	@Transactional
 	@PreAuthorize("hasRole('ROLE_AKADEMIK')")
-	@CacheEvict(value = CACHEGEDUNGLIST, allEntries = true)
+	@CacheEvict(value = { CACHEGEDUNGLIST, USERLISTBYROLEGEDUNG }, allEntries = true)
 	public void delete(Integer id) {
 		gedungRepository.delete(id);
 	}

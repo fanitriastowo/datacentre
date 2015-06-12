@@ -71,7 +71,7 @@
 					<td><c:out value="${user.phone }" /></td>
 					<td>
 						<a href="#" class="btn btn-info">Detail</a> 
-						<a href='<spring:url value="/pages/admin/users/delete/${user.id }.html"/>' class="btn btn-danger triggerRemove">Delete</a>
+						<%-- <a href='<spring:url value="/pages/admin/users/delete/${user.id }.html"/>' class="btn btn-danger triggerRemove">Delete</a> --%>
 					</td>
 				</tr>
 			</c:forEach>

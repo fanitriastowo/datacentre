@@ -71,7 +71,7 @@ public class InitDbService {
 	@Autowired
 	private AirRepository airRepository;
 
-	@PostConstruct
+	// @PostConstruct
 	public void initDb() {
 
 		// Insert Role

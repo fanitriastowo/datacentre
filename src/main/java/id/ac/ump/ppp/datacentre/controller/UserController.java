@@ -1,9 +1,5 @@
 package id.ac.ump.ppp.datacentre.controller;
 
-import id.ac.ump.ppp.datacentre.entities.User;
-import id.ac.ump.ppp.datacentre.service.RoleService;
-import id.ac.ump.ppp.datacentre.service.UserService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,15 +9,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import id.ac.ump.ppp.datacentre.entities.User;
+import id.ac.ump.ppp.datacentre.service.UserService;
+
 @Controller
 @RequestMapping("/pages/admin")
 public class UserController {
 
 	@Autowired
 	private UserService userService;
-
-	@Autowired
-	private RoleService roleService;
 
 	@ModelAttribute(value = "user")
 	public User construct() {
